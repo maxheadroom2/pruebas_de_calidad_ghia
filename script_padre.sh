@@ -44,4 +44,8 @@ echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t system > /home/maxheadro
  Tecnico=$()
 
 
+# Script inicio de comandos
 
+# apertura de xterm
+
+nohup  xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_1 -e "gtop" &
