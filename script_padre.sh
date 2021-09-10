@@ -33,11 +33,10 @@ echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t processor > /home/maxhea
 echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t system > /home/maxheadroom/Test_resultados/archivos_raw/sistema_general.txt
 #Falta anexar el del disco duro
 
-Ruta_1=$(/home/maxheadroom/Test_resultados/archivos_raw/)
 
 # variables
 
- SerieComputo=$(cat $Ruta_1/lshw.html | grep serie | grep -Eo '[0-9]{6}' | head -1)
+ #ooSerieComputo=$(cat lshw.html | grep serie | grep -Eo '[0-9]{6}' | head -1)
  VersionBios=$()
  MemoriaRam=$(sudo dmidecode -t memory | grep "Size" && sudo dmidecode -t memory | grep "Bank Locator" && sudo dmidecode -t memory | grep "Serial Number")
  DiscoDuro=$()
@@ -55,7 +54,7 @@ wmctrl -r "terminal_1" -b add,maximized_vert,maximized_horz && wmctrl -r "termin
 
 # apertura de xterm 2
 sleep 1s;
-xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_2 -e "echo $ruta" &
+xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_2 -e "htop" &
 sleep 2s;
 wmctrl -r "terminal_2" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_2" -t 2 #maximmizo la terminal de gtop
 
