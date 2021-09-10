@@ -33,7 +33,7 @@ echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t processor > /home/maxhea
 echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t system > /home/maxheadroom/Test_resultados/archivos_raw/sistema_general.txt
 #Falta anexar el del disco duro
 
-Ruta_1=$(/home/maxheadroom/Test_resultados/archivos_raw/)
+Ruta_1=/home/maxheadroom/Test_resultados/archivos_raw/
 
 # variables
 
