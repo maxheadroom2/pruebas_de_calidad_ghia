@@ -62,6 +62,7 @@ wmctrl -r "terminal_2" -b add,maximized_vert,maximized_horz && wmctrl -r "termin
 
 for (( c=1; c<=$Numero_CoresCPU; c++ ))
 do  
+  yes > /dev/null & # ciclo
   echo "veces que repitermos yes"
   notify-send -i half-life-alyx "yes yes yes" "yes"
   sleep 1s;
