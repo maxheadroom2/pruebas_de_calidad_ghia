@@ -33,10 +33,11 @@ echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t processor > /home/maxhea
 echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t system > /home/maxheadroom/Test_resultados/archivos_raw/sistema_general.txt
 #Falta anexar el del disco duro
 
+Ruta_1=$(/home/maxheadroom/Test_resultados/archivos_raw/)
 
 # variables
 
- SerieComputo=$(sudo lshw.html cat *.html | grep serie | grep -Eo '[0-9]{6}' | head -1)
+ SerieComputo=$(cat $ruta/lshw.html | grep serie | grep -Eo '[0-9]{6}' | head -1)
  VersionBios=$()
  MemoriaRam=$(sudo dmidecode -t memory | grep "Size" && sudo dmidecode -t memory | grep "Bank Locator" && sudo dmidecode -t memory | grep "Serial Number")
  DiscoDuro=$()
@@ -46,9 +47,15 @@ echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t system > /home/maxheadro
 
 # Script inicio de comandos
 
-# apertura de xterm
+# apertura de xterm 1
 
 xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_1 -e "gtop" &
 sleep 2s;
 wmctrl -r "terminal_1" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_1" -t 1 #maximmizo la terminal de gtop
+
+# apertura de xterm 2
+
+xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_2 -e "echo $ruta" &
+sleep 2s;
+wmctrl -r "terminal_1" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_2" -t 1 #maximmizo la terminal de gtop
 
