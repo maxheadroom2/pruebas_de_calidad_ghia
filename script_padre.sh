@@ -13,7 +13,7 @@
 
 # Inicio de scritp ############################################################
 
-notify-send "Prueba" "datos"
+notify-send -i Alert "inicio de pruebas automaticas" "Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje"
 
 #archivos de inicio
 # Estos comandos realizan los primeros archivos de extraccion de datos, asi es mas facil recuperar dicha información
