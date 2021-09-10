@@ -16,7 +16,7 @@
 
 # Inicio de scritp ############################################################
 
-notify-send -i abrt "inicio de pruebas automaticas" "Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje"
+notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje"
 
 #archivos de inicio
 # Estos comandos realizan los primeros archivos de extraccion de datos, asi es mas facil recuperar dicha información
@@ -49,7 +49,6 @@ echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t system > /home/maxheadro
 # apertura de xterm
 
 xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_1 -e "gtop" &
-
 sleep 2s;
+wmctrl -r "terminal_1" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_1" -t 1 #maximmizo la terminal de gtop
 
-wmctrl -r "terminal_1" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_1" -t 1
