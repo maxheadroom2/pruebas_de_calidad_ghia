@@ -10,13 +10,18 @@
 # Descripcion: Scritp padre el cual desarrollara las pruebas del area de calidad                          
 ###############################################################################
 
+# notas 
+# git-force-clone -b main https://github.com/maxheadroom2/pruebas_de_calidad_ghia.git ./bash_scripts && sudo chmod u+x *.sh
+
 
 # Inicio de scritp ############################################################
 
-notify-send -i Alert "inicio de pruebas automaticas" "Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje"
+notify-send -i abrt "inicio de pruebas automaticas" "Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje"
 
 #archivos de inicio
 # Estos comandos realizan los primeros archivos de extraccion de datos, asi es mas facil recuperar dicha información
+
+rm -f /home/maxheadroom/Test_resultados/archivos_raw/*
 
 echo Neoteo456@ | sudo -S ls /root && sudo lshw -html > /home/maxheadroom/Test_resultados/archivos_raw/lshw.html
 echo Neoteo456@ | sudo -S ls /root && sudo lshw > /home/maxheadroom/Test_resultados/archivos_raw/lshw.txt
