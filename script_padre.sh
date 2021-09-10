@@ -48,4 +48,6 @@ echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t system > /home/maxheadro
 
 # apertura de xterm
 
-nohup  xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_1 -e "gtop" &
+xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_1 -e "gtop" &
+
+wmctrl -r "terminal_1" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_1" -t 1
