@@ -57,5 +57,5 @@ wmctrl -r "terminal_1" -b add,maximized_vert,maximized_horz && wmctrl -r "termin
 
 xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_2 -e "echo $ruta" &
 sleep 2s;
-wmctrl -r "terminal_1" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_2" -t 1 #maximmizo la terminal de gtop
+wmctrl -r "terminal_1" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_2" -t 2 #maximmizo la terminal de gtop
 
