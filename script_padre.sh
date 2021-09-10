@@ -42,7 +42,7 @@ echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t system > /home/maxheadro
  DiscoDuro=$()
  Procesador=$(sudo dmidecode -t processor | grep "Version")
  Tecnico=$()
-
+ Numero_CoresCPU=$(grep -m 1 'cpu cores' /proc/cpuinfo | grep -Eo [0-9])
 
 # Script inicio de comandos
 
@@ -58,3 +58,11 @@ xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T termin
 sleep 2s;
 wmctrl -r "terminal_2" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_2" -t 2 #maximmizo la terminal de gtop
 
+# seccion de ciclo de yes por cada core del cpu del equipo
+
+for (( c=1; c<=$Numero_CoresCPU; c++ ))
+do  
+  echo "veces que repitermos yes"
+  notify-send -i half-life-alyx "yes yes yes" "yes"
+  sleep 1s;
+done
