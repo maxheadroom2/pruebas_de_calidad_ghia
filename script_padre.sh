@@ -37,7 +37,7 @@ Ruta_1=$(/home/maxheadroom/Test_resultados/archivos_raw/)
 
 # variables
 
- SerieComputo=$(cat $ruta/lshw.html | grep serie | grep -Eo '[0-9]{6}' | head -1)
+ SerieComputo=$(cat $Ruta_1/lshw.html | grep serie | grep -Eo '[0-9]{6}' | head -1)
  VersionBios=$()
  MemoriaRam=$(sudo dmidecode -t memory | grep "Size" && sudo dmidecode -t memory | grep "Bank Locator" && sudo dmidecode -t memory | grep "Serial Number")
  DiscoDuro=$()
