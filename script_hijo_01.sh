@@ -44,8 +44,11 @@ n=1
 cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
 if [[ $TecnicoLista = $TecnicoBios ]]
     then
+        foo  {
+             return $n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5
+        }
         echo "Match $n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5"
-        TecnicoK=$(echo "$n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5")
+       
     else
         echo "no concuerda $n $TecnicoLista"
         # crear aqui los datos de cuando no concuerdan
