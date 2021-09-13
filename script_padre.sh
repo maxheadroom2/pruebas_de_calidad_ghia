@@ -31,6 +31,7 @@ echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t baseboard > /home/maxhea
 echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t memory > /home/maxheadroom/Test_resultados/archivos_raw/memoria_ram.txt
 echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t processor > /home/maxheadroom/Test_resultados/archivos_raw/procesador.txt
 echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t system > /home/maxheadroom/Test_resultados/archivos_raw/sistema_general.txt
+echo Neoteo456@ | sudo -S ls /root && sudo dmidecode -t chassis > /home/maxheadroom/Test_resultados/archivos_raw/gabinete.txt
 #Falta anexar el del disco duro
 
 
