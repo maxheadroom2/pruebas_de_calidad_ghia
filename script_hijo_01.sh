@@ -22,11 +22,13 @@ notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desc
 # Estos comandos realizan los primeros archivos de extraccion de datos, asi es mas facil recuperar dicha información
 
 # variables
-
- #ooSerieComputo=$(cat lshw.html | grep serie | grep -Eo '[0-9]{6}' | head -1)
+ RutaLecturaGen=$(/home/maxheadroom/Test_resultados/archivos_raw)
+ SerieComputo=$(cat $RutaLecturaGen/lshw.html | grep serie | grep -Eo '[0-9]{6}' | head -1)
  VersionBios=$()
  MemoriaRam=$(sudo dmidecode -t memory | grep "Size" && sudo dmidecode -t memory | grep "Bank Locator" && sudo dmidecode -t memory | grep "Serial Number")
  DiscoDuro=$()
  Procesador=$(sudo dmidecode -t processor | grep "Version")
  Tecnico=$()
  Numero_CoresCPU=$(grep -m 1 'siblings' /proc/cpuinfo | grep -Eo [0-9]) #siblings son el numero de cores virtuales
+
+ echo $SerieComputo
