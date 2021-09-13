@@ -25,7 +25,9 @@ notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desc
  RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
  SerieComputo=$(cat $RutaLecturaGen/lshw.html | grep serie | grep -Eo '[0-9]{6}' | head -1)
  ModeloPc=$(cat $RutaLecturaGen/lshw.txt | grep -Eo PCGHIA-'[0-9]{4}' | head -1)
- VersionBios=$()
+ VersionBios=$( cat $RutaLecturaGen/bios.txt | grep -E "Version:")
+ Placa_Madre=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Product Name:")
+ Placa_Madre_Ver=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Version:")
  MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
  DiscoDuro=$()
  Procesador=$(sudo dmidecode -t processor | grep "Version")
@@ -65,8 +67,8 @@ sleep 2s;
  # Dialog 1
 
 dialog --begin 10 30 --backtitle "Información y Resultados" \
---title "Este equipo de computo" \
---msgbox "Serie $SerieComputo "$'\n'"Modelo $ModeloPc"$'\n'"Memoria RAM:"$'\n'" $MemoriaRam"$'\n'"Tecnico:"$'\n'"$TenicoMatch" 20 60 ;  clear
+--title "Este equipo de computo lo realizo " \
+--msgbox "Tecnico:"$'\n'"$TenicoMatch"$'\n'"Serie $SerieComputo "$'\n'"Modelo $ModeloPc"$'\n'"Memoria RAM:"$'\n'" $MemoriaRam"$'\n'"Tarjeta Madre Modelo:"$'\n'" $Placa_Madre"$'\n'"Tarjeta Madre Version:"$'\n'" $Placa_Madre_Ver"$'\n' 20 60 ;  clear
 
 
 
