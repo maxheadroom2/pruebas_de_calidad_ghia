@@ -49,7 +49,7 @@ cat $ArchivoLocal/Listado_tecnicos.txt | while read Siglas Nom1 Nom2 Nom3 Nom4 N
 if [[ $Siglas = $Tecnico ]]
     then
         echo "Match $n $Siglas $Nom1 $Nom2 $Nom3 $Nom4 $Nom5"
-        TecnicoOk=$($n $Siglas $Nom1 $Nom2 $Nom3 $Nom4 $Nom5)
+        TecnicoK=$(echo "$n $Siglas $Nom1 $Nom2 $Nom3 $Nom4 $Nom5")
     else
         echo "no concuerda $n $Siglas"
         # crear aqui los datos de cuando no concuerdan
@@ -63,7 +63,7 @@ done
 
 dialog --begin 10 30 --backtitle "Información y Resultados" \
 --title "Este equipo de computo" \
---msgbox "Serie $SerieComputo "$'\n'"Modelo $ModeloPc"$'\n'"Memoria RAM"$'\n'" $MemoriaRam"$'\n'"Tecnico $Tecnico" 20 30 ;  clear 
+--msgbox "Serie $SerieComputo "$'\n'"Modelo $ModeloPc"$'\n'"Memoria RAM"$'\n'" $MemoriaRam"$'\n'"Tecnico $TecnicoK" 20 30 ;  clear 
 
 
 
