@@ -44,7 +44,8 @@ n=1
 cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
 if [[ $TecnicoLista = $TecnicoBios ]]
     then      
-        echo "$n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" > $RutaLecturaGen/temp_tec.txt;
+        echo "$TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" > $RutaLecturaGen/temp_tec.txt;
+        echo "Mactch $n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5";
            else
         echo "no concuerda $n $TecnicoLista";
         # crear aqui los datos de cuando no concuerdan
@@ -52,10 +53,12 @@ if [[ $TecnicoLista = $TecnicoBios ]]
 n=$((n+1))
 done
 
-sleep 1s;
+sleep 3s;
 clear;
-TecnicoMatch=$(cat $RutaLecturaGen/temp_tec.txt)
 sleep 1s;
+TenicoMatch=$(cat $RutaLecturaGen/temp_tec.txt)
+echo $TenicoMatch
+sleep 2s;
 
 # Decodificador de tecnico fin #
 
