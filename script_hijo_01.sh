@@ -29,7 +29,6 @@ notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desc
  MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
  DiscoDuro=$()
  Procesador=$(sudo dmidecode -t processor | grep "Version")
- Tecnico=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read Col1 Col2 Col3; do echo $Col3; done )
  Numero_CoresCPU=$(grep -m 1 'siblings' /proc/cpuinfo | grep -Eo [0-9]) #siblings son el numero de cores virtuales
 
 
@@ -38,24 +37,23 @@ notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desc
 
     #variables de sección
     ArchivoLocal=/home/maxheadroom/Test_resultados/archivos_raw/SERIE_USB # ruta de archivo local de gabinete
+    TecnicoBios=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read Col1 Col2 Col3; do echo $Col3; done )
     #ArchivoLocal Serie Ruta aqui de la USB de series, falta anexar esta parte
 
-NumFilas=$( | grep -Eo [0-9]{2} | head -1)
-cat Listado_tecnicos.txt | while read Siglas Nom1 Nom2 Nom3 Nom4 Nom5; do
-    echo "$Siglas : $Nom1 $Nom2 $Nom3 $Nom4 $Nom5"
-done
 n=1
-cat $ArchivoLocal/Listado_tecnicos.txt | while read Siglas Nom1 Nom2 Nom3 Nom4 Nom5; do  
-if [[ $Siglas = $Tecnico ]]
+cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
+if [[ $TecnicoLista = $TecnicoBios ]]
     then
-        echo "Match $n $Siglas $Nom1 $Nom2 $Nom3 $Nom4 $Nom5"
-        TecnicoK=$(echo "$n $Siglas $Nom1 $Nom2 $Nom3 $Nom4 $Nom5")
+        echo "Match $n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5"
+        TecnicoK=$(echo "$n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5")
     else
-        echo "no concuerda $n $Siglas"
+        echo "no concuerda $n $TecnicoLista"
         # crear aqui los datos de cuando no concuerdan
     fi          
 n=$((n+1))
 done
+
+sleep 1s;
 
 # Decodificador de tecnico fin #
 
