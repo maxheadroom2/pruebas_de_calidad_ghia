@@ -44,12 +44,8 @@ n=1
 cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
 if [[ $TecnicoLista = $TecnicoBios ]]
     then
-        foo  {
-             return $n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5
-        }
         echo "Match $n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5"
-       
-    else
+           else
         echo "no concuerda $n $TecnicoLista"
         # crear aqui los datos de cuando no concuerdan
     fi          
@@ -64,7 +60,7 @@ sleep 1s;
 
 dialog --begin 10 30 --backtitle "Información y Resultados" \
 --title "Este equipo de computo" \
---msgbox "Serie $SerieComputo "$'\n'"Modelo $ModeloPc"$'\n'"Memoria RAM"$'\n'" $MemoriaRam"$'\n'"Tecnico $TecnicoK" 20 30 ;  clear 
+--msgbox "Serie $SerieComputo "$'\n'"Modelo $ModeloPc"$'\n'"Memoria RAM"$'\n'" $MemoriaRam"$'\n'"Tecnico $TecnicoLista" 20 30 ;  clear 
 
 
 
