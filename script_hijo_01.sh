@@ -44,15 +44,18 @@ n=1
 cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
 if [[ $TecnicoLista = $TecnicoBios ]]
     then
-        TenicoMatch=$(echo "$n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5")
-        echo "$n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5"
+        TenicoMatch=$(echo "$n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5");
+        echo "$n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5";
            else
-        echo "no concuerda $n $TecnicoLista"
+        echo "no concuerda $n $TecnicoLista";
         # crear aqui los datos de cuando no concuerdan
     fi          
 n=$((n+1))
 done
 
+sleep 1s;
+clear;
+echo $TenicoMatch
 sleep 1s;
 
 # Decodificador de tecnico fin #
