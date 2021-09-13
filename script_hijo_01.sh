@@ -43,9 +43,8 @@ notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desc
 n=1
 cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
 if [[ $TecnicoLista = $TecnicoBios ]]
-    then
-        TenicoMatch=$(echo "$n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" > tmp );
-        echo "$n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5";
+    then      
+        echo "$n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" > $RutaLecturaGen/temp_tec.txt;
            else
         echo "no concuerda $n $TecnicoLista";
         # crear aqui los datos de cuando no concuerdan
@@ -55,7 +54,7 @@ done
 
 sleep 1s;
 clear;
-echo $TenicoMatch
+TecnicoMatch=$(cat $RutaLecturaGen/temp_tec.txt)
 sleep 1s;
 
 # Decodificador de tecnico fin #
@@ -65,8 +64,6 @@ sleep 1s;
 dialog --begin 10 30 --backtitle "Información y Resultados" \
 --title "Este equipo de computo" \
 --msgbox "Serie $SerieComputo "$'\n'"Modelo $ModeloPc"$'\n'"Memoria RAM"$'\n'" $MemoriaRam"$'\n'"Tecnico $TenicoMatch" 20 30 ;  clear
-. tmp
-rm tmp 
 
 
 
