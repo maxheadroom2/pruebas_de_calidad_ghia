@@ -63,7 +63,7 @@ done
 
 dialog --begin 10 30 --backtitle "Información y Resultados" \
 --title "Este equipo de computo" \
---msgbox "Serie $SerieComputo "$'\n'"Modelo $ModeloPc"$'\n'"Memoria RAM"$'\n'" $MemoriaRam"$'\n'" $TenicoOk" 20 30 ;  clear 
+--msgbox "Serie $SerieComputo "$'\n'"Modelo $ModeloPc"$'\n'"Memoria RAM"$'\n'" $MemoriaRam"$'\n'"Tecnico $TenicoOk" 20 30 ;  clear 
 
 
 
