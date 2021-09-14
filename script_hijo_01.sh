@@ -11,7 +11,7 @@
 ###############################################################################
 
 # notas 
-# git-force-clone -b main https://github.com/maxheadroom2/pruebas_de_calidad_ghia.git ./bash_scripts ; sleep 3s && echo Neoteo456@ | sudo -S ls /root && sudo chmod u+x /home/maxheadroom/Scripts/bash_scripts/*.sh && bash "/home/maxheadroom/Scripts/bash_scripts/script_hijo_01.sh"
+# git-force-clone -b main https://github.com/maxheadroom2/pruebas_de_calidad_ghia.git ./bash_scripts ; sleep 1s && echo Neoteo456@ | sudo -S ls /root && sudo chmod u+x /home/maxheadroom/Scripts/bash_scripts/*.sh && bash "/home/maxheadroom/Scripts/bash_scripts/script_hijo_01.sh"
 
 
 # Inicio de scritp ############################################################
@@ -33,7 +33,8 @@ rm $RutaLecturaGen/temp_tec.txt
  Placa_Madre=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Product Name:")
  Placa_Madre_Ver=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Version:")
  MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
- DiscoDuro=$()
+ echo Neoteo456@ | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
+ DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
  Procesador=$(cat $RutaLecturaGen/procesador.txt | grep -E "Version:")
  
 
