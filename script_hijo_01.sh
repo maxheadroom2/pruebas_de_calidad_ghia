@@ -58,7 +58,7 @@ done
 
  # Dialog 1
 
-TenicoMatch=(cat $RutaLecturaGen/temp_tec.txt) # lee los datos del tecnico
+TenicoMatch=$(cat $RutaLecturaGen/temp_tec.txt) # lee los datos del tecnico
 
 dialog --begin 10 30 --backtitle "Información y Resultados" \
 --title "Este equipo de computo lo realizo " \
