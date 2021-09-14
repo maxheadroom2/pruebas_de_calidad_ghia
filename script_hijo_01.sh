@@ -18,6 +18,7 @@
 
 notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje"
 #borrado de archivos inicio
+RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
 rm $RutaLecturaGen/perfil_computo.txt
 rm $RutaLecturaGen/temp_tec.txt
 
@@ -25,7 +26,7 @@ rm $RutaLecturaGen/temp_tec.txt
 # Estos comandos realizan los primeros archivos de extraccion de datos, asi es mas facil recuperar dicha información
 
 # variables
- RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
+
  SerieComputo=$(cat $RutaLecturaGen/sistema_general.txt | grep "Serial Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
  ModeloPc=$(cat $RutaLecturaGen/sistema_general.txt | grep "SKU Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
  VersionBios=$(cat $RutaLecturaGen/bios.txt | grep -E "Version:")
