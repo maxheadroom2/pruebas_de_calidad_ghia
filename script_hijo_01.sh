@@ -37,10 +37,10 @@ notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desc
 
 # Decodificador y verificador de tecnico #
 
-    #variables de sección
-    ArchivoLocal=/home/maxheadroom/Test_resultados/archivos_raw/SERIE_USB # ruta de archivo local de gabinete
-    TecnicoBios=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read Col1 Col2 Col3; do echo $Col3; done )
-    #ArchivoLocal Serie Ruta aqui de la USB de series, falta anexar esta parte
+#variables de sección
+ArchivoLocal=/home/maxheadroom/Test_resultados/archivos_raw/SERIE_USB # ruta de archivo local de gabinete
+TecnicoBios=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read Col1 Col2 Col3; do echo $Col3; done )
+#ArchivoLocal Serie Ruta aqui de la USB de series, falta anexar esta parte
 
 n=1
 cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
