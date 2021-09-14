@@ -47,6 +47,7 @@ cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 
 if [[ $TecnicoLista = $TecnicoBios ]]
     then      
         echo "$TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" > $RutaLecturaGen/temp_tec.txt;
+        TenicoMatch=$(cat $RutaLecturaGen/temp_tec.txt)
         echo "Match $n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5";
            else
         echo "no concuerda $n $TecnicoLista > $RutaLecturaGen/anomalias/anomalias.txt " ;   
@@ -58,7 +59,7 @@ done
 
  # Dialog 1
 
-TenicoMatch=$(cat $RutaLecturaGen/temp_tec.txt) # lee los datos del tecnico
+ # lee los datos del tecnico
 
 dialog --begin 10 30 --backtitle "Información y Resultados" \
 --title "Este equipo de computo lo realizo " \
