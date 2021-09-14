@@ -34,7 +34,6 @@ notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desc
  
 
 
-
 # Decodificador y verificador de tecnico #
 
 #variables de sección
@@ -42,12 +41,26 @@ ArchivoLocal=/home/maxheadroom/Test_resultados/archivos_raw/SERIE_USB # ruta de 
 TecnicoBios=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read Col1 Col2 Col3; do echo $Col3; done )
 #ArchivoLocal Serie Ruta aqui de la USB de series, falta anexar esta parte
 
+# sección que crea el txt de la compu en version slim
+rm $RutaLecturaGen/perfil_computo.txt
+touch $RutaLecturaGen/perfil_computo.txt
+$SerieComputo > perfil_computo.txt
+$ModeloP > perfil_computo.txt
+$ModeloPco > perfil_computo.txt
+$VersionBios > perfil_computo.txt
+$Placa_Madre > perfil_computo.txt
+$Placa_Madre_Ver > perfil_computo.txt
+$MemoriaRam > perfil_computo.txt
+$DiscoDuro > perfil_computo.txt
+$Procesador > perfil_computo.txt
+
+
+
 n=1
 cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
 if [[ $TecnicoLista = $TecnicoBios ]]
     then      
         echo "$TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" > $RutaLecturaGen/temp_tec.txt;
-        TenicoMatch=$(cat $RutaLecturaGen/temp_tec.txt)
         echo "Match $n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5";
            else
         echo "no concuerda $n $TecnicoLista > $RutaLecturaGen/anomalias/anomalias.txt " ;   
@@ -57,9 +70,10 @@ done
 
 # Decodificador de tecnico fin #
 
- # Dialog 1
+# Dialog 1
 
- # lee los datos del tecnico
+TenicoMatch=$(cat $RutaLecturaGen/temp_tec.txt)# lee los datos del tecnico
+$TenicoMatch > perfil_computo.txt
 
 dialog --begin 10 30 --backtitle "Información y Resultados" \
 --title "Este equipo de computo lo realizo " \
