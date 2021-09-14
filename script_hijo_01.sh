@@ -50,15 +50,14 @@ TecnicoBios=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read
 sleep 2s;
 
 touch $RutaLecturaGen/perfil_computo.txt
-echo $SerieComputo > $RutaLecturaGen/perfil_computo.txt
-echo $ModeloP > $RutaLecturaGen/perfil_computo.txt
-echo $ModeloPco > $RutaLecturaGen/perfil_computo.txt
-echo $VersionBios > $RutaLecturaGen/perfil_computo.txt
-echo $Placa_Madre > $RutaLecturaGen/perfil_computo.txt
-echo $Placa_Madre_Ver > $RutaLecturaGen/perfil_computo.txt
-echo $MemoriaRam > $RutaLecturaGen/perfil_computo.txt
-echo $DiscoDuro > $RutaLecturaGen/perfil_computo.txt
-echo $Procesador > $RutaLecturaGen/perfil_computo.txt
+echo $SerieComputo >> $RutaLecturaGen/perfil_computo.txt
+echo $ModeloPc >> $RutaLecturaGen/perfil_computo.txt
+echo $VersionBios >> $RutaLecturaGen/perfil_computo.txt
+echo $Placa_Madre >> $RutaLecturaGen/perfil_computo.txt
+echo $Placa_Madre_Ver >> $RutaLecturaGen/perfil_computo.txt
+echo $MemoriaRam >> $RutaLecturaGen/perfil_computo.txt
+echo $DiscoDuro >> $RutaLecturaGen/perfil_computo.txt
+echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
 
 sleep 2s;
 
@@ -79,7 +78,7 @@ done
 # Dialog 1
 
 TenicoMatch=$(cat $RutaLecturaGen/temp_tec.txt)# lee los datos del tecnico
-echo $TenicoMatch > perfil_computo.txt
+echo $TenicoMatch >> $RutaLecturaGen/perfil_computo.txt
 
 dialog --begin 10 30 --backtitle "Información y Resultados" \
 --title "Este equipo de computo lo realizo " \
