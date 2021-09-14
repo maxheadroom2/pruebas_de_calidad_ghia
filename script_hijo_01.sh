@@ -17,6 +17,9 @@
 # Inicio de scritp ############################################################
 
 notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje"
+#borrado de archivos inicio
+rm $RutaLecturaGen/perfil_computo.txt
+rm $RutaLecturaGen/temp_tec.txt
 
 #archivos de inicio
 # Estos comandos realizan los primeros archivos de extraccion de datos, asi es mas facil recuperar dicha información
@@ -44,8 +47,7 @@ TecnicoBios=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read
 # sección que crea el txt de la compu en version slim
 
 sleep 2s;
-rm $RutaLecturaGen/perfil_computo.txt
-rm $RutaLecturaGen/temp_tec.txt
+
 touch $RutaLecturaGen/perfil_computo.txt
 echo $SerieComputo > perfil_computo.txt
 echo $ModeloP > perfil_computo.txt
