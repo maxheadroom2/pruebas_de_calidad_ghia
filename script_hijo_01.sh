@@ -25,7 +25,7 @@ notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desc
  RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
  SerieComputo=$(cat $RutaLecturaGen/sistema_general.txt | grep "Serial Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
  ModeloPc=$(cat $RutaLecturaGen/sistema_general.txt | grep "SKU Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
- VersionBios=$( cat $RutaLecturaGen/bios.txt | grep -E "Version:")
+ VersionBios=$(cat $RutaLecturaGen/bios.txt | grep -E "Version:")
  Placa_Madre=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Product Name:")
  Placa_Madre_Ver=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Version:")
  MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
@@ -45,6 +45,7 @@ TecnicoBios=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read
 
 sleep 2s;
 rm $RutaLecturaGen/perfil_computo.txt
+rm $RutaLecturaGen/temp_tec.txt
 touch $RutaLecturaGen/perfil_computo.txt
 echo $SerieComputo > perfil_computo.txt
 echo $ModeloP > perfil_computo.txt
