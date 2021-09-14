@@ -42,6 +42,8 @@ TecnicoBios=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read
 #ArchivoLocal Serie Ruta aqui de la USB de series, falta anexar esta parte
 
 # sección que crea el txt de la compu en version slim
+
+sleep 2s;
 rm $RutaLecturaGen/perfil_computo.txt
 touch $RutaLecturaGen/perfil_computo.txt
 echo $SerieComputo > perfil_computo.txt
@@ -54,7 +56,7 @@ echo $MemoriaRam > perfil_computo.txt
 echo $DiscoDuro > perfil_computo.txt
 echo $Procesador > perfil_computo.txt
 
-
+sleep 2s;
 
 n=1
 cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
