@@ -80,7 +80,7 @@ done
 sleep 1s;
 
 TenicoMatch=$(cat $RutaLecturaGen/temp_tec.txt)# lee los datos del tecnico
-echo $RutaLecturaGen/temp_tec.txt >> $RutaLecturaGen/perfil_computo.txt
+echo $TenicoMatch >> $RutaLecturaGen/perfil_computo.txt
 
 dialog --begin 10 30 --backtitle "Información y Resultados" \
 --title "Este equipo de computo lo realizo " \
