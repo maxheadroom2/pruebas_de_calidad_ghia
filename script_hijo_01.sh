@@ -35,7 +35,7 @@ notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desc
 
 
 
-# Decodificador de tecnico #
+# Decodificador y verificador de tecnico #
 
     #variables de sección
     ArchivoLocal=/home/maxheadroom/Test_resultados/archivos_raw/SERIE_USB # ruta de archivo local de gabinete
@@ -49,18 +49,10 @@ if [[ $TecnicoLista = $TecnicoBios ]]
         echo "$TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" > $RutaLecturaGen/temp_tec.txt;
         echo "Match $n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5";
            else
-        echo "no concuerda $n $TecnicoLista";
-        # crear aqui los datos de cuando no concuerdan
+        echo "no concuerda $n $TecnicoLista > $RutaLecturaGen/anomalias/anomalias.txt " ;   
     fi          
 n=$((n+1))
 done
-
-sleep 3s;
-clear;
-sleep 1s;
-TenicoMatch=$(cat $RutaLecturaGen/temp_tec.txt)
-echo $TenicoMatch
-sleep 2s;
 
 # Decodificador de tecnico fin #
 
