@@ -85,7 +85,7 @@ TenicoMatch=$(cat $RutaLecturaGen/temp_tec.txt)# lee los datos del tecnico
 
 dialog --begin 10 30 --backtitle "Información y Resultados" \
 --title "Este equipo de computo lo realizo " \
---msgbox "Tecnico Siglas:"$'\n'"$TecnicoBios"$'\n'"Serie $SerieComputo "$'\n'"Modelo $ModeloPc"$'\n'"Memoria RAM:"$'\n'" $MemoriaRam"$'\n'"Tarjeta Madre Modelo:"$'\n'" $Placa_Madre"$'\n'"Tarjeta Madre Version:"$'\n'" $Placa_Madre_Ver"$'\n'"Procesador:"$'\n'" $Procesador"$'\n'"Bios versión:"$'\n'" $VersionBios"$'\n'"Discos duros y capacidades:"$'\n'" $Discoduro"$'\n' 30 70 ;  clear
+--msgbox "Tecnico Siglas:"$'\n'"$TecnicoBios"$'\n'"Serie $SerieComputo "$'\n'"Modelo $ModeloPc"$'\n'"Memoria RAM:"$'\n'" $MemoriaRam"$'\n'"Tarjeta Madre Modelo:"$'\n'" $Placa_Madre"$'\n'"Tarjeta Madre Version:"$'\n'" $Placa_Madre_Ver"$'\n'"Procesador:"$'\n'" $Procesador"$'\n'"Bios versión:"$'\n'" $VersionBios"$'\n'"Discos duros y capacidades:"$'\n'" $VersionBios"$'\n' 30 70 ;  clear
 
 
 
