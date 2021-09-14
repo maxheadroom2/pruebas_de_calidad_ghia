@@ -44,15 +44,15 @@ TecnicoBios=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read
 # sección que crea el txt de la compu en version slim
 rm $RutaLecturaGen/perfil_computo.txt
 touch $RutaLecturaGen/perfil_computo.txt
-$SerieComputo > perfil_computo.txt
-$ModeloP > perfil_computo.txt
-$ModeloPco > perfil_computo.txt
-$VersionBios > perfil_computo.txt
-$Placa_Madre > perfil_computo.txt
-$Placa_Madre_Ver > perfil_computo.txt
-$MemoriaRam > perfil_computo.txt
-$DiscoDuro > perfil_computo.txt
-$Procesador > perfil_computo.txt
+echo $SerieComputo > perfil_computo.txt
+echo $ModeloP > perfil_computo.txt
+echo $ModeloPco > perfil_computo.txt
+echo $VersionBios > perfil_computo.txt
+echo $Placa_Madre > perfil_computo.txt
+echo $Placa_Madre_Ver > perfil_computo.txt
+echo $MemoriaRam > perfil_computo.txt
+echo $DiscoDuro > perfil_computo.txt
+echo $Procesador > perfil_computo.txt
 
 
 
@@ -73,7 +73,7 @@ done
 # Dialog 1
 
 TenicoMatch=$(cat $RutaLecturaGen/temp_tec.txt)# lee los datos del tecnico
-$TenicoMatch > perfil_computo.txt
+echo $TenicoMatch > perfil_computo.txt
 
 dialog --begin 10 30 --backtitle "Información y Resultados" \
 --title "Este equipo de computo lo realizo " \
