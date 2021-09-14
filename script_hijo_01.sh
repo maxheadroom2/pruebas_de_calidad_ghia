@@ -11,7 +11,7 @@
 ###############################################################################
 
 # notas 
-# git-force-clone -b main https://github.com/maxheadroom2/pruebas_de_calidad_ghia.git ./bash_scripts && sudo chmod u+x *.sh
+# git-force-clone -b main https://github.com/maxheadroom2/pruebas_de_calidad_ghia.git ./bash_scripts ; sleep 3s && echo Neoteo456@ | sudo -S ls /root && sudo chmod u+x /home/maxheadroom/Scripts/bash_scripts/*.sh
 
 
 # Inicio de scritp ############################################################
@@ -23,7 +23,7 @@ notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desc
 
 # variables
  RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
- SerieComputo=$(cat $RutaLecturaGen/lshw.html | grep serie | grep -Eo '[0-9]{6}' | head -1)
+ SerieComputo=$(cat $RutaLecturaGen/sistema_general.txt | grep "Serial Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
  ModeloPc=$(cat $RutaLecturaGen/lshw.txt | grep -Eo PCGHIA-'[0-9]{4}' | head -1)
  VersionBios=$( cat $RutaLecturaGen/bios.txt | grep -E "Version:")
  Placa_Madre=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Product Name:")
