@@ -48,7 +48,7 @@ TecnicoBios=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read
 
 # sección que crea el txt de la compu en version slim
 
-sleep 2s;
+
 
 touch $RutaLecturaGen/perfil_computo.txt
 echo $SerieComputo >> $RutaLecturaGen/perfil_computo.txt
@@ -60,7 +60,7 @@ echo $MemoriaRam >> $RutaLecturaGen/perfil_computo.txt
 echo $DiscoDuro >> $RutaLecturaGen/perfil_computo.txt
 echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
 
-sleep 2s;
+
 
 n=1
 cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
