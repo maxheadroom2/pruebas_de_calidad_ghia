@@ -30,8 +30,8 @@ notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desc
  Placa_Madre_Ver=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Version:")
  MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
  DiscoDuro=$()
- Procesador=$(sudo dmidecode -t processor | grep "Version")
- Numero_CoresCPU=$(grep -m 1 'siblings' /proc/cpuinfo | grep -Eo [0-9]) #siblings son el numero de cores virtuales
+ Procesador=$(cat $RutaLecturaGen/procesador.txt | grep -E "Version:")
+ 
 
 
 
