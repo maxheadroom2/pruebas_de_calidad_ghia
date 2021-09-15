@@ -97,14 +97,14 @@ funcion_memoria_usb
     VrB=$($VersionBios)
     Dis=$($DiscoDuro)
         #Variables del texto para caja del dialog
-        Msj_1=$("prueba")
-        Msj_2=$("prueba")
-        Msj_4=$("prueba")
-        Msj_5=$("prueba")
-        Msj_6=$("prueba")
-        Msj_7=$("prueba")
-        Msj_8=$("prueba")
-        Msj_9=$("prueba")
+        Msj_1="prueba"
+        Msj_2="prueba"
+        Msj_4="prueba"
+        Msj_5="prueba"
+        Msj_6="prueba"
+        Msj_7="prueba"
+        Msj_8="prueba"
+        Msj_9="prueba"
 
 
 
