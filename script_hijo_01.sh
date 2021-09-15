@@ -40,18 +40,12 @@ rm /home/maxheadroom/Test_resultados/archivos_raw/temp_tec.txt
  DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
  Procesador=$(cat $RutaLecturaGen/procesador.txt | grep -E "Version:")
  
-
-
 # Decodificador y verificador de tecnico #
 
 #variables de sección
 ArchivoLocal=/home/maxheadroom/Test_resultados/archivos_raw/SERIE_USB # ruta de archivo local de gabinete
 TecnicoBios=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read Col1 Col2 Col3; do echo $Col3; done )
 #ArchivoLocal Serie Ruta aqui de la USB de series, falta anexar esta parte
-
-# sección que crea el txt de la compu en version slim
-
-
 
 touch $RutaLecturaGen/perfil_computo.txt
 echo $SerieComputo >> $RutaLecturaGen/perfil_computo.txt
@@ -65,7 +59,7 @@ echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
 
 
 
-
+funcion_evaluacion_tecnico(){
     n=1
     cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
     if [[ $TecnicoLista = $TecnicoBios ]]
@@ -78,7 +72,9 @@ echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
         fi          
             n=$((n+1))
     done
+}
 
+funcion_dialog_resultado(){
     #variables del dialog
     D0=$SerieComputo
     D1=$TecnicoBios
@@ -89,7 +85,6 @@ echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
     D6=$Procesador
     D7=$DiscoDuro
     D8=$MemoriaRam
-
     #Variables del texto para caja del dialog
     Msj_0="Serie del equipo de computo: "
     Msj_1="Siglas del tecnico: "
@@ -100,13 +95,12 @@ echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
     Msj_6="Procesador: "
     Msj_7="Datos de Disco(s) instalados ---"
     Msj_8="Datos de Slots de Memoria RAM ---"
-   
-    sleep .5s;
+       sleep .5s;
     TenicoMatch=$(cat $Ru/temp_tec.txt)# lee los datos del tecnico
     dialog --begin 5 5 --backtitle "Información y Resultados"  \
     --title "Resultados de lectura del Equipo de computo " \
     --msgbox "$Msj_0""$D0"$'\n'"$Msj_1""$D1"$'\n'"$Msj_2""$D2"$'\n'"$Msj_3""$D3"$'\n'"$Msj_4""$D4"$'\n'"$Msj_5""$D5"$'\n'"$Msj_6""$D6"$'\n'"$Msj_7"$'\n'"$D7"$'\n'"$Msj_8"$'\n'"$D8"$'\n' 26 90 ;  clear
-
+}
 
 funcion_xterm_curseofwar(){
     # apertura de xterm curseofwar
@@ -135,4 +129,7 @@ funcion_memoria_usb(){
         done
 }
 
+funcion_memoria_usb
+funcion_evaluacion_tecnico
+funcion_dialog_resultado
 funcion_xterm_curseofwar
