@@ -63,9 +63,10 @@ echo $MemoriaRam >> $RutaLecturaGen/perfil_computo.txt
 echo $DiscoDuro >> $RutaLecturaGen/perfil_computo.txt
 echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
 
+
+funcion_verifica_tecnico
 funcion_xterm_curseofwar
 funcion_memoria_usb
-funcion_verifica_tecnico
 
 funcion_verifica_tecnico(){
 
