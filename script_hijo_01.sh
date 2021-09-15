@@ -32,7 +32,7 @@ funcion_notificacion(){
 funcion_notificacion=("1000" "half-life-alyx"
 "Inicio de pruebas automaticas"
 "Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje")
-${funcion_notificacion[*]}
+funcion_notificacion[*]
 
 funcion_notificacion  "aafm"\
 > "Inicio de pruebas automaticas"\
