@@ -114,7 +114,7 @@ while [ $CONTROL=0 ] ; do
     clear
     exit
   else
-    notify-send -t 1000 -i among-us "Systema de pruebas automatico" "No hay USB montada"
+    notify-send -t 2000 -i among-us "Systema de pruebas automatico" "No hay USB montada"
   fi
   sleep 1s
 done
