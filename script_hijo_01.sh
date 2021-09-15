@@ -63,22 +63,31 @@ echo $MemoriaRam >> $RutaLecturaGen/perfil_computo.txt
 echo $DiscoDuro >> $RutaLecturaGen/perfil_computo.txt
 echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
 
+funcion_xterm_curseofwar
+funcion_memoria_usb
+funcion_verifica_tecnico
 
+funcion_verifica_tecnico(){
 
-n=1
-cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
-if [[ $TecnicoLista = $TecnicoBios ]]
-    then      
-        echo "$TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" > $RutaLecturaGen/temp_tec.txt;
-        echo "$TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" >> $RutaLecturaGen/perfil_computo.txt;
-        echo "Match $n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5";
-           else
-        echo "no concuerda $n $TecnicoLista > $RutaLecturaGen/anomalias/anomalias.txt " ;   
-    fi          
-n=$((n+1))
-done
+    n=1
+    cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
+    if [[ $TecnicoLista = $TecnicoBios ]]
+        then      
+            echo "$TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" > $RutaLecturaGen/temp_tec.txt;
+            echo "$TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" >> $RutaLecturaGen/perfil_computo.txt;
+            echo "Match $n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5";
+        else
+            echo "no concuerda $n $TecnicoLista > $RutaLecturaGen/anomalias/anomalias.txt " ;   
+        fi          
+            n=$((n+1))
+    done
+}
+
 
 # Decodificador de tecnico fin #
+
+funcion_xterm_curseofwar
+funcion_memoria_usb
 
 # Dialog 1
 
@@ -97,25 +106,24 @@ funcion_xterm_curseofwar(){
     wmctrl -r "terminal_curseofwar" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_curseofwar" -t 3 #maximmizo la terminal de gtop
 }
 
-funcion_xterm_curseofwar
 
+funcion_memoria_usb(){
+    usb=SERIES
+    WHILE=0
+    while [ $CONTROL=0 ] ; do
+    df | grep $usb >> /dev/null
 
-usb=SERIES
+    if [ $? -ne 1 ];
+        then
+            dialog --backtitle "Inserto de memoria USB" --title "Se te redirecionara al menu de la memoria para que puedas copiar la informacion a la USB" --infobox "Datos aqui" 25 50
+            sleep 1s;
+            notify-send -i aafm "Systema de pruebas automatico" "Se inserto USB"
+            clear
+            exit
+        else
+            notify-send -t 2000 -i among-us "Systema de pruebas automatico" "No hay USB montada"
+        fi
+            sleep 1s
+        done
+}
 
-WHILE=0
-
-while [ $CONTROL=0 ] ; do
-  df | grep $usb >> /dev/null
-
-  if [ $? -ne 1 ];
-  then
-    dialog --backtitle "Inserto de memoria USB" --title "Se te redirecionara al menu de la memoria para que puedas copiar la informacion a la USB" --infobox "Datos aqui" 25 50
-    sleep 1s;
-    notify-send -i aafm "Systema de pruebas automatico" "Se inserto USB"
-    clear
-    exit
-  else
-    notify-send -t 2000 -i among-us "Systema de pruebas automatico" "No hay USB montada"
-  fi
-  sleep 1s
-done
