@@ -13,13 +13,18 @@
 # notas 
 # git-force-clone -b main https://github.com/maxheadroom2/pruebas_de_calidad_ghia.git ./bash_scripts ; sleep 1s && echo Neoteo456@ | sudo -S ls /root && sudo chmod u+x /home/maxheadroom/Scripts/bash_scripts/*.sh && bash "/home/maxheadroom/Scripts/bash_scripts/script_hijo_01.sh"
 
-#matamos todos los procesos
+# Inicio de shell
 
-killall -9 curseofwar
+killall -9 curseofwar # matamos proceso del juego de prueba, asi mismo este se comentara cuando pase a producción
 
-# Inicio de scritp ############################################################
+funcion_notify_send(){
+    notifi-send -i "$1" "$2" "$3"
+}
 
-notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje"
+
+funcion_notify_send  half-life-alyx "Inicio de pruebas automaticas" "Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje"
+
+
 #borrado de archivos inicio
 RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
 rm $RutaLecturaGen/perfil_computo.txt
