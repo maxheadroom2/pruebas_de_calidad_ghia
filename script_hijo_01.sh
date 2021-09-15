@@ -13,6 +13,9 @@
 # notas 
 # git-force-clone -b main https://github.com/maxheadroom2/pruebas_de_calidad_ghia.git ./bash_scripts ; sleep 1s && echo Neoteo456@ | sudo -S ls /root && sudo chmod u+x /home/maxheadroom/Scripts/bash_scripts/*.sh && bash "/home/maxheadroom/Scripts/bash_scripts/script_hijo_01.sh"
 
+#matamos todos los procesos
+
+killall -9 curseofwar
 
 # Inicio de scritp ############################################################
 
