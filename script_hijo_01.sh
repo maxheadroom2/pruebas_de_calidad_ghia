@@ -97,7 +97,7 @@ funcion_xterm_curseofwar(){
     wmctrl -r "terminal_curseofwar" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_curseofwar" -t 3 #maximmizo la terminal de gtop
 }
 
-funcion_xterm_curseofwarr
+funcion_xterm_curseofwar
 
 
 usb=SERIES
