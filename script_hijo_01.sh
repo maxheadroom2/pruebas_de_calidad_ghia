@@ -111,7 +111,7 @@ funcion_memoria_usb
     TenicoMatch=$(cat $Ru/temp_tec.txt)# lee los datos del tecnico
     dialog --begin 5 5 --backtitle "Información y Resultados"  \
     --title "Resultados de lectura del Equipo de computo " \
-    --msgbox $Msj_1 $D1 $'\n' $Msj_2 $D2 $'\n' $Msj_3 $D3 $'\n' $Msj_5 $D5 $'\n' $Msj_6 $D6 $'\n' $Msj_7 $D7 $'\n' $Msj_8 $'\n' $D8 $'\n' $Msj_9 $'\n' $D9 $'\n' 26 90 ;  clear
+    --msgbox "$Msj_1 $D1" $'\n' "$Msj_2 $D2" $'\n' "$Msj_3 $D3" $'\n' "$Msj_5 $D5" $'\n' "$Msj_6 $D6" $'\n' "$Msj_7 $D7" $'\n' "$Msj_8" $'\n' "$D8" $'\n' "$Msj_9" $'\n' "$D9" $'\n' 26 90 ;  clear
 
 
 funcion_xterm_curseofwar(){
