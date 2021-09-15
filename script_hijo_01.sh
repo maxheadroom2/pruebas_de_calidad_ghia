@@ -64,12 +64,12 @@ echo $DiscoDuro >> $RutaLecturaGen/perfil_computo.txt
 echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
 
 
-funcion_verifica_tecnico
+
 funcion_xterm_curseofwar
 funcion_dialog_resultados
 funcion_memoria_usb
 
-funcion_verifica_tecnico(){
+
 
     n=1
     cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
@@ -83,9 +83,7 @@ funcion_verifica_tecnico(){
         fi          
             n=$((n+1))
     done
-}
 
-funcion_dialog_resultados(){
     #variables del dialog
         #Variables dentro del dialog
     Ru=$($RutaLecturaGen)
@@ -116,7 +114,7 @@ funcion_dialog_resultados(){
     dialog --begin 5 5 --backtitle "Información y Resultados"  \
     --title "Resultados de lectura del Equipo de computo " \
     --msgbox "$Msj_1 ""$Te"$'\n'"$Msj_2 $Se"$'\n'"$Msj_3 $Mo"$'\n'"$Msj_4"$'\n'" $Me"$'\n'"$Msj_5 $PlaM"$'\n'"$Msj_6 $PlaMv"$'\n'"$Msj_7 $Pr"$'\n'"$Msj_8 $VrB"$'\n'"$Msj_9"$'\n'" $Dis"$'\n' 26 90 ;  clear
-}
+
 
 funcion_xterm_curseofwar(){
     # apertura de xterm curseofwar
