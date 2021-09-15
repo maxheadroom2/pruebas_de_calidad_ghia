@@ -83,21 +83,40 @@ funcion_verifica_tecnico(){
     done
 }
 
+funcion_dialog_resultados(){
+    #variables del dialog
+        #Variables dentro del dialog
+    Ru=$($RutaLecturaGen)
+    Te=$($TecnicoBios)
+    Se=$($SerieComputo)
+    Mo=$($ModeloPc)
+    Me=$($MemoriaRam)
+    PlaM=$($Placa_Madre)
+    PlaMv=$($Placa_Madre_Ver)
+    Pr=$($Procesador)
+    VrB=$($VersionBios)
+    Dis=$($DiscoDuro)
+        #Variables del texto para caja del dialog
+        Msj_1=$(prueba)
+        Msj_2=$(prueba)
+        Msj_3=$(prueba)
+        Msj_4=$(prueba)
+        Msj_5=$(prueba)
+        Msj_6=$(prueba)
+        Msj_7=$(prueba)
+        Msj_8=$(prueba)
+        Msj_9=$(prueba)
 
-# Decodificador de tecnico fin #
 
-funcion_xterm_curseofwar
-funcion_memoria_usb
 
-# Dialog 1
+    sleep 1s;
+    TenicoMatch=$(cat $Ru/temp_tec.txt)# lee los datos del tecnico
+    dialog --begin 5 5 --backtitle "Información y Resultados"  \
+    --title "Resultados de lectura del Equipo de computo " \
+    --msgbox "$Msj_1 ""$Te"$'\n'"$Msj_2 $Se"$'\n'"$Msj_3 $Mo"$'\n'"$Msj_4"$'\n'" $Me"$'\n'"$Msj_5 $PlaM"$'\n'"$Msj_6 $PlaMv"$'\n'"$Msj_7 $Pr"$'\n'"$Msj_8 $VrB"$'\n'"$Msj_9"$'\n'" $Dis"$'\n' 26 90 ;  clear
+}
 
-sleep 1s;
 
-TenicoMatch=$(cat $RutaLecturaGen/temp_tec.txt)# lee los datos del tecnico
-
-dialog --begin 5 5 --backtitle "Información y Resultados"  \
---title "Resultados de lectura del Equipo de computo " \
---msgbox "Siglas del tecnico que realizo el equipo: ""$TecnicoBios"$'\n'"Serie: $SerieComputo "$'\n'"Modelo de computo: $ModeloPc"$'\n'"Memoria RAM:"$'\n'" $MemoriaRam"$'\n'"Tarjeta Madre Modelo: $Placa_Madre"$'\n'"Tarjeta Madre: $Placa_Madre_Ver"$'\n'"Procesador: $Procesador"$'\n'"Bios versión: $VersionBios"$'\n'"Discos duros y capacidades:"$'\n'" $DiscoDuro"$'\n' 26 90 ;  clear
 
 funcion_xterm_curseofwar(){
     # apertura de xterm curseofwar
