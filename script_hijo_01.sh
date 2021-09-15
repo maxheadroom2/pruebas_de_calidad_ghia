@@ -23,7 +23,7 @@ notify-send -i half-life-alyx "inicio de pruebas automaticas" "Por favor no desc
 #borrado de archivos inicio
 RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
 rm $RutaLecturaGen/perfil_computo.txt
-rm $RutaLecturaGen/temp_tec.txt
+rm /home/maxheadroom/Test_resultados/archivos_raw/temp_tec.txt
 
 #archivos de inicio
 # Estos comandos realizan los primeros archivos de extraccion de datos, asi es mas facil recuperar dicha información
