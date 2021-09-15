@@ -110,10 +110,11 @@ while [ $CONTROL=0 ] ; do
   then
     dialog --backtitle "Inserto de memoria USB" --title "Se te redirecionara al menu de la memoria para que puedas copiar la informacion a la USB" --infobox "Datos aqui" 25 50
     sleep 1s;
-    notify-send "Systema de pruebas automatico" "Se inserto USB"
+    notify-send -i aafm "Systema de pruebas automatico" "Se inserto USB"
+    clear
     exit
   else
-    notify-send "Systema de pruebas automatico" "No hay USB montada"
+    notify-send -i among-us "Systema de pruebas automatico" "No hay USB montada"
   fi
   sleep 1s
 done
