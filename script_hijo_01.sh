@@ -96,3 +96,24 @@ dialog --begin 5 5 --backtitle "Información y Resultados"  \
 xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 9 -T terminal_curseofwar -e "curseofwar -W 90 -H 90" &
 sleep .5s;
 wmctrl -r "terminal_curseofwar" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_curseofwar" -t 3 #maximmizo la terminal de gtop
+
+
+
+usb=SERIES
+
+WHILE=0
+
+while [ $CONTROL=0 ] ; do
+  df | grep $usb >> /dev/null
+
+  if [ $? -ne 1 ];
+  then
+    dialog --backtitle "Inserto de memoria USB" --title "Se te redirecionara al menu de la memoria para que puedas copiar la informacion a la USB" --infobox "Datos aqui" 25 50
+    sleep 1s;
+    notify-send "Systema de pruebas automatico" "Se inserto USB"
+    exit
+  else
+    notify-send "Systema de pruebas automatico" "No hay USB montada"
+  fi
+  sleep 1s
+done
