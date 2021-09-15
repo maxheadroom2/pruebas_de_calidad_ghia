@@ -80,7 +80,6 @@ echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
     done
 
     #variables del dialog
-        #Variables dentro del dialog
     D0=$SerieComputo
     D1=$TecnicoBios
     D2=$ModeloPc
@@ -101,9 +100,8 @@ echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
     Msj_6="Procesador: "
     Msj_7="Datos de Disco(s) instalados ---"
     Msj_8="Datos de Slots de Memoria RAM ---"
-
    
-    sleep 1s;
+    sleep .5s;
     TenicoMatch=$(cat $Ru/temp_tec.txt)# lee los datos del tecnico
     dialog --begin 5 5 --backtitle "Información y Resultados"  \
     --title "Resultados de lectura del Equipo de computo " \
@@ -137,3 +135,4 @@ funcion_memoria_usb(){
         done
 }
 
+funcion_xterm_curseofwar
