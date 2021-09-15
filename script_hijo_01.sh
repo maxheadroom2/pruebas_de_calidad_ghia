@@ -90,12 +90,15 @@ dialog --begin 5 5 --backtitle "Información y Resultados"  \
 --title "Resultados de lectura del Equipo de computo " \
 --msgbox "Siglas del tecnico que realizo el equipo: ""$TecnicoBios"$'\n'"Serie: $SerieComputo "$'\n'"Modelo de computo: $ModeloPc"$'\n'"Memoria RAM:"$'\n'" $MemoriaRam"$'\n'"Tarjeta Madre Modelo: $Placa_Madre"$'\n'"Tarjeta Madre: $Placa_Madre_Ver"$'\n'"Procesador: $Procesador"$'\n'"Bios versión: $VersionBios"$'\n'"Discos duros y capacidades:"$'\n'" $DiscoDuro"$'\n' 26 90 ;  clear
 
-
-
+funcion_xterm_curseofwar(){
 # apertura de xterm curseofwar
 xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 9 -T terminal_curseofwar -e "curseofwar -W 90 -H 90" &
 sleep .5s;
 wmctrl -r "terminal_curseofwar" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_curseofwar" -t 3 #maximmizo la terminal de gtop
+}
+
+mi_primera_funcion
+
 
 
 
