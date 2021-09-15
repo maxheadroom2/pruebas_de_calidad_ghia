@@ -18,26 +18,22 @@
 killall -9 curseofwar # matamos proceso del juego de prueba, asi mismo este se comentara cuando pase a producción
 
 funcion_notificacion(){
-
     if [[ $# = 4 ]]
         then
             notify-send -t "$1" -i "$2" "$3" "$4"   
         else
              notify-send -i "$1" "$2" "$3"
         fi          
-    
 }
 
 
-funcion_notificacion='1000'
-funcion_notificacion+='half-life-alyx'
-funcion_notificacion+='Inicio de pruebas automaticas'
-funcion_notificacion+='Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje'
-
-
-funcion_notificacion  "aafm"\
-> "Inicio de pruebas automaticas"\
-> "Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje"
+notifi_array=( 
+"1000" #Tiempo
+"half-life-alyx" #icono
+"Inicio de pruebas automaticas" #Titulo
+"Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje" # mensaje
+)
+funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
 
 #borrado de archivos inicio
