@@ -81,32 +81,33 @@ echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
 
     #variables del dialog
         #Variables dentro del dialog
-    D1=$RutaLecturaGen
-    D2=$TecnicoBios
-    D3=$SerieComputo
-    D4=$ModeloPc
-    D5=$MemoriaRam
-    D6=$Placa_Madre
-    D7=$Placa_Madre_Ver
-    D8=$Procesador
-    D9=$VersionBios
-    D10=$DiscoDuro
+    D0=$SerieComputo
+    D1=$TecnicoBios
+    D2=$ModeloPc
+    D3=$VersionBios
+    D4=$Placa_Madre
+    D5=$Placa_Madre_Ver
+    D6=$Procesador
+    D7=$DiscoDuro
+    D8=$MemoriaRam
+
     #Variables del texto para caja del dialog
+    Msj_0="Serie del equipo de computo: "
     Msj_1="Siglas del tecnico: "
     Msj_2="Modelo del equipo de computo: "
-    Msj_4="Version de Bios: "
-    Msj_5="Codigo de Mother Board: "
-    Msj_6="Version de Mother Board: "
-    Msj_7="Procesador: "
-    Msj_8="Datos de Disco(s) instalados ---"
-    Msj_9="Datos de Slots de Memoria RAM ---"
+    Msj_3="Version de Bios: "
+    Msj_4="Codigo de Mother Board: "
+    Msj_5="Version de Mother Board: "
+    Msj_6="Procesador: "
+    Msj_7="Datos de Disco(s) instalados ---"
+    Msj_8="Datos de Slots de Memoria RAM ---"
 
    
     sleep 1s;
     TenicoMatch=$(cat $Ru/temp_tec.txt)# lee los datos del tecnico
     dialog --begin 5 5 --backtitle "Información y Resultados"  \
     --title "Resultados de lectura del Equipo de computo " \
-    --msgbox "$Msj_1""$D1"$'\n'"$Msj_2""$D2"$'\n'"$Msj_3""$D3"$'\n'"$Msj_5""$D5"$'\n'"$Msj_6""$D6"$'\n'"$Msj_7""$D7"$'\n'"$Msj_8"$'\n'"$D8"$'\n'"$Msj_9"$'\n'"$D9" 26 90 ;  clear
+    --msgbox "$Msj_0""$D0"$'\n'"$Msj_1""$D1"$'\n'"$Msj_2""$D2"$'\n'"$Msj_3""$D3"$'\n'"$Msj_5""$D5"$'\n'"$Msj_6""$D6"$'\n'"$Msj_7""$D7"$'\n'"$Msj_8"$'\n'"$D8"$'\n'"$Msj_9"$'\n'"$D9" 26 90 ;  clear
 
 
 funcion_xterm_curseofwar(){
