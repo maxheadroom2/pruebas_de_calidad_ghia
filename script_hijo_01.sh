@@ -106,9 +106,7 @@ funcion_memoria_usb
     Msj_8="Datos de Disco(s) instalados ---"
     Msj_9="Datos de Slots de Memoria RAM ---"
 
-    $'\n'
-
-
+   
     sleep 1s;
     TenicoMatch=$(cat $Ru/temp_tec.txt)# lee los datos del tecnico
     dialog --begin 5 5 --backtitle "Información y Resultados"  \
