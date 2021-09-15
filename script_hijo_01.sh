@@ -93,6 +93,6 @@ dialog --begin 5 5 --backtitle "Información y Resultados"  \
 
 
 # apertura de xterm curseofwar
-xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -T terminal_curseofwar -e "curseofwar -W 90 -H 90" &
+xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 9 -T terminal_curseofwar -e "curseofwar -W 90 -H 90" &
 sleep .5s;
 wmctrl -r "terminal_curseofwar" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_curseofwar" -t 3 #maximmizo la terminal de gtop
