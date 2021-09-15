@@ -86,16 +86,16 @@ funcion_memoria_usb
 
     #variables del dialog
         #Variables dentro del dialog
-    Ru=$($RutaLecturaGen)
-    Te=$($TecnicoBios)
-    Se=$($SerieComputo)
-    Mo=$($ModeloPc)
-    Me=$($MemoriaRam)
-    PlaM=$($Placa_Madre)
-    PlaMv=$($Placa_Madre_Ver)
-    Pr=$($Procesador)
-    VrB=$($VersionBios)
-    Dis=$($DiscoDuro)
+    Ru=$RutaLecturaGen
+    Te=$TecnicoBios
+    Se=$SerieComputo
+    Mo=$ModeloPc
+    Me=$MemoriaRam
+    PlaM=$Placa_Madre
+    PlaMv=$Placa_Madre_Ver
+    Pr=$Procesador
+    VrB=$VersionBios
+    Dis=$DiscoDuro
         #Variables del texto para caja del dialog
         Msj_1="prueba"
         Msj_2="prueba"
