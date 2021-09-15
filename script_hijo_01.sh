@@ -86,9 +86,9 @@ sleep 1s;
 
 TenicoMatch=$(cat $RutaLecturaGen/temp_tec.txt)# lee los datos del tecnico
 
-dialog --begin 5 5 --backtitle "Información y Resultados" \
---title "Este equipo de computo lo realizo " \
---msgbox "Tecnico Siglas:"$'\n'"$TecnicoBios"$'\n'"Serie $SerieComputo "$'\n'"Modelo $ModeloPc"$'\n'"Memoria RAM:"$'\n'" $MemoriaRam"$'\n'"Tarjeta Madre Modelo:"$'\n'" $Placa_Madre"$'\n'"Tarjeta Madre Version:"$'\n'" $Placa_Madre_Ver"$'\n'"Procesador:"$'\n'" $Procesador"$'\n'"Bios versión:"$'\n'" $VersionBios"$'\n'"Discos duros y capacidades:"$'\n'" $DiscoDuro"$'\n' 26 70 ;  clear
+dialog --begin 5 5 --backtitle "Información y Resultados"  \
+--title "Resultados de lectura del Equipo de computo " \
+--msgbox "Tecnico que realizo este equipo siglas:"$'\n'"$TecnicoBios"$'\n'"Serie: $SerieComputo "$'\n'"Modelo: $ModeloPc"$'\n'"Memoria RAM:"$'\n'" $MemoriaRam"$'\n'"Tarjeta Madre Modelo:"$'\n'" $Placa_Madre"$'\n'"Tarjeta Madre Version:"$'\n'" $Placa_Madre_Ver"$'\n'"Procesador:"$'\n'" $Procesador"$'\n'"Bios versión:"$'\n'" $VersionBios"$'\n'"Discos duros y capacidades:"$'\n'" $DiscoDuro"$'\n' 26 70 ;  clear
 
 
 
