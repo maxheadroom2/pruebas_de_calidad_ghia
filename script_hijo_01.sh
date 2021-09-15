@@ -117,15 +117,12 @@ funcion_dialog_resultados(){
     --msgbox "$Msj_1 ""$Te"$'\n'"$Msj_2 $Se"$'\n'"$Msj_3 $Mo"$'\n'"$Msj_4"$'\n'" $Me"$'\n'"$Msj_5 $PlaM"$'\n'"$Msj_6 $PlaMv"$'\n'"$Msj_7 $Pr"$'\n'"$Msj_8 $VrB"$'\n'"$Msj_9"$'\n'" $Dis"$'\n' 26 90 ;  clear
 }
 
-
-
 funcion_xterm_curseofwar(){
     # apertura de xterm curseofwar
     xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 9 -T terminal_curseofwar -e "curseofwar -W 90 -H 90" &
     sleep .5s;
     wmctrl -r "terminal_curseofwar" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_curseofwar" -t 3 #maximmizo la terminal de gtop
 }
-
 
 funcion_memoria_usb(){
     usb=SERIES
