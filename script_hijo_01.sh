@@ -26,7 +26,7 @@ funcion_notificacion(){
         fi          
 }
 
-source ./script_hijo_01.sh
+source ./script_hijo_00.sh
 
 funcion_toor
 
