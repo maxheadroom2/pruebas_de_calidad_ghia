@@ -26,10 +26,8 @@ funcion_notificacion(){
         fi          
 }
 
-source ./script_hijo_00.sh
-
+source ./script_hijo_00X.sh
 funcion_toor
-
 Musica_l=$(funcion_toor)
 
 notifi_array=( 
