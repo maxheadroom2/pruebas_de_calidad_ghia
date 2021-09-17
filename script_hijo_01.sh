@@ -41,12 +41,17 @@ notifi_array=(
 )
 funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
+funcion_borrado_basura
 
+funcion_borrado_basura(){
 #borrado de archivos inicio
 RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
 rm /home/maxheadroom/Test_resultados/perfil_computo.txt
 rm /home/maxheadroom/Test_resultados/archivos_raw/temp_tec.txt
 rm /home/maxheadroom/Test_resultados/discos_duros.txt
+}
+
+
 
 #archivos de inicio
 # Estos comandos realizan los primeros archivos de extraccion de datos, asi es mas facil recuperar dicha información
