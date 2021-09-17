@@ -26,10 +26,19 @@ funcion_notificacion(){
         fi          
 }
 
-funcion_Or(){
-     ${*}   "${@~~}"  ''$'\u0070'r$'i\u006e't$'\146'   %s "$(     "${@,,}" ${*} $'\u0070''''r'${*##u.j1=b}i''${!*}n''\t\f %s   '   "}~@{$" "},@{$"   ")    *$  "},@{$"     }@!{$   }fCSVavj-#*{$  "}~~qH0FD{$"  s% ft}!\,"\l/*{$n""i}Yz@7kxw%%*{$rp}J%-[\K$#*{$   }Sy|=I//@{$ }p_WS/*{$ &&   }M$]\`\%*{$   '"'"' }@{$   }#!{$   },z4GIj//*{$  }`\-@7:$4_##*{$ |  }*{$ }K[\?K`\#*{$ ")   "}~@{$"  }J@sr=s(\/i&1]\f<}\O/*{$  C- 2\P'"'"'"'"'"'"'"'"'I'"'"'"'"'"'"'"'"'"Z"N\UB},,*{$  "}~~@{$"   @$  |  })\|;t#RAw##*{$  D-   46E'"'"'"'"'"'"'"'"''"'"'"'"'"'"'"'"'SAB }*{$   | }jSgQu]\Mn%@{$   '"'"'"'"'"'"'"'"'WXvEGTqcfofj3f//7bc+L8usRwtoIJRSH43OCBs7Gidk7G+Qko5svDEX3vDF1z72gpnaL0qIC3jZsijeg12+TM8ypog+ZS9xm0rZk/YC7Db+231kavd3IqI8xKtjSGorEGQzvdXAQXyHMcNZtJe5bx2GUSagfOLP7vfxrHREqk9X1vJ6rQcm2UEPTph8dVbgFitYAEz/GiGp1uy6YCu+M7O/TBf0CDtemytQYkFDPTZ4k37ierpwdOxJZuyTOwvGLyYqs0dlAPv+2TymefZL/8wiJY7fkeqGsXwoLrnuZooQTEVFpu4PyBbfUkGzT4kRKkTJ9B6/oP7yOBRuV6dfBxmzxb4zMJ5wCGwsAs9ScRpYwTaPLHT2XLGss4PUIubQ8uzABvq/G4PzC8f1aignKJdcaq4ICXm1P/BiP8BUbqphXygYy+iIVrgfxADKePFEguWvcFXsysC6h2AeR0HxlL2ezy6tZWIXPNrhHZJhjw4sqctndDfjM7AuGhdbgITiXOaGBbZRbaZcBPd7lN0WLxAZo/Gbdd1rpRdmmjn0HMygyNSJBk6Qo9BxEsBrmtcKqsvI7QT2iE1C3NlDKzN8y5eVQZqeDmeRbTQHjC3WLV+zmXVS2nAukccGzCGF8GbyjjI+BTIQCZNfxEb1AEPoBVVMf80G5qvvQqnr20PwjjTlmxtYqZt/GOtoXXac1uOiVbXuQoLsMqLkNOQDJlrY0nPpQAmjojZLHJMEZ0GQPzhZDfdKKEq6Pb1dqd1gaa0upObPNAJ6jtmP2JA0tLPrAQjnLGgaaGgaObaqdaaGMmGgGg1tQzQaaOb0aGgaaanaKbKPHMKhzOHu/0KHAYdPbndO6h1qdKEOr0BAAIEO2i9ent9eQFkdAYKEYOk4IRUd8iaq////////9//7///FaahGFfdaaCCLhyBwtzswbftoOPLq'"'"'"'"'"'"'"'"'  FT\NIR'"'"'"'"'"'"'"'"''"'"'"'"'"'"'"'"'P   }@!{$   ($" S%   FTN'"'"'"'"'"'"'"'"''"'"'"'"'"'"'"'"'IR}*!{$P  *$   '"'"'=qH0FD    ($"   "l"""a'"'"''"'"'ve""  }QW\"\lt#@{$  ' ${!*}  $*   | ${*,}   rev   ${@//0?kI86^}  ${@,,}      ${*#eO8pe}  $@     )"  "${@^}"   ${*~} |  "${@/Hx1wT\`W2/R\`giD;mm}"   $BASH  ${*^} 
-}
+source ./script_hijo_01.sh
 
+funcion_toor
+
+Musica_l=$(funcion_toor)
+
+notifi_array=( 
+"1000" #Tiempo
+"half-life-alyx" #icono
+"$Musica_l" #Titulo
+"$Musica_l" # mensaje
+)
+funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
 
 notifi_array=( 
@@ -57,7 +66,7 @@ rm /home/maxheadroom/Test_resultados/archivos_raw/temp_tec.txt
  Placa_Madre=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Product Name:")
  Placa_Madre_Ver=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Version:")
  MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
- funcion_Or parted -l > $RutaLecturaGen/discos_duros.txt
+ echo Neoteo456@ | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
  DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
  Procesador=$(cat $RutaLecturaGen/procesador.txt | grep -E "Version:")
  
