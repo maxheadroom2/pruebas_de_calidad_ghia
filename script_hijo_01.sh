@@ -27,12 +27,9 @@ funcion_notificacion(){
 }
 
 
-source ./script_hijo_00XXX.sh
+
 source ./script_hijo_00XX.sh
-
 funcion_Data
-funcion_nudo
-
 Musica_l=$(source ./script_hijo_00X.sh)
 
 
@@ -72,7 +69,7 @@ rm $RutaLecturaGen/discos_duros.txt
  Placa_Madre=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Product Name:")
  Placa_Madre_Ver=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Version:")
  MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
- funcion_Data | funcion_nudo -S ls /root && funcion_nudo parted -l > $RutaLecturaGen/discos_duros.txt
+ funcion_Data | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
  DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
  Procesador=$(cat $RutaLecturaGen/procesador.txt | grep -E "Version:")
  
