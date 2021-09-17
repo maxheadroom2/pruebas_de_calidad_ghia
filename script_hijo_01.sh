@@ -26,10 +26,6 @@ funcion_notificacion(){
         fi          
 }
 
-funcion_toor(){
-    
-    
-}
 
 notifi_array=( 
 "1000" #Tiempo
