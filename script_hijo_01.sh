@@ -44,10 +44,9 @@ funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
 funcion_borrado_basura(){
     #borrado de archivos inicio
-    
-    rm /home/maxheadroom/Test_resultados/perfil_computo.txt
+    rm /home/maxheadroom/Test_resultados/archivos_raw/perfil_computo.txt
     rm /home/maxheadroom/Test_resultados/archivos_raw/temp_tec.txt
-    rm /home/maxheadroom/Test_resultados/discos_duros.txt
+    rm /home/maxheadroom/Test_resultados/archivos_raw/discos_duros.txt
 }
 
 funcion_borrado_basura
