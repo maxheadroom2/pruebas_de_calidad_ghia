@@ -156,6 +156,23 @@ funcion_memoria_usb(){
         done
 }
 
+funcion_stress_cpu(){
+    for (( c=1; c<=$Numero_CoresCPU; c++ ))
+        do  
+        yes > /dev/null & # ciclo
+        echo "veces que repitermos yes"
+        notify-send -i half-life-alyx "yes yes yes" "yes"
+        sleep 1s;
+        done
+        sleep 10s && killall -9 yes;
+        notifi_array=( 
+        "2000" #Tiempo
+        "half-life-alyx" #icono
+        "Eliminamos YES" #Titulo
+        "Damos de baja el proceso YES" # mensaje
+        )
+        funcion_notificacion "${notifi_array[@]}" && unset notifi_array
+}
 
 funcion_evaluacion_tecnico
 funcion_dialog_resultado
