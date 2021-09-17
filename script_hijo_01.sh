@@ -40,7 +40,7 @@ notifi_array=(
 )
 funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
-funcion_borrado_basura
+
 
 funcion_borrado_basura(){
     #borrado de archivos inicio
@@ -50,6 +50,7 @@ funcion_borrado_basura(){
     rm /home/maxheadroom/Test_resultados/discos_duros.txt
 }
 
+funcion_borrado_basura
 
 
 #archivos de inicio
