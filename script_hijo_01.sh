@@ -173,7 +173,7 @@ funcion_stress_cpu(){
         )
         funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 }
-
+funcion_stress_cpu
 funcion_evaluacion_tecnico
 funcion_dialog_resultado
 #funcion_xterm_curseofwar
