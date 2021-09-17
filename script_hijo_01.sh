@@ -16,7 +16,7 @@
 # Inicio de shell
 
 #killall -9 curseofwar # matamos proceso del juego de prueba, asi mismo este se comentara cuando pase a producción
-
+RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
 funcion_notificacion(){
     if [[ $# = 4 ]]
         then
@@ -44,7 +44,7 @@ funcion_borrado_basura
 
 funcion_borrado_basura(){
     #borrado de archivos inicio
-    RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
+    
     rm /home/maxheadroom/Test_resultados/perfil_computo.txt
     rm /home/maxheadroom/Test_resultados/archivos_raw/temp_tec.txt
     rm /home/maxheadroom/Test_resultados/discos_duros.txt
