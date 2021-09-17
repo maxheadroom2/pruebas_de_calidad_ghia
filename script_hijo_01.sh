@@ -28,7 +28,7 @@ funcion_notificacion(){
 
 source ./home/maxheadroom/Scripts/bash_script/script_hijo_00.sh
 
-Musica_Test=$(Musica_pruebas)
+Musica_pruebas
 
 notifi_array=( 
 
