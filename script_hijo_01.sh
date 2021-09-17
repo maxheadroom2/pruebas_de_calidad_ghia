@@ -157,7 +157,7 @@ funcion_memoria_usb(){
 }
 
 
-#funcion_evaluacion_tecnico
-#funcion_dialog_resultado
+funcion_evaluacion_tecnico
+funcion_dialog_resultado
 #funcion_xterm_curseofwar
 #funcion_memoria_usb
