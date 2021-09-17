@@ -26,6 +26,20 @@ funcion_notificacion(){
         fi          
 }
 
+source ./home/maxheadroom/Scripts/bash_script/script_hijo_01.sh
+
+Musica_Test=$(Musica_pruebas)
+
+notifi_array=( 
+
+"half-life-alyx" #icono
+"Inicio de pruebas automaticas" #Titulo
+"$Musica_Test" # mensaje
+)
+funcion_notificacion "${notifi_array[@]}" && unset notifi_array
+
+
+
 
 notifi_array=( 
 "1000" #Tiempo
