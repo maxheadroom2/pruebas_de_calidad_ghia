@@ -31,8 +31,10 @@ funcion_nudo(){
 }
 
 source ./script_hijo_00XX.sh
+source ./script_hijo_00XX.sh
 
 funcion_Data
+funcion_nudo
 
 Musica_l=$(source ./script_hijo_00X.sh)
 
