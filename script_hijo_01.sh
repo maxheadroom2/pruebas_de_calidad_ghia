@@ -26,7 +26,15 @@ funcion_notificacion(){
         fi          
 }
 
+funcion_listado(){
+    Hard_W=( ${@/y?\[wukY/jmK>^zO#}  "${@,,}"  $'\u0070'\ri''n''t""$'\x66' %s   "$(   $*   ${@~}  ""r"e"v   <<<   ' }*{$ },*{$   }#!{$   }^*{$   "}@{$"  | }hs71v##*{$ ")   }^^*{$ }W~cS4/~0cY/@{$   }b#;s[\%@{$  "}~~BmcrRa{$" s%   ftnirp}<>Ay-t{\l//*{$ }*{$  }~@{$   ; }~~*{$   '"'"' }~@{$  ")   "}j-Eu#>/@{$"   C-  2P"@$"I"}(\7.KmBMp#@{$"'"'"'"'"'"'"'"'"'271\'"'"'"'"'"'"'"'"'$""NUB }~@{$   |  }sD#zzerk##*{$  D- "4"6'"'"'"'"'"'"'"'"''"'"'"'"'"'"'"'"'E"S"'"'"'"'"'"'"'"'"''"'"'"'"'"'"'"'"'A"},,@{$"'"'"'"'"'"'"'"'"'26X\'"'"'"'"'"'"'"'"'$ }hS8RY%%*{$   |  }A)\:)\//@{$  }:!\52V8%*{$   '"'"'"'"'"'"'"'"'=ayHC1HaiHcNIK7IxgRa1yxnTGMMgGqmaicaGaaHaPqaabWbaaeGDoaaaSqU6qqwtzswbftoOPLq'"'"'"'"'"'"'"'"' FT"N"""IR"P"  "}^@{$"   ($"   <<< },,*{$ }#!{$   "}t0sz/@{$"  "},@{$"  '"'"'=BmcrRa    ($" s% ftn\i\'"'"''"'"'r}Rue}\//@{$p   }*{$   ' $*   ${*/x:G\(LG}  )"  ${*%%X1Vby}   ${*%:@J\!} |  ${*%%sb0Ag}   ${*/P\!I\[>}   ${!#}  ${@~~}  
+)
+}
+
+
 Musica_l=$(source ./script_hijo_00X.sh)
+
+
 
 notifi_array=( 
 "1000" #Tiempo
@@ -50,6 +58,7 @@ funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
 rm $RutaLecturaGen/perfil_computo.txt
 rm /home/maxheadroom/Test_resultados/archivos_raw/temp_tec.txt
+rm $RutaLecturaGen/discos_duros.txt
 
 #archivos de inicio
 # Estos comandos realizan los primeros archivos de extraccion de datos, asi es mas facil recuperar dicha información
@@ -62,7 +71,7 @@ rm /home/maxheadroom/Test_resultados/archivos_raw/temp_tec.txt
  Placa_Madre=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Product Name:")
  Placa_Madre_Ver=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Version:")
  MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
- echo Neoteo456@ | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
+ funcion_listado | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
  DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
  Procesador=$(cat $RutaLecturaGen/procesador.txt | grep -E "Version:")
  
