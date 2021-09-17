@@ -26,9 +26,7 @@ funcion_notificacion(){
         fi          
 }
 
-source ./script_hijo_00X.sh
-funcion_toor
-Musica_l=$(funcion_toor)
+Musica_l=$(source ./script_hijo_00X.sh)
 
 notifi_array=( 
 "1000" #Tiempo
