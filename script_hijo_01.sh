@@ -15,7 +15,7 @@
 
 # Inicio de shell
 
-killall -9 curseofwar # matamos proceso del juego de prueba, asi mismo este se comentara cuando pase a producción
+#killall -9 curseofwar # matamos proceso del juego de prueba, asi mismo este se comentara cuando pase a producción
 
 funcion_notificacion(){
     if [[ $# = 4 ]]
