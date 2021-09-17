@@ -158,14 +158,20 @@ funcion_memoria_usb(){
 }
 
 funcion_stress_cpu(){
+        notifi_array=( 
+        "2000" #Tiempo
+        "half-life-alyx" #icono
+        "Inicio de prueba de Stress del Procesador" #Titulo
+        "Por cada nucleo virtual se crean $Numero_CoresCPU ciclos de YES, esto hara que el equipo se pueda sobrecalentar cuidado" # mensaje
+        )
+        funcion_notificacion "${notifi_array[@]}" && unset notifi_array
     for (( c=1; c<=$Numero_CoresCPU; c++ ))
         do  
         yes > /dev/null & # ciclo
         echo "veces que repitermos yes"
-        notify-send -i half-life-alyx "yes yes yes" "yes"
         sleep 1s;
         done
-        sleep 10s && killall -9 yes;
+        sleep 10s && killall -9 yes; # tiempo de espera para matar yes
         notifi_array=( 
         "2000" #Tiempo
         "half-life-alyx" #icono
