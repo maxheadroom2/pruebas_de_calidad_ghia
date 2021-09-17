@@ -27,7 +27,6 @@ funcion_notificacion(){
 }
 
 
-
 source ./script_hijo_00XX.sh
 funcion_Data
 
