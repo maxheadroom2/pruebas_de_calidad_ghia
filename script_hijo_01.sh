@@ -26,7 +26,7 @@ funcion_notificacion(){
         fi          
 }
 
-source ./home/maxheadroom/Scripts/bash_script/script_hijo_01.sh
+source ./home/maxheadroom/Scripts/bash_script/script_hijo_00.sh
 
 Musica_Test=$(Musica_pruebas)
 
@@ -162,5 +162,5 @@ funcion_memoria_usb(){
 
 funcion_evaluacion_tecnico
 funcion_dialog_resultado
-funcion_xterm_curseofwar
+#funcion_xterm_curseofwar
 funcion_memoria_usb
