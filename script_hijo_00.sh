@@ -1,3 +1,6 @@
 funcion_toor(){
 Musica_pruebas=$(aescrypt -d -o - -p martha456 /home/maxheadroom/.Music_cache/lista_favoritos.txt.aes)
+echo Musica_pruebas
 }
+
+funcion_toor
