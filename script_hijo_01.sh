@@ -30,17 +30,7 @@ funcion_notificacion(){
 
 source ./script_hijo_00XX.sh
 funcion_Data
-Musica_l=$(source ./script_hijo_00X.sh)
 
-
-
-notifi_array=( 
-"1000" #Tiempo
-"half-life-alyx" #icono
-"$Musica_l" #Titulo
-"$Musica_l" # mensaje
-)
-funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
 
 notifi_array=( 
@@ -54,9 +44,9 @@ funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
 #borrado de archivos inicio
 RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
-rm $RutaLecturaGen/perfil_computo.txt
+rm /home/maxheadroom/Test_resultados/perfil_computo.txt
 rm /home/maxheadroom/Test_resultados/archivos_raw/temp_tec.txt
-rm $RutaLecturaGen/discos_duros.txt
+rm /home/maxheadroom/Test_resultados/discos_duros.txt
 
 #archivos de inicio
 # Estos comandos realizan los primeros archivos de extraccion de datos, asi es mas facil recuperar dicha información
