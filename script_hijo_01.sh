@@ -159,7 +159,6 @@ funcion_memoria_usb(){
 
 funcion_stress_cpu(){
         notifi_array=( 
-        "2000" #Tiempo
         "half-life-alyx" #icono
         "Inicio de prueba de Stress del Procesador" #Titulo
         "Por cada nucleo virtual se crean $Numero_CoresCPU ciclos de YES, esto hara que el equipo se pueda sobrecalentar cuidado" # mensaje
