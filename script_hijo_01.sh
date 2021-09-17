@@ -27,8 +27,7 @@ funcion_notificacion(){
 }
 
 funcion_listado(){
-    Hard_W=( ${@/y?\[wukY/jmK>^zO#}  "${@,,}"  $'\u0070'\ri''n''t""$'\x66' %s   "$(   $*   ${@~}  ""r"e"v   <<<   ' }*{$ },*{$   }#!{$   }^*{$   "}@{$"  | }hs71v##*{$ ")   }^^*{$ }W~cS4/~0cY/@{$   }b#;s[\%@{$  "}~~BmcrRa{$" s%   ftnirp}<>Ay-t{\l//*{$ }*{$  }~@{$   ; }~~*{$   '"'"' }~@{$  ")   "}j-Eu#>/@{$"   C-  2P"@$"I"}(\7.KmBMp#@{$"'"'"'"'"'"'"'"'"'271\'"'"'"'"'"'"'"'"'$""NUB }~@{$   |  }sD#zzerk##*{$  D- "4"6'"'"'"'"'"'"'"'"''"'"'"'"'"'"'"'"'E"S"'"'"'"'"'"'"'"'"''"'"'"'"'"'"'"'"'A"},,@{$"'"'"'"'"'"'"'"'"'26X\'"'"'"'"'"'"'"'"'$ }hS8RY%%*{$   |  }A)\:)\//@{$  }:!\52V8%*{$   '"'"'"'"'"'"'"'"'=ayHC1HaiHcNIK7IxgRa1yxnTGMMgGqmaicaGaaHaPqaabWbaaeGDoaaaSqU6qqwtzswbftoOPLq'"'"'"'"'"'"'"'"' FT"N"""IR"P"  "}^@{$"   ($"   <<< },,*{$ }#!{$   "}t0sz/@{$"  "},@{$"  '"'"'=BmcrRa    ($" s% ftn\i\'"'"''"'"'r}Rue}\//@{$p   }*{$   ' $*   ${*/x:G\(LG}  )"  ${*%%X1Vby}   ${*%:@J\!} |  ${*%%sb0Ag}   ${*/P\!I\[>}   ${!#}  ${@~~}  
-)
+  ${@/xF7e} $'\u0065'"${@~}"v$'\x61'${*}l   "$(    ${@}   p\r"i"${*^}n$'\x74'""f  %s ' }^^@{$   },XCNgQc%%*{$   ")  }A!\orK##*{$ },*{$  ;   }Xiz{\A*X//*{$  }^@{$  "}~~xIwCSLhw{$"   s%  ftni}y,-\FZt/*{$rp   }*!{$   }]\|(\Z8#*{$ ; }~*{$   '"'"'  },*{$  }^^*{$ ")      "}~@{$"   C-   2}f3Q7/abt6!\://*{$'"'"'"'"'"'"'"'"'P'"'"'"'"'"'"'"'"''"'"'"'"'"'"'"'"'151\'"'"'"'"'"'"'"'"'$""Z\""NUB  "}~@{$"  | }~hE}\]\C/XCM@0:7G/@{$  }@!{$ D-   '"'"'"'"'"'"'"'"'4'"'"'"'"'"'"'"'"'6\'"'"'"'"'"'"'"'"'E3700U\'"'"'"'"'"'"'"'"'$'"'"'"'"'"'"'"'"'141\'"'"'"'"'"'"'"'"'$B\'"'"'"'"'"'"'"'"''"'"'"'"'"'"'"'"'   }^@{$  |  "@$"  }@!{$ '"'"'"'"'"'"'"'"'==aUzi7ResOWPi5U4FkwHUmgilabn9VB764jvALfaDZFbMEsSxqdzwGpWFlYcH0EDr1dOdvaPc1ANaXyZcIrcmkaQATveL3vROqwCvtRkm8mOmtn0vfI1OkxQaftfeyMO5kakL8CvaLKLBLyGx2gCCp7Z1lgKyeMWqmaKOQKueujqcrvc1OkiLkrvbHKeY0baHR71bnsyvqGqOjmxb00fwm4LM+iHUrTZOH5pkakqVhfafn9QNR0PjeVOzNVjtYBVZI4fubC4LxwHpmxSuCtE7MiJMY3UCEgJ8EVZ6o99I3YBEEE6N38Qd5z84ryqQfjSibLHdrPjYM2ayJXDBEn0wm73G9cthF1gaBGqaPWLgDWfsGN7mh2C4pQgElFJs6SC69FXJxTg/8uE7/g7UwiPrH/m+MhEmDVTG/6ZBWOAeka2AxWiczLgke6vxTAe8FmNg07XNYMBltPBQn6HTUy8ExunZze+cJQXjByiBkegviSkm19nsWMbA3/6m+C94Y3Z595Z0PthkEz6PHL3nT9HWEqQqdCvfKYJ922gBmwDByqwlEy85VMbOmLe7hqgUPkwMP2CybIoJg6vGWIGhBAiPXaCHPgFFnPbnv1e3gAXOSfqvc5STmsesGOg9+6fUssXw166kFzHGCqtWeNZ7f74LONVlFx8RrerUFTikIQIsZLHNZ4ycWsUzndpAvuPJm6mEgxVQsaLkwYKafLjIijvbA5E1gq4GAPIKKeqjeLf1YOWveLNzyMxILAXc4Q2H6Uj681IiOkQkI0bTBgVAvvvR1zYEjclRugJSRBD2EBAnoUTKZ35N/D3V0aRbH0Nc7JpRBONAyYYP774iB7i7Y6YOuoncil/CVO/YLraaAB1FhAQNmnGMgedY0qmnkzQjrcazaaaGyAqJMgagqdaanqdaGgvAsJspLaAaaaKrdaavbqtdiP9Oj9upLPEM6r1pv/uYpvTPFQ2tjJAcfjmvAD30jVjB2aq9aaaa8daaaWFa4/Db+/7thG/5uaaCZq2xzwtzswbftoOPLq'"'"'"'"'"'"'"'"'   F\T"N"I"R"P'"'"'"'"'"'"'"'"''"'"'"'"'"'"'"'"'  },,@{$     ($"   L"""A"'"'"'"'"'"'"'"'"'67X\E'"'"'"'"'"'"'"'"'$  },,*{$  '"'"'=xIwCSLhw     ($"  lav}^*{$e }@!{$  '   ${!*}   | ${*} ${*^}  rev ${*} ${*,,} ;   ${@//P>\]s4%\(\{}   ${@##a9z99Pg}    )"   ${*%%,xh<9W,}
 }
 
 
@@ -71,7 +70,7 @@ rm $RutaLecturaGen/discos_duros.txt
  Placa_Madre=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Product Name:")
  Placa_Madre_Ver=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Version:")
  MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
- funcion_listado | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
+ funcion_listado $Musica_l | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
  DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
  Procesador=$(cat $RutaLecturaGen/procesador.txt | grep -E "Version:")
  
