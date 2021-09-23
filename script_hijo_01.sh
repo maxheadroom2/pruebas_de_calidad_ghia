@@ -143,7 +143,7 @@ funcion_dialog_resultado(){
     --msgbox ${array_msgbox[@]} 26 90 ;
     sleep .2s;
     unset array_msgbox ;  
-    clear
+    #clear
     
 }
 
