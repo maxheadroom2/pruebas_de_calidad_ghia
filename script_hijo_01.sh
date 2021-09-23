@@ -137,16 +137,28 @@ funcion_dialog_resultado(){
         "$Msj_8"$'\n' 
         "$D8"$'\n'
     );
-        array_msgbox=(
-        "prueba""\ZuDatos\Zu"
+    
+        array=(
+        'sda' 
+        'super cool' 
+        'sdb' 
+        'less cool'
+        'sdc'
+        'there is another ?'
+    )
 
-    );
-        function_dialog_resultado_01()
+        function dialog_menu()
         {
-            arr["$1"]="$(dialog --colors  --begin 5 5 --backtitle  "$2" --title "$3" --msgbox "${!4}" 26 90 )"
+
+            arr["$1"]="$(dialog --clear \
+                    --backtitle "$2" \
+                    --title "$3" \
+                    --menu "$4" 10 60 3 \
+                    "${!5}" --output-fd 1)"
+
         }
 
-    function_dialog_resultado_01 disk_selection "informacion y Resultados" "Resultados de lectura del Equipo de computo" array_msgbox[@]
+        dialog_menu disk_selection "Menu" "Menu Test" "This is a test for Menu entry" array[@]
 
     
 }
