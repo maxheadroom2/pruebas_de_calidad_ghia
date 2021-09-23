@@ -121,8 +121,8 @@ funcion_dialog_resultado(){
     Msj_4="Codigo de Mother Board: "
     Msj_5="Version de Mother Board: "
     Msj_6="Procesador: "
-    Msj_7="Datos de Disco(s) instalados ---"
-    Msj_8="Datos de Slots de Memoria RAM ---"
+    Msj_7="Datos de Disco(s) instalados ↓"
+    Msj_8="Datos de Slots de Memoria RAM ↓"
        sleep .5s;
     TenicoMatch=$(cat $Ru/temp_tec.txt)# lee los datos del tecnico
     dialog --begin 5 5 --backtitle "Información y Resultados"  \
