@@ -138,11 +138,8 @@ funcion_dialog_resultado(){
         "$D8"$'\n'
     );
         array_msgbox=(
-        "prueba""\ZuDatos\Zu"$'\n'
-        "prueba""\ZuDatos\Zu"$'\n' 
-        "prueba""\ZuDatos\Zu"$'\n' 
-        "prueba""\ZuDatos\Zu"$'\n' 
-        "prueba""\ZuDatos\Zu"$'\n'  
+        "prueba""\ZuDatos\Zu"
+
     );
         function_dialog_resultado_01()
         {
