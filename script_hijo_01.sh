@@ -166,7 +166,9 @@ funcion_dialog_resultado(){
 
         }
 
-        dialog_menu_01 Resultados_de_pruebas "Informacion y Resultados" "Datos" "Resultados de lectura del Equipo de computo" array_msgbox[@]
+    dialog_menu_01 Resultados_de_pruebas "Informacion y Resultados" "Datos" "Resultados de lectura del Equipo de computo" array_msgbox[@]
+    unset array_msgbox ;  
+    clear
 
     
 }
