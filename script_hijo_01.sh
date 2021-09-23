@@ -125,24 +125,8 @@ funcion_dialog_resultado(){
     Msj_8="Datos de Slots de Memoria RAM ↓"
     sleep .5s;
     array_msgbox=(
-        "$Msj_0"
-        "$D0"
-        "$Msj_1"
-        "$D1" 
-        "$Msj_2"
-        "$D2" 
-        "$Msj_3"
-        "$D3"
-        "$Msj_4"
-        "$D4"
-        "$Msj_5"
-        "$D5"
-        "$Msj_6"
-        "$D6"
-        "$Msj_7"
-        "$D7"
-        "$Msj_8"
-        "$D8"
+        '"$Msj_0"'
+
     );
     
         function dialog_menu_01()
