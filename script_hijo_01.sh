@@ -158,7 +158,7 @@ funcion_dialog_resultado(){
 
         }
 
-        dialog_menu disk_selection "Menu" "Menu Test" "This is a test for Menu entry" array[@]
+        dialog_menu fff "Menu" "Menu Test" "This is a test for Menu entry" array[@]
 
     
 }
