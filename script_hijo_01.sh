@@ -136,7 +136,7 @@ funcion_dialog_resultado(){
                     --colors --begin 5 5 \
                     --backtitle "$2" \
                     --title "$3" \
-                    --msgbox "Datos" 26 90 ;
+                    --msgbox "${!5} 26 90"
                     )"
 
         }
