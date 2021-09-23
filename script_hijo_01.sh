@@ -161,7 +161,7 @@ funcion_dialog_resultado(){
                     --colors --begin 5 5 \
                     --backtitle "$2" \
                     --title "$3" \
-                    --menu "$4" 26 90 \
+                    --menu "$4" 26 90 8 \
                     "${!5}" --output-fd 1)"
 
         }
