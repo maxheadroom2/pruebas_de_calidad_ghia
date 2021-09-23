@@ -125,7 +125,7 @@ funcion_dialog_resultado(){
     Msj_8="Datos de Slots de Memoria RAM ↓"
     sleep .5s;
     array_msgbox=(
-        "$Msj_0"
+        '"'$Msj_0'"'
 
     );
     
