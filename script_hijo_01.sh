@@ -125,7 +125,7 @@ funcion_dialog_resultado(){
     Msj_8="Datos de Slots de Memoria RAM ↓"
        sleep .5s;
     TenicoMatch=$(cat $Ru/temp_tec.txt)# lee los datos del tecnico
-    dialog --begin 5 5 --backtitle "Información y Resultados"  \
+    dialog --colors --begin 5 5 --backtitle "Información y Resultados"  \
     --title "Resultados de lectura del Equipo de computo " \
     --msgbox "$Msj_0""\Zu$D0"$'\n'"$Msj_1""$D1"$'\n'"$Msj_2""$D2"$'\n'"$Msj_3""$D3"$'\n'"$Msj_4""$D4"$'\n'"$Msj_5""$D5"$'\n'"$Msj_6""$D6"$'\n'"$Msj_7"$'\n'"$D7"$'\n'"$Msj_8"$'\n'"$D8"$'\n' 26 90 ;  clear
 }
