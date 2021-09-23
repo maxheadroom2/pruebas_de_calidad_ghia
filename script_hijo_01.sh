@@ -142,17 +142,16 @@ funcion_dialog_resultado(){
     
     function dialog_menu_01()
     {
-            dialog --clear \
-                    --colors --begin 5 5 \
-                    --backtitle "${1}" \
-                    --title "${2}" \
-                    --msgbox "${!3}" 26 90
+        dialog --clear \
+        --colors --begin 5 5 \
+        --backtitle "${1}" \
+        --title "${2}" \
+        --msgbox "${!3}" 26 90
     }
-
     dialog_menu_01 "Informacion y Resultados" \
     "Resultados de lectura del Equipo de computo" array_msgbox[*] # Nota usar * concatena y usar @ envia variables 1 x 1
     unset array_msgbox ;  
-    #clear
+    clear
 
     
 }
