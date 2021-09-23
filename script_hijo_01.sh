@@ -123,25 +123,34 @@ funcion_dialog_resultado(){
     Msj_6="Procesador: "
     Msj_7="Datos de Disco(s) instalados ↓"
     Msj_8="Datos de Slots de Memoria RAM ↓"
+    TenicoMatch=$(cat $Ru/temp_tec.txt)# lee los datos del tecnico
     sleep .5s;
     array_msgbox=(
-        '"'$Msj_0'"'
+        "$Msj_0""\Zu$D0\Zu"$'\n' 
+        "$Msj_1""$D1"$'\n' 
+        "$Msj_2""$D2"$'\n' 
+        "$Msj_3""$D3"$'\n' 
+        "$Msj_4""$D4"$'\n' 
+        "$Msj_5""$D5"$'\n' 
+        "$Msj_6""$D6"$'\n' 
+        "$Msj_7"$'\n' 
+        "$D7"$'\n' 
+        "$Msj_8"$'\n' 
+        "$D8"$'\n'
 
     );
     
-        function dialog_menu_01()
-        {
-
-            arr["$1"]="$(dialog --clear \
+    function dialog_menu_01()
+    {
+            
+            dialog --clear \
                     --colors --begin 5 5 \
-                    --backtitle "$2" \
-                    --title "$3" \
-                    --msgbox "${!5} 26 90"
-                    )"
+                    --backtitle "${1}" \
+                    --title "${2}" \
+                    --msgbox "${!3}" 26 90
+    }
 
-        }
-
-    dialog_menu_01 Resultados_de_pruebas "Informacion y Resultados" "Datos" "Resultados de lectura del Equipo de computo" array_msgbox[@]
+    dialog_menu_01 "Informacion y Resultados" "Resultados de lectura del Equipo de computo" array_msgbox[@]
     unset array_msgbox ;  
     #clear
 
