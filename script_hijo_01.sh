@@ -142,7 +142,7 @@ funcion_dialog_resultado(){
             arr["$1"]="$(dialog --colors  --begin 5 5 --backtitle  "$2" --title "$3" --msgbox "${!4}" 26 90 )"
         }
 
-    function_dialog_resultado_01 "informacion y Resultados" "Resultados de lectura del Equipo de computo " array_msgbox[@]
+    function_dialog_resultado_01 disk_selection "informacion y Resultados" "Resultados de lectura del Equipo de computo" array_msgbox[@]
 
     
 }
