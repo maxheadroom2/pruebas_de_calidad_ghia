@@ -219,7 +219,7 @@ funcion_init_01(){
     #Falta anexar el del disco duro
 }
 
-#funcion_stress_cpu
+funcion_stress_cpu
 funcion_evaluacion_tecnico
 funcion_dialog_resultado
 #funcion_xterm_curseofwar
