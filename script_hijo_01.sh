@@ -137,6 +137,13 @@ funcion_dialog_resultado(){
         "$Msj_8"$'\n' 
         "$D8"$'\n'
     );
+        array_msgbox=(
+        "prueba""\ZuDatos\Zu"$'\n'
+        "prueba""\ZuDatos\Zu"$'\n' 
+        "prueba""\ZuDatos\Zu"$'\n' 
+        "prueba""\ZuDatos\Zu"$'\n' 
+        "prueba""\ZuDatos\Zu"$'\n'  
+    );
         function_dialog_resultado_01()
         {
             arr["$1"]="$(dialog --colors  --begin 5 5 --backtitle  "$2" --title "$3" --msgbox "${!4}" 26 90 )"
