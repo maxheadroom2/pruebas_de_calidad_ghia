@@ -141,9 +141,9 @@ funcion_dialog_resultado(){
     dialog --colors --begin 5 5 --backtitle "Información y Resultados"  \
     --title "Resultados de lectura del Equipo de computo " \
     --msgbox ${array_msgbox[@]} 26 90 ;
-    sleep .2s;
-    unset array_msgbox ;  
-    clear
+    #sleep .2s;
+    #unset array_msgbox ;  
+    #clear
     
 }
 
