@@ -140,7 +140,10 @@ funcion_dialog_resultado(){
     TenicoMatch=$(cat $Ru/temp_tec.txt)# lee los datos del tecnico
     dialog --colors --begin 5 5 --backtitle "Información y Resultados"  \
     --title "Resultados de lectura del Equipo de computo " \
-    --msgbox ${array_msgbox[@]} 26 90 && unset array_msgbox ;  clear
+    --msgbox ${array_msgbox[@]} 26 90 ;
+    sleep .2s;
+    unset array_msgbox ;  
+    clear
     
 }
 
