@@ -125,18 +125,18 @@ funcion_dialog_resultado(){
     Msj_8="Datos de Slots de Memoria RAM ↓"
     sleep .5s;
     array_msgbox=(
-        '"$Msj_0"'
+        "$Msj_0"
 
     );
     
         function dialog_menu_01()
         {
 
-            arr["$1"]="$(dialog  \
+            arr["$1"]="$(dialog --clear \
                     --colors --begin 5 5 \
                     --backtitle "$2" \
                     --title "$3" \
-                    --msgbox "${!5}" 26 90 \
+                    --msgbox "${!5}" 26 90 ;
                     )"
 
         }
