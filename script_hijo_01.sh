@@ -145,24 +145,15 @@ funcion_dialog_resultado(){
         "$D8"
     );
     
-        array=(
-        'sda' 
-        'super cool' 
-        'sdb' 
-        'less cool'
-        'sdc'
-        'there is another ?'
-    )
-
         function dialog_menu_01()
         {
 
-            arr["$1"]="$(dialog --clear \
+            arr["$1"]="$(dialog  \
                     --colors --begin 5 5 \
                     --backtitle "$2" \
                     --title "$3" \
-                    --menu "$4" 26 90 10 \
-                    "${!5}" --output-fd 1)"
+                    --msgbox "${!5}" 26 90 \
+                    )"
 
         }
 
