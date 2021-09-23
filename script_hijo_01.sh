@@ -114,35 +114,23 @@ funcion_dialog_resultado(){
     D7=$DiscoDuro
     D8=$MemoriaRam
     #Variables del texto para caja del dialog
-    Msj_0="Serie del equipo de computo: "
-    Msj_1="Siglas del tecnico: "
-    Msj_2="Modelo del equipo de computo: "
-    Msj_3="Version de Bios: "
-    Msj_4="Codigo de Mother Board: "
-    Msj_5="Version de Mother Board: "
-    Msj_6="Procesador: "
-    Msj_7="Datos de Disco(s) instalados ↓"
-    Msj_8="Datos de Slots de Memoria RAM ↓"
+    M0="Serie del equipo de computo: "
+    M1="Siglas del tecnico: "
+    M2="Modelo del equipo de computo: "
+    M3="Version de Bios: "
+    M4="Codigo de Mother Board: "
+    M5="Version de Mother Board: "
+    M6="Procesador: "
+    M7="Datos de Disco(s) instalados ↓"
+    M8="Datos de Slots de Memoria RAM ↓"
     TenicoMatch=$(cat $Ru/temp_tec.txt)# lee los datos del tecnico
     sleep .5s;
     array_msgbox=(
-        "$Msj_0""\Zu$D0\Zu"$'\n' 
-        "$Msj_1""$D1"$'\n' 
-        "$Msj_2""$D2"$'\n' 
-        "$Msj_3""$D3"$'\n' 
-        "$Msj_4""$D4"$'\n' 
-        "$Msj_5""$D5"$'\n' 
-        "$Msj_6""$D6"$'\n' 
-        "$Msj_7"$'\n' 
-        "$D7"$'\n' 
-        "$Msj_8"$'\n' 
-        "$D8"$'\n'
-
+        "$M0""$D0"$'\n'"$M1""$D1'"$'\n'"$M1""$D1"$'\n'"$M2""$D2"$'\n'"$M3""$D3"$'\n'"$M4""$D4"$'\n'"$M5""$D5"$'\n'"$M6""$D6"$'\n'"$M7"$'\n'"$D7"$'\n'"$M8"$'\n'"$D8"$'\n'
     );
     
     function dialog_menu_01()
     {
-            
             dialog --clear \
                     --colors --begin 5 5 \
                     --backtitle "${1}" \
