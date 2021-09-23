@@ -11,7 +11,6 @@
 ###############################################################################
 
 # notas 
-# git-force-clone -b main https://github.com/maxheadroom2/pruebas_de_calidad_ghia.git ./bash_scripts && sudo chmod u+x *.sh
 
 
 # Inicio de scritp ############################################################
