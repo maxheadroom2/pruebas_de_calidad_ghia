@@ -126,7 +126,18 @@ funcion_dialog_resultado(){
     TenicoMatch=$(cat $Ru/temp_tec.txt)# lee los datos del tecnico
     sleep .5s;
     array_msgbox=(
-        "$M0""$D0"$'\n'"$M1""$D1'"$'\n'"$M1""$D1"$'\n'"$M2""$D2"$'\n'"$M3""$D3"$'\n'"$M4""$D4"$'\n'"$M5""$D5"$'\n'"$M6""$D6"$'\n'"$M7"$'\n'"$D7"$'\n'"$M8"$'\n'"$D8"$'\n'
+        "$M0""$D0"$'\n'
+        "$M1""$D1'"$'\n'
+        "$M1""$D1"$'\n'
+        "$M2""$D2"$'\n'
+        "$M3""$D3"$'\n'
+        "$M4""$D4"$'\n'
+        "$M5""$D5"$'\n'
+        "$M6""$D6"$'\n'
+        "$M7"$'\n'
+        "$D7"$'\n'
+        "$M8"$'\n'
+        "$D8"$'\n'
     );
     
     function dialog_menu_01()
@@ -138,7 +149,8 @@ funcion_dialog_resultado(){
                     --msgbox "${!3}" 26 90
     }
 
-    dialog_menu_01 "Informacion y Resultados" "Resultados de lectura del Equipo de computo" array_msgbox[@]
+    dialog_menu_01 "Informacion y Resultados" \
+    "Resultados de lectura del Equipo de computo" array_msgbox[*] # Nota usar * concatena y usar @ envia variables 1 x 1
     unset array_msgbox ;  
     #clear
 
