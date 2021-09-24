@@ -6,12 +6,27 @@
 # modificado el 10 de Agosto 2021
 # rev-6
 
+# programas anexos 
+# bashfuscator Link https://snapcraft.io/install/bashfuscator/ubuntu & https://bashfuscator.readthedocs.io/en/latest/Usage.html
+# aescrypt link https://forums.packetizer.com/viewtopic.php?t=1173 & https://www.aescrypt.com/linux_aes_crypt.html
+
 ###############################################################################
 # Descripcion: Scritp padre el cual desarrollara las pruebas del area de calidad                          
 ###############################################################################
 
 # notas 
-# git-force-clone -b main https://github.com/maxheadroom2/pruebas_de_calidad_ghia.git ./bash_scripts ; sleep 1s && echo Neoteo456@ | sudo -S ls /root && sudo chmod u+x /home/maxheadroom/Scripts/bash_scripts/*.sh && bash "/home/maxheadroom/Scripts/bash_scripts/script_hijo_01.sh"
+# GIT 
+# Para actualizar el script en el equipo de produccion cree un alias en ~/.bashrc a lo cual añadi una funcion llamada funcion_actualizar_script()
+# donde esta funcion la llama el alias de update-script.
+# Ofuscando codigo
+# Para ofuscar el txt plano use aescrypt en el cual añado el script original no ofuscado al .gitignore a lo cual
+# cree un script donde usando bashfuscator creo un  .sh con los datos para ofuscar el codigo de lectura del txt
+# esto por que use un esquema para mandar la clave de root por medio de una tuberia, evitando que se vea en texto plano 
+# parametros de bashofuscator, para hacerlo mas ligero ya que puede crear script muy pesados y se llegan a colgar
+# bashfuscator -c "echo contraseña_root" --choose-mutators compress/bzip2 command/case_swapper command/reverse --layers 1 --test
+
+
+
 
 # Inicio de shell
 
@@ -25,6 +40,7 @@ funcion_notificacion(){
              notify-send -i "$1" "$2" "$3"
         fi          
 }
+
 
 
 source ./script_hijo_00XX.sh
