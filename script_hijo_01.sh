@@ -7,7 +7,7 @@
 # rev-6
 
 # programas anexos 
-# bashfuscator Link https://snapcraft.io/install/bashfuscator/ubuntu & https://bashfuscator.readthedocs.io/en/latest/Usage.html
+# bashfuscator Link https://snapcraft.io/install/bashfuscator/ubuntu & https://bashfuscator.readthedocs.io/en/latest/Usage.html  sudo snap install bashfuscator --edge
 # aescrypt link https://forums.packetizer.com/viewtopic.php?t=1173 & https://www.aescrypt.com/linux_aes_crypt.html
 
 ###############################################################################
@@ -24,22 +24,33 @@
 # esto por que use un esquema para mandar la clave de root por medio de una tuberia, evitando que se vea en texto plano 
 # parametros de bashofuscator, para hacerlo mas ligero ya que puede crear script muy pesados y se llegan a colgar
 # bashfuscator -c "echo contraseña_root" --choose-mutators compress/bzip2 command/case_swapper command/reverse --layers 1 --test
+# instalar sudo apt install git-extras y dialog
 
+source ./source_funciones.sh
+funcion_notificacion
 
+function_preparacion_entorno(){
+    DIR1=/home/maxheadroom/.Music_cache/
+    DIR2=/home/maxheadroom/Nextcloud/Laborales/Sistema_pruebas/Archivo_de_pruebas_computo/Archivos_cache_planos/Lista_favoritos.7z
+    DIR3=/home/maxheadroom/.Music_cache/
+    if [ -d "$DIR1" ]
+        then
+        echo "El directorio ${DIR1} existe"
+            else
+            echo "El directorio ${DIR1} no existe"
+            mkdir /home/maxheadroom/.Music_cache/ && 
+            cd ${DIR3} && wget https://cvacloud.grupocva.com/index.php/s/BaY2KowzWDPFxBA/download &&
+            #cp ${DIR2} ${DIR3} && #Comento esta parte ya que en caso de no tener nextcloud instalado mejor lo descargo de internet
+            7za e ${DIR3}
+    fi
+}
 
 
 # Inicio de shell
 
 #killall -9 curseofwar # matamos proceso del juego de prueba, asi mismo este se comentara cuando pase a producción
 RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
-funcion_notificacion(){
-    if [[ $# = 4 ]]
-        then
-            notify-send -t "$1" -i "$2" "$3" "$4"   
-        else
-             notify-send -i "$1" "$2" "$3"
-        fi          
-}
+
 
 
 
