@@ -6,8 +6,12 @@ function sum(){
 echo "Sum : $sum"
 }
 function res(){
-(( sum = $1 - $2 ))
-echo "Sum : $sum"
+    if [[ $# = 4 ]]
+        then
+            notify-send -t "$1" -i "$2" "$3" "$4"   
+        else
+             notify-send -i "$1" "$2" "$3"
+        fi          
 }
 
 
