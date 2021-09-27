@@ -3,7 +3,7 @@
 # Here we calculate the sum of parameters passed to the script
 function sum(){
 (( sum = $1 + $2 ))
-echo "Sum : $sum"
+echo "operacion es : $sum"
 }
 
 
