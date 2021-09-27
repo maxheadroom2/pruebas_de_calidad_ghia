@@ -1,7 +1,7 @@
 #!/bin/bash
 read -p "Enter two numbers a and b : " a b
 # Well you should do sanitize the user inputs for legal values
-cd /home/maxheadroom/Scripts/bash_script/
+#cd /home/maxheadroom/Scripts/bash_script/ ;
 ./sum.sh "$a" "$b"
 # Now the above line is high octane part
 # The "./" mentions that the "sum" script is in the same  folder as the driver
