@@ -6,8 +6,6 @@ function sum(){
 echo "operacion es : $sum"
 }
 
-
-
 sum "$@" # Passing value from the shell script wrapper to the function
 # $@ expands to the whole parameter input.
 # What is special about "$@". Again, the spaces in the original parameters are preserved if those parameters were of the form "`A B"`.
