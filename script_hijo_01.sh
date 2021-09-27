@@ -26,7 +26,7 @@
 # bashfuscator -c "echo contraseña_root" --choose-mutators compress/bzip2 command/case_swapper command/reverse --layers 1 --test
 # instalar sudo apt install git-extras y dialog
 
-source ./source_funciones.sh
+source ./home/maxheadroom/Scripts/bash_scripts/source_funciones.sh
 
 
 
@@ -56,7 +56,7 @@ RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
 
 
 
-source ./script_hijo_00XX.sh
+source ./home/maxheadroom/Scripts/bash_scripts/script_hijo_00XX.sh
 funcion_Data
 
 
