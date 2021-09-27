@@ -26,8 +26,10 @@
 # bashfuscator -c "echo contraseña_root" --choose-mutators compress/bzip2 command/case_swapper command/reverse --layers 1 --test
 # instalar sudo apt install git-extras y dialog
 
-source ./source_funciones.sh
-funcion_notificacion
+./source_funciones.sh
+
+
+
 
 function_preparacion_entorno(){
     DIR1=/home/maxheadroom/.Music_cache/
@@ -250,8 +252,8 @@ funcion_init_01(){
     #Falta anexar el del disco duro
 }
 
-funcion_stress_cpu
-funcion_evaluacion_tecnico
-funcion_dialog_resultado
+#funcion_stress_cpu
+#funcion_evaluacion_tecnico
+#funcion_dialog_resultado
 #funcion_xterm_curseofwar
 #funcion_memoria_usb
