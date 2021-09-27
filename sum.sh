@@ -5,14 +5,7 @@ function sum(){
 (( sum = $1 + $2 ))
 echo "Sum : $sum"
 }
-function res(){
-    if [[ $# = 4 ]]
-        then
-            notify-send -t "$1" -i "$2" "$3" "$4"   
-        else
-             notify-send -i "$1" "$2" "$3"
-        fi          
-}
+
 
 
 sum "$@" # Passing value from the shell script wrapper to the function
