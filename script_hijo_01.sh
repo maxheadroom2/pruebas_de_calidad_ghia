@@ -26,7 +26,7 @@
 # bashfuscator -c "echo contraseña_root" --choose-mutators compress/bzip2 command/case_swapper command/reverse --layers 1 --test
 # instalar sudo apt install git-extras y dialog
 
-./source_funciones.sh
+source ./source_funciones.sh
 
 
 
