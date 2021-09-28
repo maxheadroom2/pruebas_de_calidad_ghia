@@ -2,7 +2,7 @@
 #read -p "Enter two numbers a and b : " a b 
 # Well you should do sanitize the user inputs for legal values
 #cd /home/maxheadroom/Scripts/bash_script/ ;
-. sum.sh
+. source_funciones.sh
 #sum "$a" "$b" 
 notifi_array=( 
 "1000" #Tiempo
