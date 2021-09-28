@@ -7,7 +7,7 @@
 # rev-0
 
 source ./script_hijo_00XX.sh
-funcion_Data
+
 
 function funcion_notificacion(){
     if [[ $# = 4 ]]
