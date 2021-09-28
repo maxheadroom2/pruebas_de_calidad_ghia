@@ -58,7 +58,7 @@ funcion_notificacion(){
 #killall -9 curseofwar # matamos proceso del juego de prueba, asi mismo este se comentara cuando pase a producción
 RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
 
-source ./home/maxheadroom/Scripts/bash_scripts/script_hijo_00XX.sh
+source ./script_hijo_00XX.sh
 funcion_Data
 
 notifi_array=( 
