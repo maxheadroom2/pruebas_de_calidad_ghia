@@ -9,7 +9,7 @@
 source ./script_hijo_00XX.sh
 funcion_Data
 
-funcion_notificacion(){
+function funcion_notificacion(){
     if [[ $# = 4 ]]
         then
             notify-send -t "$1" -i "$2" "$3" "$4"   
@@ -18,7 +18,7 @@ funcion_notificacion(){
         fi          
 }
 
-funcion_memoria_usb(){
+function funcion_memoria_usb(){
     usb=SERIES
     WHILE=0
     while [ $CONTROL=0 ] ; do
@@ -38,7 +38,7 @@ funcion_memoria_usb(){
         done
 }
 
-funcion_stress_cpu(){
+function funcion_stress_cpu(){
         notifi_array=( 
             "cpu" #icono
             "Inicio de prueba de Stress del Procesador" #Titulo
@@ -61,7 +61,7 @@ funcion_stress_cpu(){
         funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 }
 
-funcion_init_01(){
+function funcion_init_01(){
     funcion_Data | sudo -S ls /root && sudo lshw -html > /home/maxheadroom/Test_resultados/archivos_raw/lshw.html
     funcion_Data | sudo -S ls /root && sudo lshw > /home/maxheadroom/Test_resultados/archivos_raw/lshw.txt
     funcion_Data | sudo -S ls /root && sudo dmidecode -t processor > /home/maxheadroom/Test_resultados/archivos_raw/procesador.txt
@@ -74,7 +74,7 @@ funcion_init_01(){
     #Falta anexar el del disco duro
 }
 
-funcion_creacion_reportes(){
+function funcion_creacion_reportes(){
     funcion_Data | sudo -S ls /root && sudo lshw -html > /home/maxheadroom/Test_resultados/archivos_raw/lshw.html
     funcion_Data | sudo -S ls /root && sudo lshw > /home/maxheadroom/Test_resultados/archivos_raw/lshw.txt
     funcion_Data | sudo -S ls /root && sudo dmidecode -t processor > /home/maxheadroom/Test_resultados/archivos_raw/procesador.txt
@@ -86,14 +86,14 @@ funcion_creacion_reportes(){
     funcion_Data | sudo -S ls /root && sudo dmidecode -t chassis > /home/maxheadroom/Test_resultados/archivos_raw/gabinete.txt
 }
 
-funcion_borrado_basura(){
+function funcion_borrado_basura(){
     #borrado de archivos inicio
     rm /home/maxheadroom/Test_resultados/archivos_raw/perfil_computo.txt
     rm /home/maxheadroom/Test_resultados/archivos_raw/temp_tec.txt
     rm /home/maxheadroom/Test_resultados/archivos_raw/discos_duros.txt
 }
 
-funcion_evaluacion_tecnico(){
+function funcion_evaluacion_tecnico(){
     n=1
     cat $ArchivoLocal/Listado_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
     if [[ $TecnicoLista = $TecnicoBios ]]
@@ -108,7 +108,7 @@ funcion_evaluacion_tecnico(){
     done
 }
 
-funcion_dialog_resultado(){
+function funcion_dialog_resultado(){
     #variables del dialog
     D0=$SerieComputo
     D1=$TecnicoBios
@@ -160,7 +160,7 @@ funcion_dialog_resultado(){
     clear
 }
 
-funcion_xterm_curseofwar(){
+function funcion_xterm_curseofwar(){
     
     killall -9 curseofwar
     killall -9 htop
