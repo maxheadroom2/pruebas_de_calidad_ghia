@@ -1,5 +1,5 @@
 #!/bin/bash
-read -p "Enter two numbers a and b : " a b 
+#read -p "Enter two numbers a and b : " a b 
 # Well you should do sanitize the user inputs for legal values
 #cd /home/maxheadroom/Scripts/bash_script/ ;
 . sum.sh
