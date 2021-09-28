@@ -2,7 +2,7 @@
 # The script acts as a wrapper for the function sum
 # Here we calculate the sum of parameters passed to the script
 function sum(){
-(( sum = $1 + $2 ))
+let sum=$1+$2 
 echo "operacion es : $sum"
 }
 
