@@ -55,7 +55,9 @@ funcion_notificacion(){
 
 # Inicio de shell
 
-killall -9 curseofwar # matamos proceso del juego de prueba, asi mismo este se comentara cuando pase a producción
+killall -9 curseofwar
+
+
 RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
 
 source ./script_hijo_00XX.sh
@@ -274,9 +276,9 @@ funcion_init_01(){
     #Falta anexar el del disco duro
 }
 
-
+funcion_xterm_curseofwar
 funcion_stress_cpu
 funcion_evaluacion_tecnico
 funcion_dialog_resultado
-funcion_xterm_curseofwar
+
 #funcion_memoria_usb
