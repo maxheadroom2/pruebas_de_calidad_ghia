@@ -197,7 +197,7 @@ funcion_xterm_curseofwar(){
     
     killall -9 curseofwar
     killall -9 htop
-    killall -9 bashtop
+   
     # apertura de xterm 1
     xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_bashtop -e "bashtop" &
     sleep 2s;
