@@ -55,7 +55,7 @@ funcion_notificacion(){
 
 # Inicio de shell
 
-#killall -9 curseofwar # matamos proceso del juego de prueba, asi mismo este se comentara cuando pase a producción
+killall -9 curseofwar # matamos proceso del juego de prueba, asi mismo este se comentara cuando pase a producción
 RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
 
 source ./script_hijo_00XX.sh
@@ -192,10 +192,30 @@ funcion_dialog_resultado(){
 }
 
 funcion_xterm_curseofwar(){
+    
+    killall -9 curseofwar
+    killall -9 htop
+    killall -9 bashtop
+    # apertura de xterm 1
+    xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_bashtop -e "bashtop" &
+    sleep 2s;
+    wmctrl -r "terminal_bashtop" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_bashtop" -t 1 #maximmizo la terminal de gtop
+
+    # apertura de xterm 2
+    sleep 1s;
+    xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_htop -e "htop" &
+    sleep 2s;
+    wmctrl -r "terminal_htop" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_htop" -t 2 #maximmizo la terminal de gtop
+
     # apertura de xterm curseofwar
     xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 9 -T terminal_curseofwar -e "curseofwar -W 90 -H 90" &
     sleep .5s;
     wmctrl -r "terminal_curseofwar" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_curseofwar" -t 3 #maximmizo la terminal de gtop
+
+     # apertura de xterm curseofwar
+    xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 9 -T terminal_sensors -e "curseofwar -W 90 -H 90" &
+    sleep .5s;
+    wmctrl -r "terminal_sensors" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_sensors" -t 3 #maximmizo la terminal de gtop
 }
 
 funcion_memoria_usb(){
