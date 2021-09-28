@@ -79,11 +79,12 @@ funcion_memoria_usb(){
 }
 
 funcion_stress_cpu(){
-            funcion_notificacion \
-            #tiempo \
-            "cpu" \
-            "Inicio de prueba de Stress del Procesador" \
-            "Por cada nucleo virtual se crean $Numero_CoresCPU ciclos de YES, esto hara que el equipo se pueda sobrecalentar cuidado" && unset notifi_array\
+        notifi_array=( 
+            "cpu" #icono
+            "Inicio de prueba de Stress del Procesador" #Titulo
+            "Por cada nucleo virtual se crean $Numero_CoresCPU ciclos de YES, esto hara que el equipo se pueda sobrecalentar cuidado" # mensaje
+        )
+        funcion_notificacion "${notifi_array[@]}" && unset notifi_array
     for (( c=1; c<=$Numero_CoresCPU; c++ ))
         do  
             yes > /dev/null & # ciclo
@@ -91,13 +92,13 @@ funcion_stress_cpu(){
             sleep 1s;
         done
             sleep 10s && killall -9 yes; # tiempo de espera para matar yes
-            funcion_notificacion \
-            "2000" \
-            "ace" \
-            "Eliminamos YES" \
-            "Damos de baja el proceso YES" && unset notifi_array\
-        fi
-
+            notifi_array=( 
+                "2000" #Tiempo
+                "ace" #icono
+                "Eliminamos YES" #Titulo
+                "Damos de baja el proceso YES" # mensaje
+            )
+        funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 }
 
 funcion_init_01(){
