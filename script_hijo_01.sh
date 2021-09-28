@@ -96,6 +96,7 @@ funcion_stress_cpu(){
             "ace" \
             "Eliminamos YES" \
             "Damos de baja el proceso YES" && unset notifi_array\
+        fi
 
 }
 
