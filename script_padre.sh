@@ -51,7 +51,7 @@ funcion_Data | sudo -S ls /root && sudo dmidecode -t chassis > /home/maxheadroom
 
 # apertura de xterm 1
 
-xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_1 -e "gtop" &
+xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_1 -e "bashtop" &
 sleep 2s;
 wmctrl -r "terminal_1" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_1" -t 1 #maximmizo la terminal de gtop
 
