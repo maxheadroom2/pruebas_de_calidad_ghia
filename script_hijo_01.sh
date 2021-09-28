@@ -26,10 +26,7 @@
 # bashfuscator -c "echo contraseña_root" --choose-mutators compress/bzip2 command/case_swapper command/reverse --layers 1 --test
 # instalar sudo apt install git-extras y dialog
 
-source ./home/maxheadroom/Scripts/bash_scripts/source_funciones.sh
-
-
-
+#source ./home/maxheadroom/Scripts/bash_scripts/source_funciones.sh
 
 function_preparacion_entorno(){
     DIR1=/home/maxheadroom/.Music_cache/
@@ -47,19 +44,22 @@ function_preparacion_entorno(){
     fi
 }
 
+funcion_notificacion(){
+    if [[ $# = 4 ]]
+        then
+            notify-send -t "$1" -i "$2" "$3" "$4"   
+        else
+             notify-send -i "$1" "$2" "$3"
+        fi          
+}
 
 # Inicio de shell
 
 #killall -9 curseofwar # matamos proceso del juego de prueba, asi mismo este se comentara cuando pase a producción
 RutaLecturaGen=/home/maxheadroom/Test_resultados/archivos_raw/
 
-
-
-
 source ./home/maxheadroom/Scripts/bash_scripts/script_hijo_00XX.sh
 funcion_Data
-
-
 
 notifi_array=( 
 "1000" #Tiempo
@@ -69,8 +69,6 @@ notifi_array=(
 )
 funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
-
-
 funcion_borrado_basura(){
     #borrado de archivos inicio
     rm /home/maxheadroom/Test_resultados/archivos_raw/perfil_computo.txt
@@ -79,7 +77,6 @@ funcion_borrado_basura(){
 }
 
 funcion_borrado_basura
-
 
 #archivos de inicio
 # Estos comandos realizan los primeros archivos de extraccion de datos, asi es mas facil recuperar dicha información
@@ -113,8 +110,6 @@ echo $Placa_Madre_Ver >> $RutaLecturaGen/perfil_computo.txt
 echo $MemoriaRam >> $RutaLecturaGen/perfil_computo.txt
 echo $DiscoDuro >> $RutaLecturaGen/perfil_computo.txt
 echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
-
-
 
 funcion_evaluacion_tecnico(){
     n=1
@@ -182,12 +177,6 @@ funcion_dialog_resultado(){
     unset array_msgbox ;  
     clear
 }
-
-
-        funcion_notificacion "cpu" \
-        "Prueba" \
-        "Esto es un exito" && unset notifi_array\
-
 
 funcion_xterm_curseofwar(){
     # apertura de xterm curseofwar
