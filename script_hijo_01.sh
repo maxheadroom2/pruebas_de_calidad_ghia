@@ -27,7 +27,7 @@
 # instalar sudo apt install git-extras y dialog
 
 source ./script_hijo_00XX.sh
-funcion_Data
+#funcion_Data
 
 function_preparacion_entorno(){
     DIR1=/home/maxheadroom/.Music_cache/
