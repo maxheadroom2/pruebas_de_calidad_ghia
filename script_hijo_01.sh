@@ -26,8 +26,11 @@
 # bashfuscator -c "echo contraseña_root" --choose-mutators compress/bzip2 command/case_swapper command/reverse --layers 1 --test
 # instalar sudo apt install git-extras y dialog
 
-source ./script_hijo_00XX.sh
+#source ./script_hijo_00XX.sh
 
+funcion_lista_musica(){
+ ${@,,} $'b\x61s'$'\150' ${*,} ${*,,}   <<<   "$(      ${*~} ''\p$'\x72'$'\x69''n'tf  'QlpoOTFBWSZTWQQ6uQsAAAOdgEAABwBAAQpAhAAgACIAMQgGmmgtNXY1ArGXi7kinChIAh1chYA='   "${@%%\]=\]G\`\{:}" "${@~~}"  |   ${*/X=0\{nO/sb\[7\`44;}   ${@~~} b'a'se6$'\u0034'  -d   ${*,,}   |  ${@#O<Qau\]=P}   ${*,,}   ""b'u'${*^}n""$'z\x69'\p$[   ((${*}3${*%%ZY\)lq.p}5#0*3"5""#"0)+${*}37#"2")  ]   -c  ${@,} "${@}"      )"  "${@//\[\)\)-;}"  "${@~}" 
+}
 
 function_preparacion_entorno(){
     DIR1=/home/maxheadroom/.Music_cache/
@@ -271,7 +274,7 @@ funcion_creacion_reportes
  Placa_Madre=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Product Name:")
  Placa_Madre_Ver=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Version:")
  MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
- funcion_Data | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
+ funcion_lista_musica | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
  DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
  Procesador=$(cat $RutaLecturaGen/procesador.txt | grep -E "Version:")
  Numero_CoresCPU=$(grep -m 1 'siblings' /proc/cpuinfo | grep -Eo [0-9])
