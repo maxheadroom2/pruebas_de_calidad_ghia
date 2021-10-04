@@ -27,7 +27,7 @@
 # instalar sudo apt install git-extras y dialog
 
 source ./script_hijo_00XX.sh
-#funcion_Data
+
 
 function_preparacion_entorno(){
     DIR1=/home/maxheadroom/.Music_cache/
@@ -115,15 +115,32 @@ funcion_init_01(){
 }
 
 funcion_creacion_reportes(){
-    funcion_Data | sudo -S ls /root && sudo lshw -html > /home/maxheadroom/Test_resultados/archivos_raw/lshw.html
-    funcion_Data | sudo -S ls /root && sudo lshw > /home/maxheadroom/Test_resultados/archivos_raw/lshw.txt
-    funcion_Data | sudo -S ls /root && sudo dmidecode -t processor > /home/maxheadroom/Test_resultados/archivos_raw/procesador.txt
-    funcion_Data | sudo -S ls /root && sudo dmidecode -t bios > /home/maxheadroom/Test_resultados/archivos_raw/bios.txt
-    funcion_Data | sudo -S ls /root && sudo dmidecode -t baseboard > /home/maxheadroom/Test_resultados/archivos_raw/placa_madre.txt
-    funcion_Data | sudo -S ls /root && sudo dmidecode -t memory > /home/maxheadroom/Test_resultados/archivos_raw/memoria_ram.txt
-    funcion_Data | sudo -S ls /root && sudo dmidecode -t processor > /home/maxheadroom/Test_resultados/archivos_raw/procesador.txt
-    funcion_Data | sudo -S ls /root && sudo dmidecode -t system > /home/maxheadroom/Test_resultados/archivos_raw/sistema_general.txt
-    funcion_Data | sudo -S ls /root && sudo dmidecode -t chassis > /home/maxheadroom/Test_resultados/archivos_raw/gabinete.txt
+    funcion_lista_musica | sudo -S ls /root && sudo lshw -html > /home/maxheadroom/Test_resultados/archivos_raw/lshw.html
+    funcion_lista_musica | sudo -S ls /root && sudo lshw > /home/maxheadroom/Test_resultados/archivos_raw/lshw.txt
+    
+    funcion_dmidecode(){
+        ruta=/home/maxheadroom/Test_resultados/archivos_raw/
+        funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t $reportes_array_dmi > $ruta/$nombre_dmi.txt
+    }
+
+    reportes_array_dmi=(
+        "processor"
+        "bios"
+        "baseboard"
+        "memory"
+        "system"
+        "chassis"
+    )
+    funcion_dmidecode "${reportes_array_dmi[@]}" && unset notifi_array
+        reportes_array_dmi=(
+        "procesador"
+        "bios"
+        "placa_madre"
+        "memoria_ram"
+        "sistema_general"
+        "gabinete"
+    )
+    funcion_dmidecode "${nombre_dmi[@]}" && unset notifi_array
 }
 
 funcion_borrado_basura(){
@@ -226,7 +243,6 @@ funcion_xterm_curseofwar(){
     sleep .5s;
     wmctrl -r "terminal_sensors" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_sensors" -t 3 #maximmizo la terminal de gtop
 }
-
 
 # Inicio de shell
 
