@@ -271,14 +271,15 @@ funcion_escritura_datos(){
 
 
 funcion_preparacion_usb(){
-    funcion_respaldo_usb(){
+    funcion_duplicado_datos_usb(){
         stat $HOME/$USB/$SerieComputo > $HOME/$USB/$SerieComputo/serie_duplicada_$SerieComputo.txt
+        zip serie_duplicada_$SerieComputo.zip $dir/*.*
     }
     local dir=$HOME/$USB/$SerieComputo
     if [ -d $dir ];
         then
             echo "Sí, sí existe."
-            funcion_respaldo_usb
+            funcion_duplicado_datos_usb
         else
             echo "No, no existe"
             mkdir $dir 
