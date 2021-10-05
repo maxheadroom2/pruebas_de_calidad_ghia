@@ -28,6 +28,7 @@
 
 RutaLecturaGen=$HOME/Test_resultados/archivos_raw/
 ArchivoLocal=/home/maxheadroom/Test_resultados/archivos_raw/SERIE_USB # ruta de archivo local de gabinete
+USB=USB_local
 
 function_preparacion_entorno_01(){
     for i in $HOME/.Music_cache/*;
@@ -136,16 +137,16 @@ funcion_borrado_basura(){
 
 funcion_evaluacion_tecnico(){
     n=1
-    touch $HOME/USB_local/res_tec_bios.txt
+    touch $HOME/$USB/res_tec_bios.txt
     #cuando cambie a la usb solo cambiar la ruta
-    cat $HOME/USB_local/lista_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
+    cat $HOME/$USB/lista_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
     if [[ $TecnicoLista = $TecnicoBios ]]
         then      
-            echo "$TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" > $HOME/USB_local/res_tec_bios.txt;
+            echo "$TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" > $HOME/$USB/res_tec_bios.txt;
             echo "$TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" >> $RutaLecturaGen/perfil_computo.txt;
             echo "Match $n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5";
         else
-            echo "no concuerda $n $TecnicoLista" >> $HOME/USB_local/res_tec_bios.txt;   
+            echo "no concuerda $n $TecnicoLista" >> $HOME/$USB/res_tec_bios.txt;   
         fi          
             n=$((n+1))
     done
@@ -174,7 +175,7 @@ funcion_dialog_resultado(){
     M7="Datos de disco(s) instalados ↓"
     M8="Tamaño de Modulos de memoria RAM ↓"
     M9="Modulos fisicos de memoria RAM:"
-    TenicoMatch=$(cat $HOME/USB_local/res_tec_bios.txts)# lee los datos del tecnico
+    TenicoMatch=$(cat $HOME/$USB/res_tec_bios.txts)# lee los datos del tecnico
     sleep .5s;
     array_msgbox=(
         "$M0""$D0"$'\n'
@@ -268,8 +269,15 @@ funcion_escritura_datos(){
 }
 
 funcion_preparacion_usb(){
-
-    mkdir $HOME/USB_local/$SerieComputo
+    local dir=$HOME/$USB/$SerieComputo
+    if [ -d $dir ];
+        then
+            echo "Sí, sí existe."
+        else
+            echo "No, no existe"
+            mkdir $dir
+        fi
+    
 }
 
 funcion_borrado_basura
