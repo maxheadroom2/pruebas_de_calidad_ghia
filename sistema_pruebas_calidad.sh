@@ -153,10 +153,7 @@ funcion_creacion_reportes(){
 }
 
 funcion_borrado_basura(){
-    #borrado de archivos inicio
-    rm /home/maxheadroom/Test_resultados/archivos_raw/perfil_computo.txt
-    rm /home/maxheadroom/Test_resultados/archivos_raw/temp_tec.txt
-    rm /home/maxheadroom/Test_resultados/archivos_raw/discos_duros.txt
+    rm /home/maxheadroom/Test_resultados/archivos_raw/*
 }
 
 funcion_evaluacion_tecnico(){
