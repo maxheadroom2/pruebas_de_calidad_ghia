@@ -176,7 +176,6 @@ funcion_dialog_resultado(){
     sleep .5s;
     array_msgbox=(
         "$M0""$D0"$'\n'
-        "$M1""$D1'"$'\n'
         "$M1""$D1"$'\n'
         "$M2""$D2"$'\n'
         "$M3""$D3"$'\n'
