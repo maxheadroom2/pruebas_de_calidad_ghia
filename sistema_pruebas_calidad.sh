@@ -140,7 +140,7 @@ funcion_creacion_reportes(){
     funcion_dmidecode  "system" &&
     funcion_dmidecode  "chassis" &&
 
-}
+
 
 funcion_borrado_basura(){
     rm /home/maxheadroom/Test_resultados/archivos_raw/*
