@@ -276,7 +276,8 @@ funcion_preparacion_usb(){
     funcion_duplicado_datos_usb(){
         stat $HOME/$USB/$SerieComputo > $HOME/$USB/$SerieComputo/serie_duplicada_$SerieComputo.txt
         cd $HOME/$USB/
-        zip -r serie_duplicada_$SerieComputo.zip $SerieComputo* 
+        zip -r serie_duplicada_$SerieComputo.zip $SerieComputo*&&
+        mv $SerieComputo.zip $dir 
     }
     if [ -d $dir ];
         then
