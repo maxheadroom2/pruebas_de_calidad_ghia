@@ -272,8 +272,8 @@ funcion_escritura_datos(){
 
 funcion_preparacion_usb(){
     funcion_respaldo_usb(){
-        zip duplicado_de_$SerieComputo.zip $HOME/$USB/$SerieComputo
         stat $HOME/$USB/$SerieComputo > $HOME/$USB/$SerieComputo/serie_duplicada_$SerieComputo.txt
+        zip duplicado_de_$SerieComputo.zip $HOME/$USB/$SerieComputo*
     }
     local dir=$HOME/$USB/$SerieComputo
     if [ -d $dir ];
