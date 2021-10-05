@@ -162,6 +162,7 @@ funcion_dialog_resultado(){
     D6=$Procesador
     D7=$DiscoDuro
     D8=$MemoriaRam
+    D9=$ModulosRam
     #Variables del texto para caja del dialog
     M0="Serie del equipo de computo: "
     M1="Siglas del tecnico: "
@@ -171,7 +172,8 @@ funcion_dialog_resultado(){
     M5="Version de Mother Board: "
     M6="Procesador: "
     M7="Datos de Disco(s) instalados ↓"
-    M8="Datos de Slots de Memoria RAM ↓"
+    M8="Tamaño de Modulos de Memoria RAM ↓"
+    M9="Modulos Totales de Memoria RAM ↓"
     TenicoMatch=$(cat $HOME/USB_local/res_tec_bios.txts)# lee los datos del tecnico
     sleep .5s;
     array_msgbox=(
@@ -186,6 +188,7 @@ funcion_dialog_resultado(){
         "$D7"$'\n'
         "$M8"$'\n'
         "$D8"$'\n'
+        "$D9"$'\n'
     );
     
     function dialog_menu_01()
@@ -245,6 +248,7 @@ funcion_variables(){
     export Placa_Madre=$(cat $RutaLecturaGen/baseboard.txt | grep -E "Product Name:")
     export Placa_Madre_Ver=$(cat $RutaLecturaGen/baseboard.txt | grep -E "Version:")
     export MemoriaRam=$(cat $RutaLecturaGen/memory.txt | grep "Size" )
+    export ModulosRam=$(cat $RutaLecturaGen/memory.txt | grep -c "MB")
     export DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
     export Procesador=$(cat $RutaLecturaGen/processor.txt | grep -E "Version:")
     export Numero_CoresCPU=$(grep -m 1 'siblings' /proc/cpuinfo | grep -Eo [0-9])
