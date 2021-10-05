@@ -253,16 +253,11 @@ funcion_xterm_curseofwar(){
     wmctrl -r "terminal_sensors" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_sensors" -t 3 #maximmizo la terminal de gtop
 }
 
-# Inicio de shell
-
-RutaLecturaGen=$HOME/Test_resultados/archivos_raw/
-
-
 notifi_array=( 
-"1000" #Tiempo
-"half-life-alyx" #icono
-"Inicio de pruebas automaticas" #Titulo
-"Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje" # mensaje
+    "1000" #Tiempo
+    "half-life-alyx" #icono
+    "Inicio de pruebas automaticas" #Titulo
+    "Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje" # mensaje
 )
 funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
@@ -279,23 +274,28 @@ funcion_variables(){
     export DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
     export Procesador=$(cat $RutaLecturaGen/procesador.txt | grep -E "Version:")
     export Numero_CoresCPU=$(grep -m 1 'siblings' /proc/cpuinfo | grep -Eo [0-9])
-    ArchivoLocal=/home/maxheadroom/Test_resultados/archivos_raw/SERIE_USB # ruta de archivo local de gabinete
+    export ArchivoLocal=/home/maxheadroom/Test_resultados/archivos_raw/SERIE_USB # ruta de archivo local de gabinete
     export TecnicoBios=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read Col1 Col2 Col3; do echo $Col3; done )
+    export RutaLecturaGen=$HOME/Test_resultados/archivos_raw/
 }
 
-touch $RutaLecturaGen/perfil_computo.txt
-echo $SerieComputo >> $RutaLecturaGen/perfil_computo.txt
-echo $ModeloPc >> $RutaLecturaGen/perfil_computo.txt
-echo $VersionBios >> $RutaLecturaGen/perfil_computo.txt
-echo $Placa_Madre >> $RutaLecturaGen/perfil_computo.txt
-echo $Placa_Madre_Ver >> $RutaLecturaGen/perfil_computo.txt
-echo $MemoriaRam >> $RutaLecturaGen/perfil_computo.txt
-echo $DiscoDuro >> $RutaLecturaGen/perfil_computo.txt
-echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
+funcion_escritura_datos(){
+    touch $RutaLecturaGen/perfil_computo.txt
+    echo $SerieComputo >> $RutaLecturaGen/perfil_computo.txt
+    echo $ModeloPc >> $RutaLecturaGen/perfil_computo.txt
+    echo $VersionBios >> $RutaLecturaGen/perfil_computo.txt
+    echo $Placa_Madre >> $RutaLecturaGen/perfil_computo.txt
+    echo $Placa_Madre_Ver >> $RutaLecturaGen/perfil_computo.txt
+    echo $MemoriaRam >> $RutaLecturaGen/perfil_computo.txt
+    echo $DiscoDuro >> $RutaLecturaGen/perfil_computo.txt
+    echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
+}
+
 
 funcion_borrado_basura
 funcion_creacion_reportes
 funcion_variables
+funcion_escritura_datos
 #funcion_xterm_curseofwar
 #funcion_stress_cpu
 #funcion_evaluacion_tecnico
