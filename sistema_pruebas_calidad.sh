@@ -129,7 +129,7 @@ funcion_creacion_reportes(){
     
     funcion_dmidecode(){
         ruta=$HOME/Test_resultados/archivos_raw/
-        funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t $reportes_array_dmi > $ruta/$nombre_dmi.txt
+        funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t $reportes_array_dmi > $ruta/$reportes_array_dmi.txt
     }
 
     reportes_array_dmi=(
