@@ -271,13 +271,7 @@ notifi_array=(
 )
 funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
-funcion_borrado_basura
-funcion_creacion_reportes
 
-
-# Estos comandos realizan los primeros archivos de extraccion de datos, asi es mas facil recuperar dicha información
-
-# variables
 funcion_variables(){
 
     export SerieComputo=$(cat $RutaLecturaGen/sistema_general.txt | grep "Serial Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
@@ -294,13 +288,6 @@ funcion_variables(){
     export TecnicoBios=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read Col1 Col2 Col3; do echo $Col3; done )
 }
 
- 
-# Decodificador y verificador de tecnico #
-
-#variables de sección
-
-#ArchivoLocal Serie Ruta aqui de la USB de series, falta anexar esta parte
-
 touch $RutaLecturaGen/perfil_computo.txt
 echo $SerieComputo >> $RutaLecturaGen/perfil_computo.txt
 echo $ModeloPc >> $RutaLecturaGen/perfil_computo.txt
@@ -311,9 +298,11 @@ echo $MemoriaRam >> $RutaLecturaGen/perfil_computo.txt
 echo $DiscoDuro >> $RutaLecturaGen/perfil_computo.txt
 echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
 
+funcion_borrado_basura
+funcion_creacion_reportes
 funcion_variables
-funcion_xterm_curseofwar
-funcion_stress_cpu
-funcion_evaluacion_tecnico
-funcion_dialog_resultado
+#funcion_xterm_curseofwar
+#funcion_stress_cpu
+#funcion_evaluacion_tecnico
+#funcion_dialog_resultado
 #funcion_memoria_usb
