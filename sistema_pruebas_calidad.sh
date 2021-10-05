@@ -121,7 +121,6 @@ funcion_creacion_reportes(){
         ruta=$HOME/Test_resultados/archivos_raw/
         funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t $1 > $ruta/$1.txt
     }
-   
     funcion_dmidecode "processor" 
     funcion_dmidecode  "bios" 
     funcion_dmidecode  "baseboard" 
@@ -237,9 +236,7 @@ notifi_array=(
 )
 funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
-
 funcion_variables(){
-    
     funcion_lista_musica | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
     export SerieComputo=$(cat $RutaLecturaGen/system.txt | grep "Serial Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
     export ModeloPc=$(cat $RutaLecturaGen/system.txt | grep "SKU Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
@@ -251,7 +248,6 @@ funcion_variables(){
     export Procesador=$(cat $RutaLecturaGen/processor.txt | grep -E "Version:")
     export Numero_CoresCPU=$(grep -m 1 'siblings' /proc/cpuinfo | grep -Eo [0-9])
     export TecnicoBios=$(cat $RutaLecturaGen/chassis.txt | grep  "Asset Tag:" | while read Col1 Col2 Col3; do echo $Col3; done )
-  
 }
 
 funcion_escritura_datos(){
@@ -273,6 +269,6 @@ funcion_variables
 funcion_escritura_datos
 #funcion_xterm_curseofwar
 #funcion_stress_cpu
-#funcion_evaluacion_tecnico
-#funcion_dialog_resultado
+funcion_evaluacion_tecnico
+funcion_dialog_resultado
 #funcion_memoria_usb
