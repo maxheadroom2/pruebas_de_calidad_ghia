@@ -188,7 +188,7 @@ funcion_dialog_resultado(){
         "$D7"$'\n'
         "$M8"$'\n'
         "$D8"$'\n'
-        "$D9"$'\n'
+        "$M9""$D9"$'\n'
     );
     
     function dialog_menu_01()
@@ -248,7 +248,7 @@ funcion_variables(){
     export Placa_Madre=$(cat $RutaLecturaGen/baseboard.txt | grep -E "Product Name:")
     export Placa_Madre_Ver=$(cat $RutaLecturaGen/baseboard.txt | grep -E "Version:")
     export MemoriaRam=$(cat $RutaLecturaGen/memory.txt | grep "Size" )
-    export ModulosRam=$(cat $RutaLecturaGen/memory.txt | grep -c "MB")
+    export ModulosRam=$(echo $MemoriaRam | grep -c "MB")
     export DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
     export Procesador=$(cat $RutaLecturaGen/processor.txt | grep -E "Version:")
     export Numero_CoresCPU=$(grep -m 1 'siblings' /proc/cpuinfo | grep -Eo [0-9])
