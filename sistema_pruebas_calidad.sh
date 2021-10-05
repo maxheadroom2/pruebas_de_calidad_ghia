@@ -170,7 +170,7 @@ funcion_dialog_resultado(){
     M6="Procesador: "
     M7="Datos de Disco(s) instalados ↓"
     M8="Datos de Slots de Memoria RAM ↓"
-    TenicoMatch=$(cat $Ru/temp_tec.txt)# lee los datos del tecnico
+    #TenicoMatch=$(cat $Ru/temp_tec.txt)# lee los datos del tecnico
     sleep .5s;
     array_msgbox=(
         "$M0""$D0"$'\n'
