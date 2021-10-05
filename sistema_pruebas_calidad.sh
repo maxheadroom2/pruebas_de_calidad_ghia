@@ -132,15 +132,14 @@ funcion_creacion_reportes(){
         funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t $reportes_array_dmi > $ruta/$reportes_array_dmi.txt
     }
 
-    reportes_array_dmi=(
-        "processor"
-        "bios"
-        "baseboard"
-        "memory"
-        "system"
-        "chassis"
-    )
-    funcion_dmidecode "${reportes_array_dmi[@]}" && unset notifi_array
+    
+    funcion_dmidecode "processor" &&
+    funcion_dmidecode  "bios" &&
+    funcion_dmidecode  "baseboard" &&
+    funcion_dmidecode  "memory" &&
+    funcion_dmidecode  "system" &&
+    funcion_dmidecode  "chassis" &&
+
 }
 
 funcion_borrado_basura(){
