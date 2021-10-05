@@ -260,14 +260,13 @@ funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
 
 funcion_variables(){
-
+    funcion_lista_musica | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
     export SerieComputo=$(cat $RutaLecturaGen/sistema_general.txt | grep "Serial Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
     export ModeloPc=$(cat $RutaLecturaGen/sistema_general.txt | grep "SKU Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
     export VersionBios=$(cat $RutaLecturaGen/bios.txt | grep -E "Version:" | while read Col1 Col2 Col3; do echo $Col2; done )
     export Placa_Madre=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Product Name:")
     export Placa_Madre_Ver=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Version:")
     export MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
-    export funcion_lista_musica | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
     export DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
     export Procesador=$(cat $RutaLecturaGen/procesador.txt | grep -E "Version:")
     export Numero_CoresCPU=$(grep -m 1 'siblings' /proc/cpuinfo | grep -Eo [0-9])
@@ -289,7 +288,7 @@ funcion_escritura_datos(){
 }
 
 
-funcion_borrado_basura
+#funcion_borrado_basura
 funcion_creacion_reportes
 funcion_variables
 funcion_escritura_datos
