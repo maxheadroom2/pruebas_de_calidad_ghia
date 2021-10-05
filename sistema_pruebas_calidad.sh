@@ -167,13 +167,13 @@ funcion_dialog_resultado(){
     M0="Serie del equipo de computo: "
     M1="Siglas del tecnico: "
     M2="Modelo del equipo de computo: "
-    M3="Version de Bios: "
-    M4="Codigo de Mother Board: "
-    M5="Version de Mother Board: "
+    M3="Version de bios: "
+    M4="Codigo de mother Board: "
+    M5="Version de mother Board: "
     M6="Procesador: "
-    M7="Datos de Disco(s) instalados ↓"
-    M8="Tamaño de Modulos de Memoria RAM ↓"
-    M9="Modulos Totales de Memoria RAM:"
+    M7="Datos de disco(s) instalados ↓"
+    M8="Tamaño de Modulos de memoria RAM ↓"
+    M9="Modulos fisicos de memoria RAM:"
     TenicoMatch=$(cat $HOME/USB_local/res_tec_bios.txts)# lee los datos del tecnico
     sleep .5s;
     array_msgbox=(
