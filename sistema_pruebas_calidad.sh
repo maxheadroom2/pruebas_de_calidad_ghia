@@ -240,7 +240,7 @@ funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
 funcion_variables(){
     
-    rudo | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
+    funcion_lista_musica | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
     export SerieComputo=$(cat $RutaLecturaGen/system.txt | grep "Serial Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
     export ModeloPc=$(cat $RutaLecturaGen/system.txt | grep "SKU Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
     export VersionBios=$(cat $RutaLecturaGen/bios.txt | grep -E "Version:" | while read Col1 Col2 Col3; do echo $Col2; done )
