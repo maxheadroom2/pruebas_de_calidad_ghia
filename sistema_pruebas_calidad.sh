@@ -173,7 +173,7 @@ funcion_dialog_resultado(){
     M6="Procesador: "
     M7="Datos de Disco(s) instalados ↓"
     M8="Tamaño de Modulos de Memoria RAM ↓"
-    M9="Modulos Totales de Memoria RAM ↓"
+    M9="Modulos Totales de Memoria RAM:"
     TenicoMatch=$(cat $HOME/USB_local/res_tec_bios.txts)# lee los datos del tecnico
     sleep .5s;
     array_msgbox=(
