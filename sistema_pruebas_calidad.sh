@@ -26,7 +26,7 @@
 # bashfuscator -c "echo contraseña_root" --choose-mutators compress/bzip2 command/case_swapper command/reverse --layers 1 --test
 # instalar sudo apt install git-extras y dialog
 
-RutaLecturaGen=$HOME/Test_resultados/archivos_raw
+RutaLecturaGen=$HOME/Test_resultados/archivos_raw/
 
 function_preparacion_entorno_01(){
     for i in $HOME/.Music_cache/*;
