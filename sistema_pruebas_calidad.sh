@@ -285,7 +285,9 @@ funcion_preparacion_usb(){
         else
             echo "No, no existe"
             mkdir $dir 
-            cp $RutaLecturaGen/*.* $dir
+            cd $RutaLecturaGen && zip -r $SerieComputo.zip $RutaLecturaGen* &&
+            mv $SerieComputo.zip $dir
+            
         fi
 }
 
