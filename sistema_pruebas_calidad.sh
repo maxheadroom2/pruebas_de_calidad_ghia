@@ -278,7 +278,7 @@ funcion_preparacion_usb(){
     if [ -d $dir ];
         then
             echo "Sí, sí existe."
-            funcion_respaldo_usb &&
+            funcion_respaldo_usb
         else
             echo "No, no existe"
             mkdir $dir 
