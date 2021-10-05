@@ -124,22 +124,22 @@ funcion_init_01(){
 }
 
 funcion_creacion_reportes(){
-    funcion_lista_musica | sudo -S ls /root && sudo lshw -html > $HOME/Test_resultados/archivos_raw/lshw.html
-    funcion_lista_musica | sudo -S ls /root && sudo lshw > $HOME/Test_resultados/archivos_raw/lshw.txt
+    ruta=$HOME/Test_resultados/archivos_raw/
+    funcion_lista_musica | sudo -S ls /root && sudo lshw -html > $ruta/lshw.html
+    funcion_lista_musica | sudo -S ls /root && sudo lshw > $ruta/lshw.txt
     
     funcion_dmidecode(){
         ruta=$HOME/Test_resultados/archivos_raw/
-        funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t $reportes_array_dmi > $ruta/$reportes_array_dmi.txt
+        funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t $1 > $ruta/$1.txt
     }
-
-    
-    funcion_dmidecode "processor" &&
-    funcion_dmidecode  "bios" &&
-    funcion_dmidecode  "baseboard" &&
-    funcion_dmidecode  "memory" &&
-    funcion_dmidecode  "system" &&
-    funcion_dmidecode  "chassis" &&
-
+   
+    funcion_dmidecode "processor" 
+    funcion_dmidecode  "bios" 
+    funcion_dmidecode  "baseboard" 
+    funcion_dmidecode  "memory" 
+    funcion_dmidecode  "system" 
+    funcion_dmidecode  "chassis" 
+}
 
 
 funcion_borrado_basura(){
