@@ -267,6 +267,10 @@ funcion_escritura_datos(){
     echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
 }
 
+funcion_preparacion_usb(){
+
+    mkdir $HOME/USB_local/$SerieComputo
+}
 
 funcion_borrado_basura
 funcion_creacion_reportes
@@ -277,3 +281,4 @@ funcion_escritura_datos
 funcion_evaluacion_tecnico
 funcion_dialog_resultado
 #funcion_memoria_usb
+funcion_preparacion_usb
