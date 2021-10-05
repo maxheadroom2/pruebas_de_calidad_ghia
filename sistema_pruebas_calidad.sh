@@ -110,19 +110,6 @@ funcion_stress_cpu(){
         funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 }
 
-funcion_init_01(){
-    funcion_lista_musica | sudo -S ls /root && sudo lshw -html > /home/maxheadroom/Test_resultados/archivos_raw/lshw.html
-    funcion_lista_musica | sudo -S ls /root && sudo lshw > /home/maxheadroom/Test_resultados/archivos_raw/lshw.txt
-    funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t processor > /home/maxheadroom/Test_resultados/archivos_raw/procesador.txt
-    funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t bios > /home/maxheadroom/Test_resultados/archivos_raw/bios.txt
-    funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t baseboard > /home/maxheadroom/Test_resultados/archivos_raw/placa_madre.txt
-    funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t memory > /home/maxheadroom/Test_resultados/archivos_raw/memoria_ram.txt
-    funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t processor > /home/maxheadroom/Test_resultados/archivos_raw/procesador.txt
-    funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t system > /home/maxheadroom/Test_resultados/archivos_raw/sistema_general.txt
-    funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t chassis > /home/maxheadroom/Test_resultados/archivos_raw/gabinete.txt
-    #Falta anexar el del disco duro
-}
-
 funcion_creacion_reportes(){
     ruta=$HOME/Test_resultados/archivos_raw/
     funcion_lista_musica | sudo -S ls /root && sudo lshw -html > $ruta/lshw.html
@@ -254,14 +241,14 @@ funcion_variables(){
     export SerieComputo=$(cat $RutaLecturaGen/sistema_general.txt | grep "Serial Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
     export ModeloPc=$(cat $RutaLecturaGen/sistema_general.txt | grep "SKU Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
     export VersionBios=$(cat $RutaLecturaGen/bios.txt | grep -E "Version:" | while read Col1 Col2 Col3; do echo $Col2; done )
-    export Placa_Madre=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Product Name:")
-    export Placa_Madre_Ver=$(cat $RutaLecturaGen/placa_madre.txt | grep -E "Version:")
-    export MemoriaRam=$(cat $RutaLecturaGen/memoria_ram.txt | grep "Size" )
+    export Placa_Madre=$(cat $RutaLecturaGen/baseboard.txt | grep -E "Product Name:")
+    export Placa_Madre_Ver=$(cat $RutaLecturaGen/baseboard.txt | grep -E "Version:")
+    export MemoriaRam=$(cat $RutaLecturaGen/memory.txt | grep "Size" )
     export DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
-    export Procesador=$(cat $RutaLecturaGen/procesador.txt | grep -E "Version:")
+    export Procesador=$(cat $RutaLecturaGen/processor.txt | grep -E "Version:")
     export Numero_CoresCPU=$(grep -m 1 'siblings' /proc/cpuinfo | grep -Eo [0-9])
     export ArchivoLocal=/home/maxheadroom/Test_resultados/archivos_raw/SERIE_USB # ruta de archivo local de gabinete
-    export TecnicoBios=$(cat $RutaLecturaGen/gabinete.txt | grep  "Asset Tag:" | while read Col1 Col2 Col3; do echo $Col3; done )
+    export TecnicoBios=$(cat $RutaLecturaGen/chassis.txt | grep  "Asset Tag:" | while read Col1 Col2 Col3; do echo $Col3; done )
     export RutaLecturaGen=$HOME/Test_resultados/archivos_raw/
 }
 
