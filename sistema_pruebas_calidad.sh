@@ -26,6 +26,7 @@
 # bashfuscator -c "echo contraseña_root" --choose-mutators compress/bzip2 command/case_swapper command/reverse --layers 1 --test
 # instalar sudo apt install git-extras y dialog
 
+RutaLecturaGen=$HOME/Test_resultados/archivos_raw
 
 function_preparacion_entorno_01(){
     for i in $HOME/.Music_cache/*;
@@ -251,7 +252,7 @@ funcion_variables(){
     export Numero_CoresCPU=$(grep -m 1 'siblings' /proc/cpuinfo | grep -Eo [0-9])
     export ArchivoLocal=/home/maxheadroom/Test_resultados/archivos_raw/SERIE_USB # ruta de archivo local de gabinete
     export TecnicoBios=$(cat $RutaLecturaGen/chassis.txt | grep  "Asset Tag:" | while read Col1 Col2 Col3; do echo $Col3; done )
-    export RutaLecturaGen=$HOME/Test_resultados/archivos_raw/
+  
 }
 
 funcion_escritura_datos(){
