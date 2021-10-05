@@ -268,11 +268,18 @@ funcion_escritura_datos(){
     echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
 }
 
+
+
 funcion_preparacion_usb(){
+    funcion_respaldo_usb(){
+        zip duplicado_de_$SerieComputo.zip $HOME/$USB/$SerieComputo
+        stat $HOME/$USB/$SerieComputo > $HOME/$USB/$SerieComputo/serie_duplicada_$SerieComputo.txt
+    }
     local dir=$HOME/$USB/$SerieComputo
     if [ -d $dir ];
         then
             echo "Sí, sí existe."
+            funcion_respaldo_usb
         else
             echo "No, no existe"
             mkdir $dir
