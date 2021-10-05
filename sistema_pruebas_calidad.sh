@@ -141,15 +141,6 @@ funcion_creacion_reportes(){
         "chassis"
     )
     funcion_dmidecode "${reportes_array_dmi[@]}" && unset notifi_array
-        reportes_array_dmi=(
-        "procesador"
-        "bios"
-        "placa_madre"
-        "memoria_ram"
-        "sistema_general"
-        "gabinete"
-    )
-    funcion_dmidecode "${nombre_dmi[@]}" && unset notifi_array
 }
 
 funcion_borrado_basura(){
