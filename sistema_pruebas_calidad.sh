@@ -200,7 +200,7 @@ funcion_dialog_resultado(){
         --msgbox "${!3}" 26 90
     }
     dialog_menu_01 "Informacion y Resultados" \
-    "Resultados de lectura del Equipo de computo" array_msgbox[*] # Nota usar * concatena y usar @ envia variables 1 x 1
+    "Resultados de lectura del equipo de computo" array_msgbox[*] # Nota usar * concatena y usar @ envia variables 1 x 1
     unset array_msgbox ;  
     clear
 }
@@ -233,7 +233,7 @@ funcion_xterm_curseofwar(){
 }
 
 notifi_array=( 
-    "1000" #Tiempo
+    "3000" #Tiempo
     "half-life-alyx" #icono
     "Inicio de pruebas automaticas" #Titulo
     "Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje" # mensaje
