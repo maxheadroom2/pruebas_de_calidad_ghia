@@ -136,6 +136,7 @@ funcion_borrado_basura(){
 
 funcion_evaluacion_tecnico(){
     n=1
+    touch $HOME/USB_local/res_tec_bios.txt
     #cuando cambie a la usb solo cambiar la ruta
     cat $HOME/USB_local/lista_tecnicos.txt | while read TecnicoLista Nom1 Nom2 Nom3 Nom4 Nom5; do  
     if [[ $TecnicoLista = $TecnicoBios ]]
@@ -144,8 +145,6 @@ funcion_evaluacion_tecnico(){
             echo "$TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5" >> $RutaLecturaGen/perfil_computo.txt;
             echo "Match $n $TecnicoLista $Nom1 $Nom2 $Nom3 $Nom4 $Nom5";
         else
-            
-            touch $HOME/USB_local/anomalias.txt
             echo "no concuerda $n $TecnicoLista" >> $HOME/USB_local/res_tec_bios.txt;   
         fi          
             n=$((n+1))
