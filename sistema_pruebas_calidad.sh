@@ -281,7 +281,7 @@ funcion_preparacion_usb(){
             funcion_respaldo_usb &&
         else
             echo "No, no existe"
-            mkdir $dir &&
+            mkdir $dir 
             cp $RutaLecturaGen/*.* $dir
         fi
     
