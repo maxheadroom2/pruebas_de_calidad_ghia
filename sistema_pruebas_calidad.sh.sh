@@ -31,6 +31,7 @@ function_preparacion_entorno_01(){
     for i in $HOME/.Music_cache/*;
     do source $i
     done
+    #dejamos esta funcion para la siguiente version añadir funciones globales las cuales el script pueda llamarlas por el momento se anexa aqui mismo
 }
 
 funcion_lista_musica(){
