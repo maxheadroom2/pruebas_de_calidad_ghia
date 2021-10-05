@@ -267,7 +267,7 @@ funcion_escritura_datos(){
 }
 
 
-#funcion_borrado_basura
+funcion_borrado_basura
 funcion_creacion_reportes
 funcion_variables
 funcion_escritura_datos
