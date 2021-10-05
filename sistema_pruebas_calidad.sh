@@ -124,11 +124,11 @@ funcion_init_01(){
 }
 
 funcion_creacion_reportes(){
-    funcion_lista_musica | sudo -S ls /root && sudo lshw -html > /home/maxheadroom/Test_resultados/archivos_raw/lshw.html
-    funcion_lista_musica | sudo -S ls /root && sudo lshw > /home/maxheadroom/Test_resultados/archivos_raw/lshw.txt
+    funcion_lista_musica | sudo -S ls /root && sudo lshw -html > $HOME/Test_resultados/archivos_raw/lshw.html
+    funcion_lista_musica | sudo -S ls /root && sudo lshw > $HOME/Test_resultados/archivos_raw/lshw.txt
     
     funcion_dmidecode(){
-        ruta=/home/maxheadroom/Test_resultados/archivos_raw/
+        ruta=$HOME/Test_resultados/archivos_raw/
         funcion_lista_musica | sudo -S ls /root && sudo dmidecode -t $reportes_array_dmi > $ruta/$nombre_dmi.txt
     }
 
