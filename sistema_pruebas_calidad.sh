@@ -282,12 +282,11 @@ funcion_preparacion_usb(){
             mv $SerieComputo.zip $dir
             else
                 n=$(ls $dir | grep -c "$SerieComputo")
-                for (( c=1; c<=$n; c++ ))
-                do
+                for (( c=1; c<=$n; c++ )) do
+                done
                     cd $dir && stat '$SerieComputo.zip' >> "historico_$SerieComputo.txt" ;
                     zip -jr "duplicada $n - $SerieComputo.zip" $RutaLecturaGen*&&
                     mv "duplicada $n - $SerieComputo.zip" $dir
-                done
             fi
     }
     if [ -d $dir ];
