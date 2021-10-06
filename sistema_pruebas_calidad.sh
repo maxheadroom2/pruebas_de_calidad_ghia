@@ -274,10 +274,10 @@ funcion_preparacion_usb(){
     local dir=$HOME/$USB/$SerieComputo
     funcion_duplicado_datos_usb(){
         local n
-        n=$(ls $HOME/$USB/$SerieComputo | grep -c "PC02RPQP.zip")
+        n=$(ls $dir | grep -c "$SerieComputo")
         for (( c=1; c<=$n; c++ ))
         do
-            stat $HOME/$USB/$SerieComputo > $HOME/$USB/$SerieComputo/$n_serie_duplicada_$SerieComputo.txt
+            #stat $HOME/$USB/$SerieComputo > $HOME/$USB/$SerieComputo/$n_serie_duplicada_$SerieComputo.txt
             mv serie_duplicada_$SerieComputo.txt $dir 
             cd $HOME/$USB/
             zip -r $n_serie_duplicada_$SerieComputo.zip $SerieComputo*&&
@@ -291,7 +291,7 @@ funcion_preparacion_usb(){
         else
             echo "No, no existe"
             mkdir $dir 
-            cd $RutaLecturaGen && zip -r $SerieComputo.zip $RutaLecturaGen* &&
+            zip -jr $SerieComputo.zip $RutaLecturaGen* &&
             mv $SerieComputo.zip $dir
             
         fi
