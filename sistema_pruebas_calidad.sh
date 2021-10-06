@@ -271,15 +271,18 @@ funcion_escritura_datos(){
 
 
 funcion_preparacion_usb(){
-    
     local dir=$HOME/$USB/$SerieComputo
     funcion_duplicado_datos_usb(){
-        stat $HOME/$USB/$SerieComputo > $HOME/$USB/$SerieComputo/$n_serie_duplicada_$SerieComputo.txt
-        mv serie_duplicada_$SerieComputo.txt $dir 
-        cd $HOME/$USB/
-        zip -r $n_serie_duplicada_$SerieComputo.zip $SerieComputo*&&
-        mv $n_serie_duplicada_$SerieComputo.zip $dir
-        local n=$((n+1))
+        local n
+        n=$(ls $HOME/$USB/$SerieComputo | grep -c "PC02RPQP.zip")
+        for (( c=1; c<=$n; c++ ))
+        do
+            stat $HOME/$USB/$SerieComputo > $HOME/$USB/$SerieComputo/$n_serie_duplicada_$SerieComputo.txt
+            mv serie_duplicada_$SerieComputo.txt $dir 
+            cd $HOME/$USB/
+            zip -r $n_serie_duplicada_$SerieComputo.zip $SerieComputo*&&
+            mv $n_serie_duplicada_$SerieComputo.zip $dir
+        done
     }
     if [ -d $dir ];
         then
