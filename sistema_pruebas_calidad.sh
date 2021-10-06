@@ -277,7 +277,7 @@ funcion_preparacion_usb(){
         n=$(ls $dir | grep -c "$SerieComputo")
         if [[ $n = 0 ]]
             then
-            cd $dir && stat '$SerieComputo.zip' >> "historico_$SerieComputo.txt" ;
+            cd $dir && stat "duplicada $n - $SerieComputo.zip" >> "historico_$SerieComputo.txt" ;
             zip -jr $SerieComputo.zip $RutaLecturaGen* && ## -jr la j de  caminos-basura no carpetas la r de recursivo
             mv $SerieComputo.zip $dir
             else
@@ -286,7 +286,7 @@ funcion_preparacion_usb(){
                 do
                 echo ok
                 done
-                    cd $dir && stat '$SerieComputo.zip' >> "historico_$SerieComputo.txt" ;
+                    cd $dir && stat "duplicada $n - $SerieComputo.zip" >> "historico_$SerieComputo.txt" ;
                     zip -jr "duplicada $n - $SerieComputo.zip" $RutaLecturaGen*&&
                     mv "duplicada $n - $SerieComputo.zip" $dir
             fi
