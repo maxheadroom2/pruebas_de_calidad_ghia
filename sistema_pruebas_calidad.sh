@@ -165,6 +165,9 @@ funcion_dialog_resultado(){
     D8=$MemoriaRam
     D9=$ModulosRam
     D10=$DiscoCanti
+    D11=$DiscoSerie
+    D12=$DiscoMod
+    D13=$DiscoDescr
     #Variables del texto para caja del dialog
     M0="Serie del equipo de computo: "
     M1="Siglas del tecnico: "
@@ -177,6 +180,7 @@ funcion_dialog_resultado(){
     M8="Tamaño de Modulos de memoria RAM ↓"
     M9="Modulos fisicos de memoria RAM:"
     M10="Cantidad de disco(s) instalados:"
+    M11="Detalles de disco(s) instalados:"
     #TenicoMatch=$(cat $HOME/$USB/res_tec_bios.txts)# lee los datos del tecnico
     sleep .5s;
     array_msgbox=(
@@ -189,10 +193,13 @@ funcion_dialog_resultado(){
         "$M6""$D6"$'\n'
         "$M7"$'\n'
         "$D7"$'\n'
+        "$M10""$D9"$'\n'
+        "$M11"$'\n'
+        "$D11"$'\n'
         "$M8"$'\n'
         "$D8"$'\n'
         "$M9""$D9"$'\n'
-        "$M10""$D9"$'\n'
+
     );
     
     function dialog_menu_01()
@@ -203,7 +210,7 @@ funcion_dialog_resultado(){
         --title "${2}" \
         --msgbox "${!3}" 26 90
     }
-    dialog_menu_01 "Informacion y Resultados" \
+    dialog_menu_01 "Información y Resultados" \
     "Resultados de lectura del equipo de computo" array_msgbox[*] # Nota usar * concatena y usar @ envia variables 1 x 1
     unset array_msgbox ;  
     clear
