@@ -175,7 +175,7 @@ funcion_dialog_resultado(){
     M7="Datos de disco(s) instalados ↓"
     M8="Tamaño de Modulos de memoria RAM ↓"
     M9="Modulos fisicos de memoria RAM:"
-    TenicoMatch=$(cat $HOME/$USB/res_tec_bios.txts)# lee los datos del tecnico
+    #TenicoMatch=$(cat $HOME/$USB/res_tec_bios.txts)# lee los datos del tecnico
     sleep .5s;
     array_msgbox=(
         "$M0""$D0"$'\n'
@@ -246,14 +246,20 @@ funcion_variables(){
     export SerieComputo=$(cat $RutaLecturaGen/system.txt | grep "Serial Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
     export ModeloPc=$(cat $RutaLecturaGen/system.txt | grep "SKU Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
     export VersionBios=$(cat $RutaLecturaGen/bios.txt | grep -E "Version:" | while read Col1 Col2 Col3; do echo $Col2; done )
-    export Placa_Madre=$(cat $RutaLecturaGen/baseboard.txt | grep -E "Product Name:")
-    export Placa_Madre_Ver=$(cat $RutaLecturaGen/baseboard.txt | grep -E "Version:")
+    export Placa_Madre=$(cat $RutaLecturaGen/baseboard.txt | grep -E "Product Name:" | while read Col1 Col2 Col3; do echo $Col3; done )
+    export Placa_Madre_Ver=$(cat $RutaLecturaGen/baseboard.txt | grep -E "Version:" |  | while read Col1 Col2 Col3; do echo $Col3; done )
     export MemoriaRam=$(cat $RutaLecturaGen/memory.txt | grep "Size" )
-    export ModulosRam=$(echo $MemoriaRam | grep -c "MB")
-    export DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
-    export Procesador=$(cat $RutaLecturaGen/processor.txt | grep -E "Version:")
+    export ModulosRam=$(cat $RutaLecturaGen/memory.txt | grep -e "Size" | grep -c "MB")
+    export Procesador=$(cat $RutaLecturaGen/processor.txt | grep -E "Version:" |  | while read Col1 Col2 Col3; do echo $Col3; done )
     export Numero_CoresCPU=$(grep -m 1 'siblings' /proc/cpuinfo | grep -Eo [0-9])
     export TecnicoBios=$(cat $RutaLecturaGen/chassis.txt | grep  "Asset Tag:" | while read Col1 Col2 Col3; do echo $Col3; done )
+    #variables de disco duro
+    export DiscoDescr=$(cat $RutaLecturaGen/lshw.txt | grep -wns "*-disk" -A 10 | grep  "descripción:" |  while read Col1 Col2 Col3; do echo $Col3; done )
+    export DiscoCanti=$(cat $RutaLecturaGen/lshw.txt | grep -c "*-disk")
+    export DiscoMod=$(cat $RutaLecturaGen/lshw.txt | grep -wns "*-disk" -A 10 | grep  "producto:" |  while read Col1 Col2 Col3; do echo $Col3; done )
+    export DiscoSize=$(cat $RutaLecturaGen/lshw.txt | grep -wns "*-disk" -A 10 | grep  "tamaño:" |  while read Col1 Col2 Col3; do echo $Col3; done )
+    export DiscoSerie=$(cat $RutaLecturaGen/lshw.txt | grep -wns "*-disk" -A 10 | grep  "serie:" |  while read Col1 Col2 Col3; do echo $Col3; done )
+    export DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
 }
 
 funcion_escritura_datos(){
