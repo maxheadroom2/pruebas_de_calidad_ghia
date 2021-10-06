@@ -277,9 +277,8 @@ funcion_preparacion_usb(){
         n=$(ls $dir | grep -c "$SerieComputo")
         for (( c=1; c<=$n; c++ ))
         do
-            cd $HOME/$USB/
-            zip -jr $n_$SerieComputo.zip $SerieComputo*&&
-            mv $n_$SerieComputo.zip $dir
+            zip -jr "duplicada $n - $SerieComputo.zip" $RutaLecturaGen*&&
+            mv "duplicada $n - $SerieComputo.zip" $dir
         done
     }
     if [ -d $dir ];
