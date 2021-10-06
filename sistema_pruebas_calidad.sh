@@ -247,7 +247,7 @@ funcion_variables(){
     export ModeloPc=$(cat $RutaLecturaGen/system.txt | grep "SKU Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
     export VersionBios=$(cat $RutaLecturaGen/bios.txt | grep -E "Version:" | while read Col1 Col2 Col3; do echo $Col2; done )
     export Placa_Madre=$(cat $RutaLecturaGen/baseboard.txt | grep -E "Product Name:" | while read Col1 Col2 Col3; do echo $Col3; done )
-    export Placa_Madre_Ver=$(cat $RutaLecturaGen/baseboard.txt | grep -E "Version:" | while read Col1 Col2 Col3; do echo $Col3; done )
+    export Placa_Madre_Ver=$(cat $RutaLecturaGen/baseboard.txt | grep -E "Version:" | while read Col1 Col2 Col3; do echo $Col2 $Col3; done )
     export MemoriaRam=$(cat $RutaLecturaGen/memory.txt | grep "Size" )
     export ModulosRam=$(cat $RutaLecturaGen/memory.txt | grep -e "Size" | grep -c "MB" )
     export Procesador=$(cat $RutaLecturaGen/processor.txt | grep -E "Version:" | while read Col1 Col2 Col3; do echo $Col3; done )
