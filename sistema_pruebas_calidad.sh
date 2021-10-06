@@ -283,7 +283,7 @@ funcion_variables(){
             $DiscoSerie
             $DiscoDuro
         )
-        echo $disk_array
+        echo ${notifi_array[@]}
     }
     funcion_datos_discos_duros 
    
