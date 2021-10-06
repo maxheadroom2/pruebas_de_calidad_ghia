@@ -272,10 +272,11 @@ funcion_variables(){
     export DiscoSize=$(cat $RutaLecturaGen/lshw.txt | grep -wns "*-disk" -A 10 | grep  "tamaño:" |  while read Col1 Col2 Col3; do echo $Col3; done )
     export DiscoSerie=$(cat $RutaLecturaGen/lshw.txt | grep -wns "*-disk" -A 10 | grep  "serie:" |  while read Col1 Col2 Col3; do echo $Col3; done )
     export DiscoDuro=$(cat $RutaLecturaGen/discos_duros.txt | grep Disco | while read Col1 Col2 Col3; do echo $Col3; done )
-    export DiscoTipoDepu=$(cat $RutaLecturaGen/lshw.txt | grep -wns "capacidades:" -A 10 | while read Col1 Col2 Col3; do echo $Col3; done )
+    export DiscoTipoDepu=$(cat $RutaLecturaGen/lshw.txt | grep -wns "*-disk" -A 10 |  grep -e "capacidades:" | while read Col1 Col2 Col3; do echo $Col3; done )
 
     funcion_datos_discos_duros(){
         disk_array=( 
+            $DiscoTipoDepu
             $DiscoDescr
             $DiscoCanti
             $DiscoMod
@@ -283,7 +284,7 @@ funcion_variables(){
             $DiscoSerie
             $DiscoDuro
         )
-        echo ${notifi_array[@]}
+        echo ${disk_array[@]}
     }
     funcion_datos_discos_duros 
    
