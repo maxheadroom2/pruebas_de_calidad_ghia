@@ -300,7 +300,7 @@ funcion_preparacion_usb(){
             mkdir $dir
             zip -jr $SerieComputo.zip $RutaLecturaGen* && ## -jr la j de  caminos-basura no carpetas la r de recursivo
             mv $SerieComputo.zip $dir &&
-            cd $dir && touch "historico_$SerieComputo.txt" && stat '$SerieComputo.zip' > $dir/"historico_$SerieComputo.txt" ;
+            cd $dir && touch "historico_$SerieComputo.txt" && stat "$SerieComputo.zip" >> $dir/"historico_$SerieComputo.txt" ;
             
         fi
 }
