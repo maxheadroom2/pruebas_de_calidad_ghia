@@ -275,11 +275,18 @@ funcion_preparacion_usb(){
     funcion_duplicado_datos_usb(){
         local n
         n=$(ls $dir | grep -c "$SerieComputo")
-        for (( c=1; c<=$n; c++ ))
-        do
-            zip -jr "duplicada $n - $SerieComputo.zip" $RutaLecturaGen*&&
-            mv "duplicada $n - $SerieComputo.zip" $dir
-        done
+        if [[ $n = 0 ]]
+            then
+            zip -jr $SerieComputo.zip $RutaLecturaGen* && ## -jr la j de  caminos-basura no carpetas la r de recursivo
+            mv $SerieComputo.zip $dir
+            else
+                n=$(ls $dir | grep -c "$SerieComputo")
+                for (( c=1; c<=$n; c++ ))
+                do
+                    zip -jr "duplicada $n - $SerieComputo.zip" $RutaLecturaGen*&&
+                    mv "duplicada $n - $SerieComputo.zip" $dir
+                done
+            fi
     }
     if [ -d $dir ];
         then
