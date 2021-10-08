@@ -284,17 +284,26 @@ funcion_variables(){
             d=$(echo "${#arrayA[@]}")
             for (( a=0; a<$d; a++ )) 
             do
-            declare -a arrayA=("capacidades:" "descripción:" "producto:" "serie:" "tamaño:")
-            arr[$c,$a]=$( 
-            cat $RutaLecturaGen/lshw.txt | 
-            grep -wns "*-disk" -A 10  |
-             grep "${arrayA[$a]}" | 
-            while read C1 C2 C3; do echo $C3; done | 
-            cat -n | 
-            sed -n  "$c"p""  
-            )
-            #echo "matriz c $c -a $a"  
-            echo "${arr[$c,$a]}"
+                declare -a arrayA=("capacidades:" "descripción:" "producto:" "serie:" "tamaño:")
+                arr[$c,$a]=$( 
+                cat $RutaLecturaGen/lshw.txt | 
+                grep -wns "*-disk" -A 10  |
+                grep "${arrayA[$a]}" | 
+                while read C1 C2 C3; do echo $C3; done | 
+                cat -n | 
+                sed -n  "$c"p"" |
+                cut -f2 
+                )
+                #echo "matriz c $c -a $a"  
+                #echo "${arr[$c,$a]}"
+                #echo "${#arr[$c,$a]}"
+                
+                if [ "${arr[$c,$a]}" == "removable" ]; then
+                echo "aqui" "${arr[$c,$a]}"
+                
+                else 
+                echo "no" "${arr[$c,$a]}"
+                fi
             done
         done
         }
