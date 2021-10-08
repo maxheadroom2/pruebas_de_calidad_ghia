@@ -254,6 +254,7 @@ notifi_array=(
 funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
 funcion_variables(){
+    RutaLecturaGen=$HOME/Test_resultados/archivos_raw/
     funcion_lista_musica | sudo -S ls /root && sudo parted -l > $RutaLecturaGen/discos_duros.txt
     export SerieComputo=$(cat $RutaLecturaGen/system.txt | grep "Serial Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
     export ModeloPc=$(cat $RutaLecturaGen/system.txt | grep "SKU Number:" | while read Col1 Col2 Col3; do echo $Col3; done )
@@ -275,16 +276,16 @@ funcion_variables(){
     export DiscoTipoDepu=$(cat $RutaLecturaGen/lshw.txt | grep -wns "*-disk" -A 10 |  grep -e "capacidades:" | while read Col1 Col2 Col3; do echo $Col3; done )
 
     funcion_datos_discos_duros(){
-        disk_array=( 
-            $DiscoTipoDepu
-            $DiscoDescr
-            $DiscoCanti
-            $DiscoMod
-            $DiscoSize
-            $DiscoSerie
-            $DiscoDuro
-        )
-        echo ${disk_array[@]}
+        RutaLecturaGen=$HOME/Test_resultados/archivos_raw/
+        n=$(cat $RutaLecturaGen/lshw.txt | grep -c "*-disk")
+        for (( c=1; c<=$n; c++ )) 
+        do
+        disk_array[$n]=(
+        diskG[$n]=$DiscoTipoDepu=$(cat $RutaLecturaGen/lshw.txt | grep -wns "*-disk" -A 10 |  grep -e "capacidades:" | while read Col1 Col2 Col3; do echo $Col3; done | cat -n | grep -m1 "va" | cut -f2 )
+         )
+        done
+        echo ${disk_array[$n]}
+
     }
     funcion_datos_discos_duros 
    
