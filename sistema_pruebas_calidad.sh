@@ -276,16 +276,40 @@ funcion_variables(){
     export DiscoTipoDepu=$(cat $RutaLecturaGen/lshw.txt | grep -wns "*-disk" -A 10 |  grep -e "capacidades:" | while read Col1 Col2 Col3; do echo $Col3; done )
 
     funcion_datos_discos_duros(){
+         RutaLecturaGen=$HOME/Test_resultados/archivos_raw/
+        
+            local ruta_a=$($RutaLecturaGen/lshw.txt)
+            local config_A=$(grep -wns "*-disk" -A 10)
+            arrayA=( 
+                "descripción:"
+                "producto:" 
+                "capacidades:" 
+                "serie:" 
+            )
+        
+      
+         
+        }
+
         RutaLecturaGen=$HOME/Test_resultados/archivos_raw/
         n=$(cat $RutaLecturaGen/lshw.txt | grep -c "*-disk")
         for (( c=1; c<=$n; c++ )) 
-        do
-        disk_array[$n]=(
-        diskG[$n]=$DiscoTipoDepu=$(cat $RutaLecturaGen/lshw.txt | grep -wns "*-disk" -A 10 |  grep -e "capacidades:" | while read Col1 Col2 Col3; do echo $Col3; done | cat -n | grep -m1 "va" | cut -f2 )
-         )
-        done
-        echo ${disk_array[$n]}
 
+        do
+        echo "Unidad_$c-------------"
+            d=$(echo "${#arrayA[@]}")
+            for (( a=0; a<$d; a++ )) 
+            do
+            declare -A arr
+            declare -a arrayA=("capacidades:" "descripción:" "producto:" "serie:" "tamaño:")
+            arr[$c,$a]=$(cat $RutaLecturaGen/lshw.txt | grep -wns "*-disk" -A 10 | grep "${arrayA[$a]}" | while read C1 C2 C3; do echo $C3; done | cat -n | sed -n  "$c"p""  )
+            echo "matriz c $c -a $a"  echo "${arr[$c,$a]}"
+            #echo "${arrayA[$a]}"
+            #echo "${arrayA[@]}"
+            #echo "$a"
+            done
+        done
+     
     }
     funcion_datos_discos_duros 
    
