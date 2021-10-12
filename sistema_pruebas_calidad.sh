@@ -307,7 +307,6 @@ funcion_variables(){
             done
         done
         }
-    }
     funcion_datos_discos_duros 
    
 }
