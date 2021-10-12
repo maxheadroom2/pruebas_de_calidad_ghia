@@ -277,14 +277,14 @@ funcion_variables(){
 
     funcion_datos_discos_duros(){
         RutaLecturaGen=$HOME/Test_resultados/archivos_raw/
-        n=$(cat $RutaLecturaGen/lshw.txt | grep -c "*-disk")
+        n=$(cat $RutaLecturaGen/lshw.txt | grep -c "*-disk") #cantidad de discos encontrados en la unidad (unidades de almacenamiento)
         for (( c=1; c<=$n; c++ )) 
         do
         #echo "Unidad_$c-------------"
+            declare -a arrayA=("capacidades:" "descripción:" "producto:" "serie:" "tamaño:")
             d=$(echo "${#arrayA[@]}")
             for (( a=0; a<$d; a++ )) 
             do
-                declare -a arrayA=("capacidades:" "descripción:" "producto:" "serie:" "tamaño:")
                 arr[$c,$a]=$( 
                 cat $RutaLecturaGen/lshw.txt | 
                 grep -wns "*-disk" -A 10  |

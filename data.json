@@ -1,0 +1,66 @@
+{
+ "modelo": "xxxx",
+ "tecnico": "codigo",
+ "fecha": "12/10/2021",
+ "serie": "123456",
+
+"bios": [
+    {
+    "version": "1.1",
+    "idioma": "es|ES|iso8859-1"
+}],
+"almacenamiento":[{
+    "cantidad": "2",
+    "Disco-1":[{
+        "capacidades": "removable",
+        "producto": "Cruzer Glide 3.0",
+        "fabricante": "SanDisk",
+        "serie": "4C530000270820119353",
+        "almacenamiento": "29GiB (31GB)"
+    }],
+    "Disco-2":[{
+        "capacidades": "",
+        "producto": "WDC WDS480G2G0A-",
+        "fabricante": "Western Digital",
+        "serie": "211861802717",
+        "almacenamiento": "447GiB (480GB)"
+    }]
+}],
+"ram":[{
+    "slots": "4",
+    "instaladas": "1",
+    "ram-1":[{
+        "form factor": "DIM",
+        "Bank": "BANK 0",
+        "fabricante": "A-DATA",
+        "serie": "50FD0100",
+        "velocidad": "2666 MT/s",
+        "tamaño": "16384 MB"
+    }]
+
+}],
+"motherboard":[{
+    "fabricante": "GHIA",
+    "modelo": "PRIME_B360M-A",
+    "version": "1.03",
+    "serie": "200772435001164"
+}],
+"webcam":[{
+    "instalada": "no",
+    "modelo": ""
+}],
+"cdrom":[{
+    "instalada": "no",
+    "modelo": ""
+}],
+"pruebas":[{
+    "tiempo-up": "1.1",
+    "tiempo-tecnico": "es|ES|iso8859-1",
+    "temp-cold": "xx.xx",
+    "temp-hold": "xx.xx",
+    "errores": "0"
+}]
+
+}
+
+
