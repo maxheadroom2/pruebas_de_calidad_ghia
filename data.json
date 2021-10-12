@@ -11,8 +11,8 @@
     "idioma": "es|ES|iso8859-1"
 }],
 "almacenamiento":[{
-    "cantidad": "2",
-    [{
+
+    "Disco-1":[{
         "capacidades": "removable",
         "producto": "Cruzer Glide 3.0",
         "fabricante": "SanDisk",
