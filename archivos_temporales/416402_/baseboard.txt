@@ -1,0 +1,107 @@
+# dmidecode 3.2
+Getting SMBIOS data from sysfs.
+SMBIOS 3.2.1 present.
+# SMBIOS implementations newer than version 3.2.0 are not
+# fully supported by this version of dmidecode.
+
+Handle 0x0002, DMI type 2, 15 bytes
+Base Board Information
+	Manufacturer: GHIA
+	Product Name: PRIME_B360M-A
+	Version: 1.03
+	Serial Number: 200772435001164
+	Asset Tag: Default string
+	Features:
+		Board is a hosting board
+		Board is replaceable
+	Location In Chassis: Default string
+	Chassis Handle: 0x0003
+	Type: Motherboard
+	Contained Object Handles: 0
+
+Handle 0x0024, DMI type 10, 6 bytes
+On Board Device Information
+	Type: Video
+	Status: Enabled
+	Description:    To Be Filled By O.E.M.
+
+Handle 0x0050, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 1
+	Bus Address: 0000:00:00.0
+
+Handle 0x0051, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Video
+	Type: Video
+	Status: Enabled
+	Type Instance: 1
+	Bus Address: 0000:00:02.0
+
+Handle 0x0052, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 2
+	Bus Address: 0000:00:14.0
+
+Handle 0x0053, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 3
+	Bus Address: 0000:00:14.2
+
+Handle 0x0054, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 4
+	Bus Address: 0000:00:16.0
+
+Handle 0x0055, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - SATA
+	Type: SATA Controller
+	Status: Enabled
+	Type Instance: 1
+	Bus Address: 0000:00:17.0
+
+Handle 0x0056, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 5
+	Bus Address: 0000:00:1f.0
+
+Handle 0x0057, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Sound
+	Type: Sound
+	Status: Enabled
+	Type Instance: 1
+	Bus Address: 0000:00:1f.3
+
+Handle 0x0058, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 6
+	Bus Address: 0000:00:1f.4
+
+Handle 0x0059, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 7
+	Bus Address: 0000:00:1f.5
+

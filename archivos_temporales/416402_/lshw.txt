@@ -1,0 +1,442 @@
+maxheadroom-pruebas
+    descripción: Equipo de escritorio
+    producto: DESKTOP (PCGHIA-2873)
+    fabricante: GHIA
+    versión: DESKTOP
+    serie: 416402
+    anchura: 64 bits
+    capacidades: smbios-3.2.1 dmi-3.2.1 smp vsyscall32
+    configuración: boot=normal chassis=desktop family=Desktop Series sku=PCGHIA-2873 uuid=E1E630F1-C4EE-95AF-2597-244BFECFABF0
+  *-core
+       descripción: Placa base
+       producto: PRIME_B360M-A
+       fabricante: GHIA
+       id físico: 0
+       versión: 1.03
+       serie: 200772435001164
+       ranura: Default string
+     *-firmware
+          descripción: BIOS
+          fabricante: American Megatrends Inc.
+          id físico: 0
+          versión: 2811
+          date: 05/27/2020
+          tamaño: 64KiB
+          capacidad: 16MiB
+          capacidades: pci apm upgrade shadowing cdboot bootselect socketedrom edd int13floppy1200 int13floppy720 int13floppy2880 int5printscreen int9keyboard int14serial int17printer acpi usb biosbootspecification uefi
+     *-memory
+          descripción: Memoria de sistema
+          id físico: 3e
+          ranura: Placa de sistema o placa base
+          tamaño: 16GiB
+        *-bank:0
+             descripción: DIMM DDR4 Síncrono 2666 MHz (0.4 ns)
+             fabricante: A-DATA
+             id físico: 0
+             serie: 50FD0100
+             ranura: ChannelA-DIMM1
+             tamaño: 16GiB
+             anchura: 64 bits
+             reloj: 2666MHz (0.4ns)
+        *-bank:1
+             descripción: Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2021-08-02 16:47+0000X-Generator: Launchpad (build 8bd362bf86c4b35e805f897f03c203e3576a7006)Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2021-08-02 16:47+0000X-Generator: Launchpad (build 8bd362bf86c4b35e805f897f03c203e3576a7006) [vacío]
+             id físico: 1
+             ranura: ChannelA-DIMM2
+        *-bank:2
+             descripción: Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2021-08-02 16:47+0000X-Generator: Launchpad (build 8bd362bf86c4b35e805f897f03c203e3576a7006)Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2021-08-02 16:47+0000X-Generator: Launchpad (build 8bd362bf86c4b35e805f897f03c203e3576a7006) [vacío]
+             id físico: 2
+             ranura: ChannelB-DIMM1
+        *-bank:3
+             descripción: Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2021-08-02 16:47+0000X-Generator: Launchpad (build 8bd362bf86c4b35e805f897f03c203e3576a7006)Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2021-08-02 16:47+0000X-Generator: Launchpad (build 8bd362bf86c4b35e805f897f03c203e3576a7006) [vacío]
+             id físico: 3
+             ranura: ChannelB-DIMM2
+     *-cache:0
+          descripción: L1 caché
+          id físico: 49
+          ranura: L1 Cache
+          tamaño: 512KiB
+          capacidad: 512KiB
+          capacidades: synchronous internal write-back unified
+          configuración: level=1
+     *-cache:1
+          descripción: L2 caché
+          id físico: 4a
+          ranura: L2 Cache
+          tamaño: 2MiB
+          capacidad: 2MiB
+          capacidades: synchronous internal write-back unified
+          configuración: level=2
+     *-cache:2
+          descripción: L3 caché
+          id físico: 4b
+          ranura: L3 Cache
+          tamaño: 12MiB
+          capacidad: 12MiB
+          capacidades: synchronous internal write-back unified
+          configuración: level=3
+     *-cpu
+          descripción: CPU
+          producto: Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz
+          fabricante: Intel Corp.
+          id físico: 4c
+          información del bus: cpu@0
+          versión: Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz
+          serie: To Be Filled By O.E.M.
+          ranura: LGA1151
+          tamaño: 4598MHz
+          capacidad: 4700MHz
+          anchura: 64 bits
+          reloj: 100MHz
+          capacidades: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities cpufreq
+          configuración: cores=8 enabledcores=8 threads=8
+     *-pci
+          descripción: Host bridge
+          producto: 8th Gen Core 8-core Desktop Processor Host Bridge/DRAM Registers [Coffee Lake S]
+          fabricante: Intel Corporation
+          id físico: 100
+          información del bus: pci@0000:00:00.0
+          versión: 0d
+          anchura: 32 bits
+          reloj: 33MHz
+          configuración: driver=skl_uncore
+          recursos: irq:0
+        *-display
+             descripción: VGA compatible controller
+             producto: UHD Graphics 630 (Desktop 9 Series)
+             fabricante: Intel Corporation
+             id físico: 2
+             información del bus: pci@0000:00:02.0
+             versión: 02
+             anchura: 64 bits
+             reloj: 33MHz
+             capacidades: pciexpress msi pm vga_controller bus_master cap_list rom
+             configuración: driver=i915 latency=0
+             recursos: irq:127 memoria:a0000000-a0ffffff memoria:90000000-9fffffff ioport:4000(size=64) memoria:c0000-dffff
+        *-usb
+             descripción: USB controller
+             producto: Cannon Lake PCH USB 3.1 xHCI Host Controller
+             fabricante: Intel Corporation
+             id físico: 14
+             información del bus: pci@0000:00:14.0
+             versión: 10
+             anchura: 64 bits
+             reloj: 33MHz
+             capacidades: pm msi xhci bus_master cap_list
+             configuración: driver=xhci_hcd latency=0
+             recursos: irq:125 memoria:a1200000-a120ffff
+           *-usbhost:0
+                producto: xHCI Host Controller
+                fabricante: Linux 5.11.0-37-generic xhci-hcd
+                id físico: 0
+                información del bus: usb@1
+                nombre lógico: usb1
+                versión: 5.11
+                capacidades: usb-2.00
+                configuración: driver=hub slots=16 speed=480Mbit/s
+              *-usb
+                   descripción: USB hub
+                   producto: USB 2.0 Hub
+                   fabricante: Terminus Technology Inc.
+                   id físico: 8
+                   información del bus: usb@1:8
+                   versión: 1.11
+                   capacidades: usb-2.00
+                   configuración: driver=hub maxpower=100mA slots=4 speed=480Mbit/s
+                 *-usb:0
+                      descripción: USB hub
+                      producto: Hub
+                      fabricante: ATEN International Co., Ltd
+                      id físico: 1
+                      información del bus: usb@1:8.1
+                      versión: 1.00
+                      capacidades: usb-1.10
+                      configuración: driver=hub maxpower=100mA slots=4 speed=12Mbit/s
+                    *-usb
+                         descripción: Teclado
+                         producto: CS1798   V1.2.115
+                         fabricante: ATEN International Co. Ltd
+                         id físico: 1
+                         información del bus: usb@1:8.1.1
+                         versión: 1.00
+                         capacidades: usb-1.10
+                         configuración: driver=usbhid maxpower=100mA speed=12Mbit/s
+                 *-usb:1
+                      descripción: USB hub
+                      producto: USB 2.0 Hub
+                      fabricante: Terminus Technology Inc.
+                      id físico: 2
+                      información del bus: usb@1:8.2
+                      versión: 1.11
+                      capacidades: usb-2.00
+                      configuración: driver=hub maxpower=100mA slots=4 speed=480Mbit/s
+           *-usbhost:1
+                producto: xHCI Host Controller
+                fabricante: Linux 5.11.0-37-generic xhci-hcd
+                id físico: 1
+                información del bus: usb@2
+                nombre lógico: usb2
+                versión: 5.11
+                capacidades: usb-3.10
+                configuración: driver=hub slots=6 speed=10000Mbit/s
+              *-usb
+                   descripción: Dispositivo de almacenamiento masivo
+                   producto: Cruzer Glide 3.0
+                   fabricante: SanDisk
+                   id físico: 6
+                   información del bus: usb@2:6
+                   versión: 1.00
+                   serie: 4C530000270820119353
+                   capacidades: usb-3.00 scsi
+                   configuración: driver=usb-storage maxpower=896mA speed=5000Mbit/s
+        *-memory NO RECLAMADO
+             descripción: RAM memory
+             producto: Cannon Lake PCH Shared SRAM
+             fabricante: Intel Corporation
+             id físico: 14.2
+             información del bus: pci@0000:00:14.2
+             versión: 10
+             anchura: 64 bits
+             reloj: 33MHz (30.3ns)
+             capacidades: pm cap_list
+             configuración: latency=0
+             recursos: memoria:a1216000-a1217fff memoria:a121c000-a121cfff
+        *-communication
+             descripción: Communication controller
+             producto: Cannon Lake PCH HECI Controller
+             fabricante: Intel Corporation
+             id físico: 16
+             información del bus: pci@0000:00:16.0
+             versión: 10
+             anchura: 64 bits
+             reloj: 33MHz
+             capacidades: pm msi bus_master cap_list
+             configuración: driver=mei_me latency=0
+             recursos: irq:128 memoria:a121b000-a121bfff
+        *-sata
+             descripción: SATA controller
+             producto: Cannon Lake PCH SATA AHCI Controller
+             fabricante: Intel Corporation
+             id físico: 17
+             información del bus: pci@0000:00:17.0
+             versión: 10
+             anchura: 32 bits
+             reloj: 66MHz
+             capacidades: sata msi pm ahci_1.0 bus_master cap_list
+             configuración: driver=ahci latency=0
+             recursos: irq:124 memoria:a1214000-a1215fff memoria:a121a000-a121a0ff ioport:4090(size=8) ioport:4080(size=4) ioport:4060(size=32) memoria:a1219000-a12197ff
+        *-pci:0
+             descripción: PCI bridge
+             producto: Cannon Lake PCH PCI Express Root Port #21
+             fabricante: Intel Corporation
+             id físico: 1b
+             información del bus: pci@0000:00:1b.0
+             versión: f0
+             anchura: 32 bits
+             reloj: 33MHz
+             capacidades: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuración: driver=pcieport
+             recursos: irq:120 ioport:5000(size=4096) memoria:a1300000-a14fffff ioport:a1500000(size=2097152)
+        *-pci:1
+             descripción: PCI bridge
+             producto: Cannon Lake PCH PCI Express Root Port #5
+             fabricante: Intel Corporation
+             id físico: 1c
+             información del bus: pci@0000:00:1c.0
+             versión: f0
+             anchura: 32 bits
+             reloj: 33MHz
+             capacidades: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuración: driver=pcieport
+             recursos: irq:121 ioport:6000(size=4096) memoria:a1700000-a18fffff ioport:a1900000(size=2097152)
+        *-pci:2
+             descripción: PCI bridge
+             producto: Cannon Lake PCH PCI Express Root Port #8
+             fabricante: Intel Corporation
+             id físico: 1c.7
+             información del bus: pci@0000:00:1c.7
+             versión: f0
+             anchura: 32 bits
+             reloj: 33MHz
+             capacidades: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuración: driver=pcieport
+             recursos: irq:122 ioport:3000(size=4096) memoria:a1100000-a11fffff
+           *-network
+                descripción: Ethernet interface
+                producto: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
+                fabricante: Realtek Semiconductor Co., Ltd.
+                id físico: 0
+                información del bus: pci@0000:03:00.0
+                nombre lógico: enp3s0
+                versión: 15
+                serie: 24:4b:fe:cf:ab:f0
+                capacidad: 1Gbit/s
+                anchura: 64 bits
+                reloj: 33MHz
+                capacidades: pm msi pciexpress msix bus_master cap_list ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+                configuración: autonegotiation=on broadcast=yes driver=r8169 driverversion=5.11.0-37-generic firmware=rtl8168h-2_0.0.2 02/26/15 latency=0 link=no multicast=yes port=twisted pair
+                recursos: irq:19 ioport:3000(size=256) memoria:a1104000-a1104fff memoria:a1100000-a1103fff
+        *-pci:3
+             descripción: PCI bridge
+             producto: Cannon Lake PCH PCI Express Root Port #9
+             fabricante: Intel Corporation
+             id físico: 1d
+             información del bus: pci@0000:00:1d.0
+             versión: f0
+             anchura: 32 bits
+             reloj: 33MHz
+             capacidades: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuración: driver=pcieport
+             recursos: irq:123 ioport:7000(size=4096) memoria:a1b00000-a1cfffff ioport:a1d00000(size=2097152)
+        *-isa
+             descripción: ISA bridge
+             producto: Intel Corporation
+             fabricante: Intel Corporation
+             id físico: 1f
+             información del bus: pci@0000:00:1f.0
+             versión: 10
+             anchura: 32 bits
+             reloj: 33MHz
+             capacidades: isa bus_master
+             configuración: latency=0
+        *-multimedia
+             descripción: Audio device
+             producto: Cannon Lake PCH cAVS
+             fabricante: Intel Corporation
+             id físico: 1f.3
+             información del bus: pci@0000:00:1f.3
+             versión: 10
+             anchura: 64 bits
+             reloj: 33MHz
+             capacidades: pm msi bus_master cap_list
+             configuración: driver=snd_hda_intel latency=32
+             recursos: irq:129 memoria:a1210000-a1213fff memoria:a1000000-a10fffff
+        *-serial:0
+             descripción: SMBus
+             producto: Cannon Lake PCH SMBus Controller
+             fabricante: Intel Corporation
+             id físico: 1f.4
+             información del bus: pci@0000:00:1f.4
+             versión: 10
+             anchura: 64 bits
+             reloj: 33MHz
+             configuración: driver=i801_smbus latency=0
+             recursos: irq:16 memoria:a1218000-a12180ff ioport:efa0(size=32)
+        *-serial:1 NO RECLAMADO
+             descripción: Serial bus controller
+             producto: Cannon Lake PCH SPI Controller
+             fabricante: Intel Corporation
+             id físico: 1f.5
+             información del bus: pci@0000:00:1f.5
+             versión: 10
+             anchura: 32 bits
+             reloj: 33MHz
+             configuración: latency=0
+             recursos: memoria:fe010000-fe010fff
+     *-pnp00:00
+          producto: PnP device PNP0c02
+          id físico: 1
+          capacidades: pnp
+          configuración: driver=system
+     *-pnp00:01
+          producto: PnP device PNP0c02
+          id físico: 2
+          capacidades: pnp
+          configuración: driver=system
+     *-pnp00:02
+          producto: PnP device PNP0400
+          id físico: 3
+          capacidades: pnp
+          configuración: driver=parport_pc
+     *-pnp00:03
+          producto: PnP device PNP0501
+          id físico: 4
+          capacidades: pnp
+          configuración: driver=serial
+     *-pnp00:04
+          producto: PnP device PNP0c02
+          id físico: 5
+          capacidades: pnp
+          configuración: driver=system
+     *-pnp00:05
+          producto: PnP device INT3f0d
+          id físico: 6
+          capacidades: pnp
+          configuración: driver=system
+     *-pnp00:06
+          producto: PnP device PNP0c02
+          id físico: 7
+          capacidades: pnp
+          configuración: driver=system
+     *-pnp00:07
+          producto: PnP device PNP0c02
+          id físico: 8
+          capacidades: pnp
+          configuración: driver=system
+     *-pnp00:08
+          producto: PnP device PNP0c02
+          id físico: 9
+          capacidades: pnp
+          configuración: driver=system
+     *-pnp00:09
+          producto: PnP device PNP0c02
+          id físico: a
+          capacidades: pnp
+          configuración: driver=system
+     *-scsi:0
+          id físico: b
+          nombre lógico: scsi0
+          capacidades: emulated
+        *-disk
+             descripción: ATA Disk
+             producto: WDC WDS480G2G0A-
+             fabricante: Western Digital
+             id físico: 0.0.0
+             información del bus: scsi@0:0.0.0
+             nombre lógico: /dev/sda
+             versión: 0400
+             serie: 211861802717
+             tamaño: 447GiB (480GB)
+             configuración: ansiversion=5 logicalsectorsize=512 sectorsize=512
+     *-scsi:1
+          id físico: c
+          nombre lógico: scsi6
+          capacidades: emulated scsi-host
+          configuración: driver=usb-storage
+        *-disk
+             descripción: SCSI Disk
+             producto: Cruzer Glide 3.0
+             fabricante: SanDisk
+             id físico: 0.0.0
+             información del bus: scsi@6:0.0.0
+             nombre lógico: /dev/sdb
+             versión: 1.00
+             serie: 4C530000270820119353
+             tamaño: 29GiB (31GB)
+             capacidades: removable
+             configuración: ansiversion=6 logicalsectorsize=512 sectorsize=512
+           *-medium
+                id físico: 0
+                nombre lógico: /dev/sdb
+                tamaño: 29GiB (31GB)
+                capacidades: partitioned partitioned:dos
+                configuración: signature=837e0402
+              *-volume
+                   descripción: Windows FAT volumen
+                   fabricante: SYSLINUX
+                   id físico: 1
+                   nombre lógico: /dev/sdb1
+                   nombre lógico: /cdrom
+                   versión: FAT32
+                   serie: 9035-6bf5
+                   tamaño: 29GiB
+                   capacidad: 29GiB
+                   capacidades: primary bootable fat initialized
+                   configuración: FATs=2 filesystem=fat label=SBLIVE mount.fstype=vfat mount.options=ro,noatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro state=mounted
+  *-power NO RECLAMADO
+       descripción: To Be Filled By O.E.M.
+       producto: To Be Filled By O.E.M.
+       fabricante: To Be Filled By O.E.M.
+       id físico: 1
+       versión: To Be Filled By O.E.M.
+       serie: To Be Filled By O.E.M.
+       capacidad: 32768mWh

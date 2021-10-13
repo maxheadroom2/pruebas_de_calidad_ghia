@@ -1,0 +1,16 @@
+                                                                          Modelo: ATA WDC WDS480G2G0A- (scsi)
+Disco /dev/sda: 480GB
+Tamaño de sector (lógico/físico): 512B/512B
+Tabla de particiones: unknown
+Indicadores de disco: 
+
+Modelo: SanDisk Cruzer Glide 3.0 (scsi)
+Disco /dev/sdb: 31.2GB
+Tamaño de sector (lógico/físico): 512B/512B
+Tabla de particiones: msdos
+Indicadores de disco: 
+
+Numero  Inicio  Fin     Tamaño  Tipo     Sistema de archivos  Banderas
+ 1      1049kB  31.2GB  31.2GB  primary  fat32                arranque, lba
+
+

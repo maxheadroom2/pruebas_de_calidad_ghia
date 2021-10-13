@@ -1,0 +1,8 @@
+416402
+PCGHIA-2873
+2811
+PRIME_B360M-A
+1.03
+Size: 16384 MB Size: No Module Installed Size: No Module Installed Size: No Module Installed
+480GB 31.2GB
+Core(TM) i7-9700 CPU @ 3.00GHz
