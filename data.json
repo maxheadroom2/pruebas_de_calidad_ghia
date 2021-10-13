@@ -29,6 +29,7 @@
 }],
 "ram":[{
     "slots": "4",
+    "memoriaTotal": "",
     "instaladas": "1",
     "ram-1":[{
         "form factor": "DIM",
