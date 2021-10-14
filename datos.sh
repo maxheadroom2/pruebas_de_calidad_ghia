@@ -16,6 +16,7 @@ funcion_variables(){
     export Placa_Madre_Ver=$(cat $RutaLecturaGen/baseboard.txt | grep -E "Version:" | while read Col1 Col2 Col3; do echo $Col2 $Col3; done )
     export MemoriaRam=$(cat $RutaLecturaGen/memory.txt | grep "Size" )
     export ModulosRam=$(cat $RutaLecturaGen/memory.txt | grep -e "Size" | grep -c "MB" )
+    export MemoriaTotal=$(cat $RutaLecturaGen/lshw.txt | grep -wns "*-memory" -A 4 | grep  "tamaño:" |  while read Col1 Col2 Col3; do echo $Col3; done )
     export Procesador=$(cat $RutaLecturaGen/processor.txt | grep -E "Version:" | while read Col1 Col2 Col3; do echo $Col3; done )
     export Numero_CoresCPU=$(grep -m 1 'siblings' /proc/cpuinfo | grep -Eo [0-9])
     export TecnicoBios=$(cat $RutaLecturaGen/chassis.txt | grep  "Asset Tag:" | while read Col1 Col2 Col3; do echo $Col3; done )
@@ -63,3 +64,5 @@ funcion_variables(){
     funcion_datos_discos_duros 
    
 }
+
+cat data.json | jq -r '.ram[]."ram-1"[]."tamaño"'
