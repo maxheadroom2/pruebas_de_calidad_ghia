@@ -130,7 +130,6 @@ funcion_creacion_reportes(){
     funcion_dmidecode  "chassis" 
 }
 
-
 funcion_borrado_basura(){
     rm /home/maxheadroom/Test_resultados/archivos_raw/*
 }
@@ -322,8 +321,6 @@ funcion_escritura_datos(){
     echo $DiscoDuro >> $RutaLecturaGen/perfil_computo.txt
     echo $Procesador >> $RutaLecturaGen/perfil_computo.txt
 }
-
-
 
 funcion_preparacion_usb(){
     local dir=$HOME/$USB/$SerieComputo
