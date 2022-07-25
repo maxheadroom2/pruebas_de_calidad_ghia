@@ -3,7 +3,8 @@
 
 # Author: Victor Ruben Farias Rolón
 # creado 26 febrero 2016
-# modificado el 10 de Agosto 2021
+# modificado el 10 de Agosto 2021 (se dejo en stanby por cambios de ubiación)
+# modificado el 25 de julio de 2022 (se revisa e inicia por medio de visual estudio y el portatil de manera remota)
 # rev-6
 
 # programas anexos 
