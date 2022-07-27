@@ -366,5 +366,5 @@ funcion_xterm_curseofwar
 funcion_stress_cpu
 funcion_evaluacion_tecnico
 funcion_dialog_resultado
-funcion_memoria_usb
+#funcion_memoria_usb
 funcion_preparacion_usb
