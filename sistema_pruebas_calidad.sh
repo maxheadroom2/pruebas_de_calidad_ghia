@@ -218,7 +218,7 @@ funcion_dialog_resultado(){
     clear
 }
 
-funcion_xterm_curseofwar(){
+funcion_killall(){
     
     killall -9 curseofwar
     killall -9 htop
@@ -247,7 +247,7 @@ funcion_control_de_ventanas(){
     xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 9 -T terminal_sensors -e "curseofwar -W 90 -H 90" &
     sleep .5s;
     wmctrl -r "terminal_sensors" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_sensors" -t 3 #maximmizo la terminal de gtop
-    
+
 }
 
 notifi_array=( 
@@ -368,7 +368,7 @@ funcion_borrado_basura
 funcion_creacion_reportes
 funcion_variables
 funcion_escritura_datos
-funcion_xterm_curseofwar
+funcion_killall
 funcion_stress_cpu
 funcion_evaluacion_tecnico
 funcion_dialog_resultado
