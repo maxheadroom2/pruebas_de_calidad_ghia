@@ -223,7 +223,7 @@ funcion_killall(){
     killall -9 curseofwar
     killall -9 htop
     killall -9 bashtop
-{
+}
 
 funcion_control_de_ventanas(){
 
