@@ -365,10 +365,10 @@ funcion_preparacion_usb(){
 }
 
 funcion_borrado_basura
+funcion_killall
 funcion_creacion_reportes
 funcion_variables
 funcion_escritura_datos
-funcion_killall
 funcion_control_de_ventanas
 funcion_stress_cpu
 funcion_evaluacion_tecnico
