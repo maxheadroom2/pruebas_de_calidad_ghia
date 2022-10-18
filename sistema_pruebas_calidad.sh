@@ -11,9 +11,9 @@
 # bashfuscator Link https://snapcraft.io/install/bashfuscator/ubuntu & https://bashfuscator.readthedocs.io/en/latest/Usage.html  sudo snap install bashfuscator --edge
 # aescrypt link https://forums.packetizer.com/viewtopic.php?t=1173 & https://www.aescrypt.com/linux_aes_crypt.html
 
-###############################################################################
-# Descripcion: Scritp padre el cual desarrollara las pruebas del area de calidad                          
-###############################################################################
+###################################################################################
+# Descripcion: Scritp padre el cual desarrollara las pruebas del area de calidad  #                        
+###################################################################################
 
 # notas 
 # GIT 
@@ -102,7 +102,7 @@ funcion_stress_cpu(){
         do  
             yes > /dev/null & # ciclo
             echo "veces que repitermos yes"
-            sleep 1s;
+            sleep 7s;
         done
             sleep 10s && killall -9 yes; # tiempo de espera para matar yes
             notifi_array=( 
@@ -222,7 +222,11 @@ funcion_xterm_curseofwar(){
     
     killall -9 curseofwar
     killall -9 htop
-   
+    killall -9 bashtop
+{
+
+funcion_control_de_ventanas(){
+
     # apertura de xterm 1
     xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 14  -T terminal_bashtop -e "bashtop" &
     sleep 2s;
@@ -239,10 +243,11 @@ funcion_xterm_curseofwar(){
     sleep .5s;
     wmctrl -r "terminal_curseofwar" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_curseofwar" -t 3 #maximmizo la terminal de gtop
 
-     # apertura de xterm curseofwar
+    # apertura de xterm curseofwar
     xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 9 -T terminal_sensors -e "curseofwar -W 90 -H 90" &
     sleep .5s;
     wmctrl -r "terminal_sensors" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_sensors" -t 3 #maximmizo la terminal de gtop
+    
 }
 
 notifi_array=( 
@@ -369,3 +374,4 @@ funcion_evaluacion_tecnico
 funcion_dialog_resultado
 #funcion_memoria_usb
 funcion_preparacion_usb
+funcion_control_de_ventanas
