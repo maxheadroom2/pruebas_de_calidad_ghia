@@ -311,6 +311,7 @@ funcion_notificacion "${notifi_array[@]}" && unset notifi_array
     
     }
 
+
 funcion_escritura_datos(){
     touch $RutaLecturaGen/perfil_computo.txt
     echo $SerieComputo >> $RutaLecturaGen/perfil_computo.txt
@@ -363,7 +364,7 @@ funcion_creacion_reportes
 funcion_variables
 funcion_escritura_datos
 funcion_xterm_curseofwar
-#funcion_stress_cpu
+funcion_stress_cpu
 funcion_evaluacion_tecnico
 funcion_dialog_resultado
 #funcion_memoria_usb
