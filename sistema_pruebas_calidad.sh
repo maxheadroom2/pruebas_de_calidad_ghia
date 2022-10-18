@@ -244,7 +244,7 @@ funcion_control_de_ventanas(){
     wmctrl -r "terminal_curseofwar" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_curseofwar" -t 3 #maximmizo la terminal de gtop
 
     # apertura de xterm curseofwar
-    xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 9 -T terminal_sensors -e "curseofwar -W 90 -H 90" &
+    xterm -xrm 'XTerm.vt100.allowTitleOps: false'  -fa 'Monospace' -fs 9 -T terminal_sensors -e "sensors -W 90 -H 90" &
     sleep .5s;
     wmctrl -r "terminal_sensors" -b add,maximized_vert,maximized_horz && wmctrl -r "terminal_sensors" -t 3 #maximmizo la terminal de gtop
 
