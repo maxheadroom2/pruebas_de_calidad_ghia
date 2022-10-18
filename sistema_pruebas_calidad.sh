@@ -251,6 +251,7 @@ notifi_array=(
     "Inicio de pruebas automaticas" #Titulo
     "Por favor no desconecte el equipo o mueva el mouse, al finalizar las pruebas se le mandara un mensaje" # mensaje
 )
+
 funcion_notificacion "${notifi_array[@]}" && unset notifi_array
 
     funcion_variables(){
@@ -310,7 +311,6 @@ funcion_notificacion "${notifi_array[@]}" && unset notifi_array
         funcion_datos_discos_duros 
     
     }
-
 
 funcion_escritura_datos(){
     touch $RutaLecturaGen/perfil_computo.txt
