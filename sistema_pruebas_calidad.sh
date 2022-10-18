@@ -369,9 +369,9 @@ funcion_creacion_reportes
 funcion_variables
 funcion_escritura_datos
 funcion_killall
+funcion_control_de_ventanas
 funcion_stress_cpu
 funcion_evaluacion_tecnico
 funcion_dialog_resultado
 #funcion_memoria_usb
 funcion_preparacion_usb
-funcion_control_de_ventanas
